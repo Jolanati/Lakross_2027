@@ -6,52 +6,63 @@ export default function PassTheStick() {
   const { t } = useSite()
 
   return (
-    <div className="py-24 px-4 bg-cream">
-      <div className="max-w-5xl mx-auto">
-        <p className="text-carmine font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-center">
-          {t.passTheStick.overtitle}
-        </p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-charcoal text-center mb-6">
-          {t.passTheStick.title}
-        </h2>
-        <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          {t.passTheStick.description}
-        </p>
+    <div className="relative py-32 px-4 bg-charcoal-deep overflow-hidden">
+      {/* Dramatic background */}
+      <div className="bg-text top-1/2 -translate-y-1/2 left-[-2%] text-white/[0.02]">PASS</div>
+      <div className="absolute top-0 left-1/4 w-[2px] h-full bg-carmine/10" />
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Steps */}
-          <div className="space-y-8">
-            {t.passTheStick.steps.map((step, i) => (
-              <div key={i} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-carmine text-white font-display font-black text-xl
-                               rounded-full flex items-center justify-center">
-                  {step.step}
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left — video placeholder */}
+          <div className="relative order-2 lg:order-1">
+            <div className="aspect-[9/16] max-w-[280px] mx-auto relative">
+              {/* Phone frame */}
+              <div className="absolute inset-0 border-2 border-white/10 bg-gradient-to-b from-white/5 to-charcoal-deep overflow-hidden">
+                {/* Red accent */}
+                <div className="absolute top-1/3 left-0 w-full h-1/3 bg-carmine/5" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 border-2 border-white/20 flex items-center justify-center hover:border-carmine transition-colors cursor-pointer">
+                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-lg font-semibold text-charcoal">{step.text}</p>
-                </div>
+                <p className="absolute bottom-6 left-0 right-0 text-center text-[10px] text-gray-600 uppercase tracking-widest">
+                  {t.passTheStick.videoPlaceholder}
+                </p>
               </div>
-            ))}
-
-            {/* Hashtags */}
-            <div className="flex flex-wrap gap-3 pt-4">
-              {t.passTheStick.hashtags.map((tag, i) => (
-                <span key={i} className="px-4 py-2 bg-carmine/10 text-carmine font-semibold text-sm rounded-full">
-                  {tag}
-                </span>
-              ))}
             </div>
           </div>
 
-          {/* Video placeholder */}
-          <div className="aspect-[9/16] max-w-xs mx-auto bg-charcoal-deep rounded-3xl flex items-center justify-center border-4 border-charcoal/20 shadow-2xl">
-            <div className="text-center p-8">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-carmine/20 flex items-center justify-center">
-                <svg className="w-8 h-8 text-carmine" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <p className="text-sm text-gray-500">{t.passTheStick.videoPlaceholder}</p>
+          {/* Right — content */}
+          <div className="order-1 lg:order-2">
+            <p className="text-carmine-light text-[10px] font-bold tracking-[0.4em] uppercase mb-4">
+              {t.passTheStick.overtitle}
+            </p>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white leading-[0.9] tracking-tight mb-8">
+              {t.passTheStick.title}
+            </h2>
+            <p className="text-lg text-gray-400 leading-relaxed mb-12 max-w-md">
+              {t.passTheStick.description}
+            </p>
+
+            {/* Steps — bold numbered */}
+            <div className="space-y-6 mb-10">
+              {t.passTheStick.steps.map((step, i) => (
+                <div key={i} className="flex items-start gap-6">
+                  <span className="text-4xl font-display font-black text-carmine/30 leading-none">{step.step}</span>
+                  <p className="text-white font-semibold text-lg pt-1">{step.text}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Hashtags */}
+            <div className="flex flex-wrap gap-4">
+              {t.passTheStick.hashtags.map((tag, i) => (
+                <span key={i} className="text-sm font-bold text-carmine-light">
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>

@@ -8,67 +8,94 @@ export default function Hero() {
   const percent = Math.round((siteConfig.donate.raisedEur / siteConfig.donate.goalEur) * 100)
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-end pb-24 pt-32 bg-charcoal-deep overflow-hidden">
-      {/* Atmospheric background */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(155,27,48,0.15)_0%,_transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(201,168,76,0.08)_0%,_transparent_50%)]" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-carmine/30 to-transparent" />
+    <section id="hero" className="relative min-h-screen flex items-center bg-charcoal-deep overflow-hidden">
+      {/* Oversized background text */}
+      <div className="bg-text top-1/2 -translate-y-1/2 -left-[5%]">ROAD</div>
+      <div className="bg-text top-[15%] right-[-10%] text-white/[0.02]">TOP5</div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-end">
-          {/* Left — copy */}
-          <div>
-            <div className="inline-block px-3 py-1 border border-gold/30 mb-8">
-              <span className="text-gold text-[10px] font-bold tracking-[0.3em] uppercase">{t.hero.badge}</span>
+      {/* Red geometric accent — large circle */}
+      <div className="accent-circle absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] md:w-[700px] md:h-[700px] rounded-full border-[3px] border-carmine/20" />
+      <div className="accent-circle absolute top-1/2 left-1/2 -translate-x-[45%] -translate-y-[55%] w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-full bg-carmine/10" />
+
+      {/* Diagonal red slash accents */}
+      <div className="accent-slash h-[200px] top-[10%] right-[15%] opacity-60" />
+      <div className="accent-slash h-[300px] bottom-[5%] left-[8%] opacity-40" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-32">
+        <div className="grid lg:grid-cols-12 gap-8 items-center">
+          {/* Left — headline */}
+          <div className="lg:col-span-7">
+            <div className="hero-fade-in mb-6">
+              <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-carmine-light">
+                {t.hero.overtitle}
+              </span>
             </div>
 
-            <p className="text-carmine-light text-[11px] font-bold tracking-[0.25em] uppercase mb-5">
-              {t.hero.overtitle}
-            </p>
-
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-display font-black text-white leading-[0.95] mb-8 tracking-tight">
-              {t.hero.title}
+            <h1 className="mb-8">
+              <span className="hero-title-line block text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black text-white leading-[0.85] tracking-tighter">
+                ROAD
+              </span>
+              <span className="hero-title-line block text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-black text-white leading-[0.85] tracking-tighter">
+                TO <span className="text-carmine">TOP</span>
+              </span>
+              <span className="hero-title-line block text-8xl sm:text-9xl md:text-[10rem] lg:text-[12rem] font-display font-black text-white leading-[0.75] tracking-tighter">
+                5
+              </span>
             </h1>
 
-            <p className="text-lg text-gray-400 max-w-lg leading-relaxed mb-10">
-              {t.hero.subtitle}
-            </p>
+            <div className="hero-fade-in max-w-md">
+              <p className="text-lg text-gray-400 leading-relaxed mb-8">
+                {t.hero.subtitle}
+              </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#donate"
-                 className="inline-flex items-center justify-center px-8 py-4 bg-carmine text-white font-display font-bold text-sm tracking-wide uppercase hover:bg-carmine-light transition-colors">
-                {t.hero.cta}
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </a>
-              <a href="#story"
-                 className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white/80 font-display font-semibold text-sm tracking-wide uppercase hover:bg-white/5 transition-colors">
-                {t.hero.scrollHint}
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a href="#donate"
+                   className="group inline-flex items-center px-8 py-4 bg-carmine text-white font-display font-bold text-sm tracking-wide uppercase hover:bg-carmine-light transition-all">
+                  {t.hero.cta}
+                  <svg className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+                <a href="#story"
+                   className="inline-flex items-center px-8 py-4 border border-white/20 text-white/70 font-display font-semibold text-sm tracking-wide uppercase hover:border-white/40 hover:text-white transition-all">
+                  {t.hero.scrollHint}
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Right — fundraising data */}
-          <div className="lg:border-l lg:border-white/10 lg:pl-16">
-            <div className="space-y-6">
-              <div>
-                <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-500 mb-2">{t.progress.deadline}</p>
+          {/* Right — fundraising + image placeholder */}
+          <div className="lg:col-span-5 hero-fade-in-late">
+            {/* Athlete image placeholder */}
+            <div className="relative mb-8">
+              <div className="aspect-[3/4] bg-gradient-to-b from-white/5 to-transparent border border-white/10 flex items-center justify-center relative overflow-hidden">
+                {/* Red circle accent behind where photo will go */}
+                <div className="absolute top-1/4 right-0 w-48 h-48 rounded-full bg-carmine/20 blur-sm" />
+                <div className="relative text-center">
+                  <p className="text-[10px] text-gray-600 uppercase tracking-[0.3em]">Athlete visual</p>
+                  <p className="text-[10px] text-gray-700 mt-1">Coming soon</p>
+                </div>
               </div>
-              <div className="flex items-baseline gap-3">
-                <span className="text-5xl font-display font-black text-white">{siteConfig.donate.raisedEur.toLocaleString()}&euro;</span>
-                <span className="text-lg text-gray-500">/ {siteConfig.donate.goalEur.toLocaleString()}&euro;</span>
+            </div>
+
+            {/* Progress */}
+            <div className="number-reveal">
+              <div className="flex items-baseline gap-3 mb-3">
+                <span className="text-4xl font-display font-black text-white">{siteConfig.donate.raisedEur.toLocaleString()}&euro;</span>
+                <span className="text-sm text-gray-600">/ {siteConfig.donate.goalEur.toLocaleString()}&euro;</span>
               </div>
-              <div className="h-1 bg-white/10 w-full">
-                <div className="h-full bg-gradient-to-r from-carmine to-carmine-light transition-all duration-1000"
-                     style={{ width: `${percent}%` }} />
+              <div className="h-[2px] bg-white/10 w-full line-reveal origin-left">
+                <div className="h-full bg-carmine transition-all duration-[2s] ease-out" style={{ width: `${percent}%` }} />
               </div>
-              <div className="flex justify-between text-[11px] text-gray-500 uppercase tracking-wider">
-                <span>{percent}% {t.progress.raised.toLowerCase()}</span>
-                <span>{(siteConfig.donate.goalEur - siteConfig.donate.raisedEur).toLocaleString()}&euro; {t.progress.remaining.toLowerCase()}</span>
-              </div>
+              <p className="text-[10px] text-gray-600 uppercase tracking-[0.2em] mt-3">{t.progress.deadline}</p>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom line accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-carmine/50 to-transparent" />
     </section>
   )
 }
