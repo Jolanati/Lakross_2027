@@ -3,6 +3,8 @@
 import { useSite } from '@/context/SiteContext'
 import Image from 'next/image'
 
+const MAIN_IMAGE = '94422ef3-721d-4a9c-b37f-c8d97da499c2.jpg'
+
 const teamImages = [
   '08a3a247-8548-4eae-8d48-ba9a00eee53c.jpg',
   '0b0e3c56-98b5-458c-89a5-d68a2fa1b46b.jpg',
@@ -12,7 +14,6 @@ const teamImages = [
   '5c4e3660-24c4-4bd0-9cad-d320f7ea570e.jpg',
   '6713e2f9-2951-477c-ad46-3818bc237144.jpg',
   '8859a73b-52d2-409c-8934-b87471b0422c.jpg',
-  '94422ef3-721d-4a9c-b37f-c8d97da499c2.jpg',
   '952c882c-5e36-4a8c-bb8f-11dba752b72b.jpg',
   '9cb8c3ae-3464-42ac-b234-5b0c940d8322.jpg',
   'b3c02227-a881-4110-98ee-dbdedbe4a7fa.jpg',
@@ -43,7 +44,19 @@ export default function Team() {
           </p>
         </div>
 
-        {/* Photo grid */}
+        {/* Main team image */}
+        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[16/10] mb-1 overflow-hidden">
+          <Image
+            src={`/team/${MAIN_IMAGE}`}
+            alt="Latvia Lacrosse Sixes Team"
+            fill
+            className="object-cover object-top"
+            sizes="100vw"
+            priority
+          />
+        </div>
+
+        {/* Individual photo grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1">
           {teamImages.map((img, i) => (
             <div
