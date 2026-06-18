@@ -21,7 +21,7 @@ export default function Campaigns() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
           {t.campaigns.items.map((item, i) => (
             <div key={i} className="bg-charcoal-deep p-8 hover:bg-white/5 transition-colors">
-              <span className=\"text-[10px] font-bold tracking-[0.3em] uppercase text-gold mb-6 block\">{item.icon} — {item.percent}</span>
+              <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-gold mb-6 block">{item.icon} &mdash; {item.percent}</span>
               <h3 className="text-lg font-display font-bold text-white mb-3">{item.title}</h3>
               <p className="text-sm text-gray-500 mb-6 leading-relaxed">{item.description}</p>
               <span className="text-2xl font-display font-black text-white">{item.amount}</span>
