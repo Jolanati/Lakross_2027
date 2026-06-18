@@ -46,9 +46,9 @@ export const lv = {
     ],
     stats: [
       { value: '14', label: 'Gadu pieredze' },
+      { value: '7', label: 'Starptautiski čempionāti' },
+      { value: 'Top 8', label: 'Augstākā pozīcija Eiropā' },
       { value: '15 000€', label: 'Nepieciešamais budžets' },
-      { value: 'Top 5', label: 'Mērķis Eiropā' },
-      { value: '0€', label: 'Valsts finansējums' },
     ],
   },
 
@@ -97,28 +97,28 @@ export const lv = {
     subtitle: '15 000 EUR tiks sasniegti, izmantojot četru pīlāru pieeju',
     items: [
       {
-        icon: '🤝',
+        icon: '01',
         title: 'Sponsori un B2B partneri',
         amount: '6 000 EUR',
         percent: '40%',
         description: '1–2 lielo sponsoru piesaiste ar ekskluzīvu CSR un PR integrāciju.',
       },
       {
-        icon: '🌐',
+        icon: '02',
         title: 'Online ziedojumi',
         amount: '4 000 EUR',
         percent: '27%',
         description: 'Crowdfunding, ziedojumu maratoni un "Nopērc kilometru" kampaņa.',
       },
       {
-        icon: '🦸',
+        icon: '03',
         title: 'AI Supervaroņu atribūtika',
         amount: '3 000 EUR',
         percent: '20%',
         description: 'AI ģenerēti dizaini uz T-krekliem, plakātiem un uzlīmēm.',
       },
       {
-        icon: '🏒',
+        icon: '04',
         title: '"Pass the Stick" izaicinājums',
         amount: '2 000 EUR',
         percent: '13%',
@@ -323,7 +323,7 @@ export const lv = {
   // -- Footer --
   footer: {
     tagline: 'Uzvaras top arēnā, bet čempionāti tiek sagatavoti pie darbagalda.',
-    cta: 'Aiziet, Latvija! 🇱🇻',
+    cta: 'Aiziet, Latvija!',
     copyright: '© 2026 Latvijas Sieviešu Lakrosa Izlase',
     links: {
       privacy: 'Privātuma politika',

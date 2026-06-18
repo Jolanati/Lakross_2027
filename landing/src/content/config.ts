@@ -33,13 +33,13 @@ export const siteConfig = {
 
   // Donation config
   donate: {
-    zeffy: 'https://www.zeffy.com/REPLACE_ME',
-    paypal: 'https://paypal.me/REPLACE_ME',
+    zeffy: 'https://www.zeffy.com/en-US/donation-form/support-latvia-lacrosse-2026-wl-womens-championship-dii',
+    paypal: 'https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=info@llf.lv&currency_code=EUR&item_name=Atbalsts+Latvijas+Sieviesu+Lakrosa+Izlasei',
     bankAccount: 'LV00HABA0000000000000',
     suggestedAmounts: [10, 25, 50, 100],
     highlightedAmount: 25,
     goalEur: 15000,
-    raisedEur: 300, // UPDATE THIS as donations come in
+    raisedEur: 4015, // UPDATE THIS as donations come in
   },
 
   // Event: European Championship
@@ -51,10 +51,10 @@ export const siteConfig = {
 
   // Social links
   social: {
-    instagram: 'https://instagram.com/REPLACE_ME',
-    tiktok: 'https://tiktok.com/@REPLACE_ME',
-    facebook: 'https://facebook.com/REPLACE_ME',
+    instagram: 'https://www.instagram.com/lat_wlax/',
+    tiktok: '',
+    facebook: 'https://www.facebook.com/Lakrosaizlase',
     youtube: '',
-    website: 'https://lacrosse.lv',
+    website: 'https://www.lacrosse.lv/lv',
   },
 }

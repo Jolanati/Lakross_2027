@@ -19,15 +19,13 @@ export default function Team() {
         </p>
 
         {/* Team photo placeholder */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-16">
-          <div className="flex justify-center gap-2 mb-6">
+        <div className="border border-white/10 p-16">
+          <div className="flex justify-center gap-px mb-8">
             {Array.from({ length: 6 }).map((_, i) => (
-              <div key={i} className="w-16 h-16 rounded-full bg-carmine/20 flex items-center justify-center">
-                <span className="text-2xl">🥍</span>
-              </div>
+              <div key={i} className="w-16 h-20 bg-white/5 border border-white/5" />
             ))}
           </div>
-          <p className="text-sm text-gray-500">{t.team.membersPlaceholder}</p>
+          <p className="text-xs text-gray-600 uppercase tracking-widest">{t.team.membersPlaceholder}</p>
         </div>
       </div>
     </div>

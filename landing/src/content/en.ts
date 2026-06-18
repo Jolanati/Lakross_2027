@@ -41,9 +41,9 @@ export const en = {
     ],
     stats: [
       { value: '14', label: 'Years of experience' },
+      { value: '7', label: 'International championships' },
+      { value: 'Top 8', label: 'Highest European position' },
       { value: '€15,000', label: 'Budget needed' },
-      { value: 'Top 5', label: 'European goal' },
-      { value: '€0', label: 'State funding' },
     ],
   },
 
@@ -90,28 +90,28 @@ export const en = {
     subtitle: '€15,000 will be reached through a four-pillar approach',
     items: [
       {
-        icon: '🤝',
+        icon: '01',
         title: 'Sponsors & B2B Partners',
         amount: '€6,000',
         percent: '40%',
         description: 'Attracting 1–2 major sponsors with exclusive CSR and PR integration.',
       },
       {
-        icon: '🌐',
+        icon: '02',
         title: 'Online Donations',
         amount: '€4,000',
         percent: '27%',
         description: 'Crowdfunding, donation marathons, and "Buy a Kilometer" campaign.',
       },
       {
-        icon: '🦸',
+        icon: '03',
         title: 'AI Superhero Merchandise',
         amount: '€3,000',
         percent: '20%',
         description: 'AI-generated designs on T-shirts, posters, and stickers.',
       },
       {
-        icon: '🏒',
+        icon: '04',
         title: '"Pass the Stick" Challenge',
         amount: '€2,000',
         percent: '13%',
@@ -306,7 +306,7 @@ export const en = {
 
   footer: {
     tagline: 'Victories happen on the field, but championships are prepared at the desk.',
-    cta: "Let's go, Latvia! 🇱🇻",
+    cta: "Let's go, Latvia!",
     copyright: "© 2026 Latvia Women's Lacrosse National Team",
     links: {
       privacy: 'Privacy Policy',

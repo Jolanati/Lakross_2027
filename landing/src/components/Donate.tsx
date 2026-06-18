@@ -9,9 +9,8 @@ export default function Donate() {
   const percent = Math.round((donate.raisedEur / donate.goalEur) * 100)
 
   return (
-    <div id="donate" className="py-24 px-4 bg-gradient-to-b from-carmine to-carmine-dark relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+    <div id="donate" className="py-24 px-4 bg-carmine relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(0,0,0,0.2)_0%,_transparent_60%)]" />
 
       <div className="max-w-3xl mx-auto relative z-10">
         <p className="text-white/70 font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-center">
@@ -25,14 +24,14 @@ export default function Donate() {
         </p>
 
         {/* Progress bar */}
-        <div className="bg-white/10 rounded-2xl p-6 mb-10">
+        <div className="bg-white/10 p-6 mb-10">
           <div className="flex justify-between text-sm text-white/80 mb-2">
             <span>{t.progress.raised}: <strong>{donate.raisedEur}€</strong></span>
             <span>{t.progress.goal}: <strong>{donate.goalEur.toLocaleString()}€</strong></span>
           </div>
-          <div className="h-4 bg-white/10 rounded-full overflow-hidden mb-2">
+          <div className="h-1 bg-white/10 overflow-hidden mb-2">
             <div
-              className="h-full bg-gradient-to-r from-gold to-gold-light rounded-full transition-all duration-1000"
+              className="h-full bg-white transition-all duration-1000"
               style={{ width: `${Math.max(percent, 2)}%` }}
             />
           </div>
@@ -50,9 +49,9 @@ export default function Donate() {
                 href={donate.zeffy}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group text-center p-4 rounded-xl border-2 transition-all hover:scale-105
+                className={`group text-center p-4 border transition-all hover:scale-[1.02]
                   ${isHighlighted
-                    ? 'bg-white text-carmine border-white shadow-lg'
+                    ? 'bg-white text-carmine border-white'
                     : 'bg-white/10 text-white border-white/20 hover:bg-white/20'
                   }`}
               >
@@ -73,8 +72,8 @@ export default function Donate() {
             href={donate.zeffy}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-4 bg-white text-carmine font-display font-bold text-lg rounded-lg
-                       hover:bg-cream transition-all hover:scale-105 shadow-xl"
+            className="inline-block px-10 py-4 bg-white text-carmine font-display font-bold text-sm tracking-wide uppercase
+                       hover:bg-cream transition-all"
           >
             {t.donate.ctaDonate}
           </a>
