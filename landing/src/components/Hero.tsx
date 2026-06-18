@@ -2,6 +2,7 @@
 
 import { useSite } from '@/context/SiteContext'
 import { siteConfig } from '@/content/config'
+import Image from 'next/image'
 
 export default function Hero() {
   const { t } = useSite()
@@ -67,15 +68,17 @@ export default function Hero() {
 
           {/* Right — fundraising + image placeholder */}
           <div className="lg:col-span-5 hero-fade-in-late">
-            {/* Athlete image placeholder */}
+            {/* Team image */}
             <div className="relative mb-8">
-              <div className="aspect-[3/4] bg-gradient-to-b from-white/5 to-transparent border border-white/10 flex items-center justify-center relative overflow-hidden">
-                {/* Red circle accent behind where photo will go */}
-                <div className="absolute top-1/4 right-0 w-48 h-48 rounded-full bg-carmine/20 blur-sm" />
-                <div className="relative text-center">
-                  <p className="text-[10px] text-gray-600 uppercase tracking-[0.3em]">Athlete visual</p>
-                  <p className="text-[10px] text-gray-700 mt-1">Coming soon</p>
-                </div>
+              <div className="aspect-[3/4] relative overflow-hidden">
+                <Image
+                  src="/team/94422ef3-721d-4a9c-b37f-c8d97da499c2.jpg"
+                  alt="Latvia Lacrosse Team"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  priority
+                />
               </div>
             </div>
 

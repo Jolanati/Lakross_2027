@@ -3,8 +3,6 @@
 import { useSite } from '@/context/SiteContext'
 import Image from 'next/image'
 
-const MAIN_IMAGE = '94422ef3-721d-4a9c-b37f-c8d97da499c2.jpg'
-
 const teamImages = [
   '08a3a247-8548-4eae-8d48-ba9a00eee53c.jpg',
   '0b0e3c56-98b5-458c-89a5-d68a2fa1b46b.jpg',
@@ -42,18 +40,6 @@ export default function Team() {
           <p className="text-lg text-gray-400 max-w-xl mt-6">
             {t.team.description}
           </p>
-        </div>
-
-        {/* Main team image */}
-        <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] md:aspect-[16/10] mb-1 overflow-hidden">
-          <Image
-            src={`/team/${MAIN_IMAGE}`}
-            alt="Latvia Lacrosse Sixes Team"
-            fill
-            className="object-cover object-top"
-            sizes="100vw"
-            priority
-          />
         </div>
 
         {/* Individual photo grid */}
