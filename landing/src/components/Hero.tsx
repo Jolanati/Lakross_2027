@@ -3,18 +3,18 @@
 import { useEffect, useRef, useState } from 'react'
 
 export default function Hero() {
-  const [opened, setOpened] = useState(false)
+  const [opened, setOpened] = useState(() =>
+    typeof window !== 'undefined' && sessionStorage.getItem('heroOpened') === '1'
+  )
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const video = videoRef.current
-    if (video) {
-      video.currentTime = 25
-      video.play()
-    }
+    if (video) video.play()
   }, [])
 
   const handleOpen = () => {
+    sessionStorage.setItem('heroOpened', '1')
     setOpened(true)
     setTimeout(() => {
       document.getElementById('videohook')?.scrollIntoView({ behavior: 'smooth' })
