@@ -6,7 +6,7 @@ export default function KPIs() {
   const { t } = useSite()
 
   return (
-    <div className="py-20 px-4 bg-charcoal-deep">
+    <div className="py-20 px-4 bg-charcoal-deep" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
       <div className="max-w-4xl mx-auto">
         <p className="text-gold font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-center">
           {t.kpis.overtitle}

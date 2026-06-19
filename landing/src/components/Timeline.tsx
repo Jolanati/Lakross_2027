@@ -6,7 +6,7 @@ export default function Timeline() {
   const { t } = useSite()
 
   return (
-    <div className="py-20 px-4 bg-cream">
+    <div className="py-20 px-4 bg-cream" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
       <div className="max-w-5xl mx-auto">
         <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3 text-center">
           {t.timeline.overtitle}
