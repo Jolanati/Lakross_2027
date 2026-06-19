@@ -131,18 +131,18 @@ export default function Kilometer() {
   ].filter((e) => e.value >= 1)
 
   return (
-    <section id="kilometri" className="py-24 md:py-32 px-6 bg-charcoal-deep">
+    <section id="kilometri" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-10">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
             Ceļš uz Spāniju · Nopērc kilometru
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-cream leading-[1.05]">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.05]">
             Velc autobusu. Aizved
             <br className="hidden sm:block" /> izlasi līdz startam.
           </h2>
-          <p className="text-lg text-cream/70 max-w-2xl mt-6 leading-relaxed">
+          <p className="text-lg text-charcoal/70 max-w-2xl mt-6 leading-relaxed">
             No Rīgas līdz Eiropas čempionātam ir aptuveni 3&nbsp;000 km. Pavelc autobusu pa ceļu vai pieskaries
             pilsētai — un redzi tieši, cik tālu tavs ieguldījums aizved komandu.
           </p>
@@ -152,12 +152,12 @@ export default function Kilometer() {
         <div className="flex flex-wrap items-end gap-x-8 gap-y-3 mb-6">
           <div>
             <span className="font-display text-4xl font-semibold text-carmine">{kmFunded.toLocaleString()}</span>
-            <span className="text-cream/50 text-sm ml-2">/ {TOTAL_KM.toLocaleString()} km nofinansēti</span>
+            <span className="text-charcoal/50 text-sm ml-2">/ {TOTAL_KM.toLocaleString()} km nofinansēti</span>
           </div>
-          <div className="text-cream/30">·</div>
+          <div className="text-charcoal/30">·</div>
           <div>
-            <span className="font-display text-4xl font-semibold text-cream">{raisedEur.toLocaleString()}&nbsp;€</span>
-            <span className="text-cream/50 text-sm ml-2">savākti līdz šim</span>
+            <span className="font-display text-4xl font-semibold text-charcoal">{raisedEur.toLocaleString()}&nbsp;€</span>
+            <span className="text-charcoal/50 text-sm ml-2">savākti līdz šim</span>
           </div>
         </div>
 
@@ -189,8 +189,8 @@ export default function Kilometer() {
               ref={pathRef}
               d={ROAD}
               fill="none"
-              stroke="#F6F2EA"
-              strokeOpacity="0.15"
+              stroke="#1A1A1A"
+              strokeOpacity="0.12"
               strokeWidth="5"
               strokeLinecap="round"
               strokeDasharray="2 9"
@@ -254,7 +254,7 @@ export default function Kilometer() {
                       cy={pt.y}
                       r={last ? 8 : 6}
                       fill={isFunded ? '#9D2235' : isPreview ? '#C9A84C' : '#F6F2EA'}
-                      stroke={isFunded ? '#9D2235' : isPreview ? '#C9A84C' : '#F6F2EA'}
+                      stroke={isFunded ? '#9D2235' : isPreview ? '#C9A84C' : '#1A1A1A'}
                       strokeOpacity={isReached ? 1 : 0.3}
                       strokeWidth="2.5"
                     />
@@ -264,7 +264,7 @@ export default function Kilometer() {
                       y={pt.y - 16}
                       textAnchor="middle"
                       className="font-display"
-                      style={{ fontSize: 16, fontWeight: 600, fill: isReached ? '#F6F2EA' : 'rgba(246,242,234,0.4)' }}
+                      style={{ fontSize: 16, fontWeight: 600, fill: isReached ? '#1A1A1A' : 'rgba(26,26,26,0.4)' }}
                     >
                       {last ? '🇪🇸 ' : ''}
                       {stop.city}
@@ -273,7 +273,7 @@ export default function Kilometer() {
                       x={pt.x}
                       y={pt.y + 26}
                       textAnchor="middle"
-                      style={{ fontSize: 10, letterSpacing: 1, fill: 'rgba(246,242,234,0.35)', textTransform: 'uppercase' }}
+                      style={{ fontSize: 10, letterSpacing: 1, fill: 'rgba(26,26,26,0.35)', textTransform: 'uppercase' }}
                     >
                       {stop.km.toLocaleString()} km
                     </text>
@@ -290,7 +290,7 @@ export default function Kilometer() {
                 style={{ cursor: dragging ? 'grabbing' : 'grab' }}
               >
                 <circle cx={busPt.x} cy={busPt.y} r={22} fill="transparent" />
-                <circle cx={busPt.x} cy={busPt.y} r={15} fill="#F6F2EA" stroke="#1A1A1A" strokeWidth="3" />
+                <circle cx={busPt.x} cy={busPt.y} r={15} fill="#1A1A1A" stroke="#F6F2EA" strokeWidth="3" />
                 <text x={busPt.x} y={busPt.y + 6} textAnchor="middle" style={{ fontSize: 16 }}>
                   🚌
                 </text>
@@ -298,13 +298,13 @@ export default function Kilometer() {
             )}
           </svg>
 
-          <p className="text-center text-xs text-cream/40 uppercase tracking-[0.2em] mt-1">
+          <p className="text-center text-xs text-charcoal/40 uppercase tracking-[0.2em] mt-1">
             ↤ Velc autobusu vai pieskaries pilsētai ↦
           </p>
         </div>
 
         {/* ── Chooser + impact ──────────────────────────────── */}
-        <div className="grid md:grid-cols-[1.1fr_1fr] gap-10 items-start bg-charcoal text-cream p-8 sm:p-10 rounded-sm border border-white/10">
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-10 items-start bg-charcoal text-cream p-8 sm:p-10 rounded-sm">
           {/* chooser */}
           <div>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-6">Tavs posms</p>

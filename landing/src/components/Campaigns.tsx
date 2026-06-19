@@ -31,36 +31,36 @@ export default function Campaigns() {
   ]
 
   return (
-    <section id="campaigns" className="py-24 md:py-32 px-6 bg-charcoal">
+    <section id="campaigns" className="py-24 md:py-32 px-6 bg-cream-light">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
             Citi veidi kā palīdzēt
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-cream leading-[1.1] mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1] mb-4">
             Citi veidi kā palīdzēt mums nokļūt Olimpiskajās spēlēs
           </h2>
-          <p className="text-lg text-cream/60 max-w-xl">
+          <p className="text-lg text-charcoal/60 max-w-xl">
             Katrs no trim ceļiem ir tiešs ieguldījums mūsu startā Spānijā.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-white/5">
+        <div className="grid md:grid-cols-3 gap-px bg-charcoal/10">
           {cards.map((card) => (
             <Link
               key={card.num}
               href={card.href}
-              className="bg-[#212121] p-8 md:p-10 flex flex-col group hover:bg-[#2a2a2a] transition-all border border-transparent hover:border-carmine/40"
+              className="bg-cream p-8 md:p-10 flex flex-col group hover:bg-white transition-colors"
             >
               <span className="font-body text-xs font-bold tracking-[0.2em] text-carmine mb-4">{card.num}</span>
-              <h3 className="text-2xl md:text-3xl font-display font-semibold text-cream mb-4 group-hover:text-carmine transition-colors">
+              <h3 className="text-2xl md:text-3xl font-display font-semibold text-charcoal mb-4 group-hover:text-carmine transition-colors">
                 {card.title}
               </h3>
-              <p className="text-sm text-cream/60 leading-relaxed mb-8 flex-grow">
+              <p className="text-sm text-charcoal/60 leading-relaxed mb-8 flex-grow">
                 {card.description}
               </p>
-              <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/10">
-                <span className="text-2xl font-display font-semibold text-cream">{card.price}</span>
+              <div className="flex items-center justify-between mt-auto pt-6 border-t border-charcoal/10">
+                <span className="text-2xl font-display font-semibold text-charcoal">{card.price}</span>
                 <span className="text-sm font-body font-medium text-carmine">{card.cta}</span>
               </div>
             </Link>

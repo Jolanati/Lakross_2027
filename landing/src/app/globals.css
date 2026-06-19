@@ -11,7 +11,7 @@
   }
 
   body {
-    @apply font-body text-cream bg-charcoal overflow-x-hidden;
+    @apply font-body text-charcoal bg-cream overflow-x-hidden;
   }
 
   h1, h2, h3, h4 {
@@ -22,7 +22,7 @@
 @layer components {
   .academic-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em]
-           bg-amber-900/50 text-amber-300 border border-amber-700;
+           bg-amber-100 text-amber-800 border border-amber-300;
   }
 
   .section-reveal {

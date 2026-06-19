@@ -11,25 +11,25 @@ export default function Club100() {
   const { t } = useSite()
 
   return (
-    <section id="klubs" className="py-24 md:py-32 px-6 bg-charcoal">
+    <section id="klubs" className="py-24 md:py-32 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
             01 · Atbalstītāju klubs
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-cream leading-[1.1]">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1]">
             Esi viens no 100.
           </h2>
         </div>
 
-        <p className="text-lg text-cream/70 max-w-2xl mb-8 leading-relaxed">
+        <p className="text-lg text-charcoal/70 max-w-2xl mb-8 leading-relaxed">
           Mēs meklējam tieši 100 cilvēkus, no kuriem katrs ziedo 50 €. Tā tiek nosegta trešdaļa no izlases budžeta. Kluba dalībnieki nonāk komandas Goda sienā un pirms čempionāta saņem personalizētu video sveicienu.
         </p>
 
         {/* Counter */}
         <div className="flex items-baseline gap-3 mb-8">
           <span className="text-5xl font-display font-semibold text-carmine">{FILLED_SLOTS}</span>
-          <span className="text-cream/50">/ 100 vietas aizņemtas</span>
+          <span className="text-charcoal/50">/ 100 vietas aizņemtas</span>
         </div>
 
         {/* Visual grid — 100 squares */}
@@ -40,13 +40,13 @@ export default function Club100() {
               className={`aspect-square transition-colors ${
                 i < FILLED_SLOTS
                   ? 'bg-carmine'
-                  : 'bg-white/10 hover:bg-white/20'
+                  : 'bg-charcoal/5 hover:bg-charcoal/10'
               }`}
             />
           ))}
         </div>
 
-        <p className="text-sm text-cream/40 mb-8">
+        <p className="text-sm text-charcoal/50 mb-8">
           {TOTAL_SLOTS - FILLED_SLOTS} vietas vēl brīvas — esi viens no pirmajiem.
         </p>
 

@@ -29,41 +29,42 @@ export default function Sponsors() {
   ]
 
   return (
-    <section id="sponsors" className="py-24 md:py-32 px-6 bg-charcoal">
+    <section id="sponsors" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
             02 · Sievietes atbalsta sievietes
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-cream leading-[1.1] mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1] mb-4">
             Korporatīvais atbalsts.
           </h2>
-          <p className="text-lg text-cream/60 max-w-2xl leading-relaxed">
+          <p className="text-lg text-charcoal/60 max-w-2xl leading-relaxed">
             Spēcīgas sievietes biznesā iedvesmo spēcīgas sievietes sportā. Standartizēti, uzņēmumiem viegli norakstāmi atbalsta līmeņi.
           </p>
         </div>
 
-        {/* 3-tier cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {tiers.map((tier) => (
             <div
               key={tier.name}
               className={`p-8 flex flex-col ${
                 tier.highlighted
-                  ? 'bg-carmine text-cream'
-                  : 'bg-[#212121] border border-white/10'
+                  ? 'bg-charcoal text-cream'
+                  : 'bg-white border border-charcoal/10'
               }`}
             >
               <span className={`text-xs font-body font-medium tracking-[0.15em] uppercase mb-3 ${
-                tier.highlighted ? 'text-cream/60' : 'text-cream/40'
+                tier.highlighted ? 'text-cream/60' : 'text-charcoal/40'
               }`}>
                 {tier.name}
               </span>
-              <span className="text-4xl font-display font-semibold mb-6 text-cream">
+              <span className={`text-4xl font-display font-semibold mb-6 ${
+                tier.highlighted ? 'text-cream' : 'text-charcoal'
+              }`}>
                 {tier.price}
               </span>
               <p className={`text-sm leading-relaxed mb-8 flex-grow ${
-                tier.highlighted ? 'text-cream/70' : 'text-cream/60'
+                tier.highlighted ? 'text-cream/70' : 'text-charcoal/60'
               }`}>
                 {tier.perks}
               </p>
@@ -74,7 +75,7 @@ export default function Sponsors() {
                 className={`inline-block text-center px-6 py-3 font-body text-sm font-medium transition-colors ${
                   tier.highlighted
                     ? 'bg-cream text-charcoal hover:bg-white'
-                    : 'bg-white text-charcoal hover:bg-cream'
+                    : 'bg-charcoal text-cream hover:bg-charcoal/90'
                 }`}
               >
                 {tier.cta}
@@ -83,9 +84,9 @@ export default function Sponsors() {
           ))}
         </div>
 
-        <p className="text-sm text-cream/50">
+        <p className="text-sm text-charcoal/50">
           Meklē ģenerālsponsora paketi (4 000–6 000 €)?{' '}
-          <a href="mailto:info@llf.lv" className="text-carmine-light hover:underline">
+          <a href="mailto:info@llf.lv" className="text-carmine hover:underline">
             Sazinies ar mums →
           </a>
         </p>
