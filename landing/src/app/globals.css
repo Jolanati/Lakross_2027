@@ -15,7 +15,8 @@
   }
 
   body {
-    @apply font-body text-charcoal bg-cream overflow-x-hidden;
+    @apply font-display text-charcoal bg-cream overflow-x-hidden;
+    font-size: 1.125rem; /* 18px base — Cormorant Garamond reads best at 18px+ */
   }
 
   h1, h2, h3, h4 {

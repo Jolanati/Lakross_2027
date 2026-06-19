@@ -310,7 +310,7 @@ export default function Kilometer() {
               </span>
               <span className="font-display text-xl text-cream/60">km</span>
             </div>
-            <p className="font-body text-gold text-base font-medium mb-4 tabular-nums">= {selectedEur.toLocaleString()} €</p>
+            <p className="text-gold text-lg font-medium mb-4 tabular-nums">= {selectedEur.toLocaleString()} €</p>
 
             <input
               type="range"
@@ -352,7 +352,7 @@ export default function Kilometer() {
           <div className="md:border-l md:border-cream/15 md:pl-10">
             <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-3">Ko tas izdara</p>
 
-            <p className="text-cream/80 leading-relaxed mb-3">
+            <p className="text-lg text-cream/80 leading-relaxed mb-3">
               {reached ? (
                 <>
                   Tu aizved izlasi <span className="text-gold font-medium">līdz pašam čempionātam Spānijā</span> 🎉

@@ -25,7 +25,7 @@ export default function Story() {
         <div className="grid md:grid-cols-2 gap-12 mb-10">
           <div className="space-y-4">
             {t.story.paragraphs.map((p, i) => (
-              <p key={i} className="font-display text-lg text-charcoal/70 leading-relaxed">{p}</p>
+              <p key={i} className="text-xl text-charcoal/70 leading-relaxed">{p}</p>
             ))}
           </div>
           {/* Visual accent column */}
@@ -41,7 +41,7 @@ export default function Story() {
           {t.story.stats.map((stat, i) => (
             <div key={i} className="bg-cream p-5 text-center">
               <div className="text-3xl md:text-4xl font-display font-black text-charcoal leading-none mb-1">{stat.value}</div>
-              <div className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
+              <div className="text-xs font-body font-bold uppercase tracking-[0.2em] text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>

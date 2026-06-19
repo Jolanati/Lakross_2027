@@ -16,7 +16,7 @@ export default function Footer() {
             Četrpadsmit gadus pašas.{' '}
             <em className="italic"><span className="mark">Pēdējos kilometrus — kopā.</span></em>
           </h2>
-          <p className="text-cream/60 text-lg mb-10 font-display italic">
+          <p className="text-cream/60 text-xl mb-10 italic">
             {t.footer.tagline}
           </p>
           <a
