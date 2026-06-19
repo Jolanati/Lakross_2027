@@ -9,16 +9,16 @@ export default function Team() {
   const [flipped, setFlipped] = useState(false)
 
   return (
-    <section id="team" className="py-24 md:py-32 px-6 bg-cream-light">
+    <section id="team" className="py-24 md:py-32 px-6 bg-charcoal">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-4">
             Iepazīsti komandu
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1] mb-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-cream leading-[1.1] mb-4">
             Aiz katra kilometra ir stāsts.
           </h2>
-          <p className="text-sm text-charcoal/50">
+          <p className="text-sm text-cream/40">
             Uzklikšķini uz attēla, lai uzzinātu vairāk.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function Team() {
                   className="object-cover object-top"
                   sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent" />
                 <div className="absolute bottom-6 left-6 text-cream">
                   <span className="font-display text-2xl font-semibold">Latvijas sieviešu lakrosa izlase</span>
                   <span className="block text-sm text-cream/70 mt-1">Mūsu stāsts ↻</span>

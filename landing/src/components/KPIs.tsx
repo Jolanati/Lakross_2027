@@ -14,7 +14,7 @@ export default function KPIs() {
         <h2 className="text-3xl sm:text-4xl font-display font-black text-white text-center mb-4">
           {t.kpis.title}
         </h2>
-        <p className="text-gray-400 text-center text-sm mb-12">{t.kpis.weeklyRate}</p>
+        <p className="text-cream/40 text-center text-sm mb-12">{t.kpis.weeklyRate}</p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {t.kpis.metrics.map((kpi, i) => (

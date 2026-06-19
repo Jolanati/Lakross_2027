@@ -6,9 +6,9 @@ export default function Story() {
   const { t } = useSite()
 
   return (
-    <div id="story" className="relative py-32 px-4 bg-cream overflow-hidden">
+    <div id="story" className="relative py-32 px-4 bg-charcoal overflow-hidden">
       {/* Oversized background text */}
-      <div className="bg-text top-1/2 -translate-y-1/2 right-[-5%] text-charcoal/[0.03]">LATVIA</div>
+      <div className="bg-text top-1/2 -translate-y-1/2 right-[-5%] text-cream/[0.04]">LATVIA</div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Overtitle */}
@@ -17,7 +17,7 @@ export default function Story() {
         </p>
 
         {/* Title — large, impactful */}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-charcoal leading-[0.9] tracking-tight mb-12 max-w-4xl">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-cream leading-[0.9] tracking-tight mb-12 max-w-4xl">
           {t.story.title}
         </h2>
 
@@ -25,7 +25,7 @@ export default function Story() {
         <div className="grid md:grid-cols-2 gap-16 mb-20">
           <div className="space-y-5">
             {t.story.paragraphs.map((p, i) => (
-              <p key={i} className="text-lg text-gray-600 leading-relaxed">{p}</p>
+              <p key={i} className="text-lg text-cream/60 leading-relaxed">{p}</p>
             ))}
           </div>
           {/* Visual accent column */}
@@ -39,9 +39,9 @@ export default function Story() {
         {/* Stats — horizontal, bold */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-charcoal-deep">
           {t.story.stats.map((stat, i) => (
-            <div key={i} className="bg-cream p-8 text-center">
-              <div className="text-4xl md:text-5xl font-display font-black text-charcoal leading-none mb-2">{stat.value}</div>
-              <div className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
+            <div key={i} className="bg-charcoal-deep p-8 text-center">
+              <div className="text-4xl md:text-5xl font-display font-black text-cream leading-none mb-2">{stat.value}</div>
+              <div className="text-[10px] text-cream/40 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
             </div>
           ))}
         </div>
