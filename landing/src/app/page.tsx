@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import VideoHook from '@/components/VideoHook'
 import Story from '@/components/Story'
 import Kilometer from '@/components/Kilometer'
 import Campaigns from '@/components/Campaigns'
@@ -20,6 +21,8 @@ export default function Home() {
       <SectionWrapper sectionKey="hero">
         <Hero />
       </SectionWrapper>
+
+      <VideoHook />
 
       <SectionWrapper sectionKey="story">
         <Story />

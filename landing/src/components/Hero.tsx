@@ -9,7 +9,7 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current
     if (video) {
-      video.currentTime = 2
+      video.currentTime = 25
       video.play()
     }
   }, [])
@@ -44,7 +44,7 @@ export default function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover opacity-50"
         >
-          <source src="/lvtoday.mp4" type="video/mp4" />
+          <source src="/practice-days.mp4" type="video/mp4" />
         </video>
 
         {/* Content */}
@@ -59,14 +59,6 @@ export default function Hero() {
               <circle cx="325" cy="140" r="72" stroke="white" strokeWidth="8" fill="none" />
             </svg>
           </div>
-
-          {/* "14 gadus vienas." — the tagline */}
-          <p className="text-white/60 font-display text-lg md:text-xl tracking-wide mb-2">
-            14 gadus vienas.
-          </p>
-          <p className="text-white/40 font-body text-sm mb-10 max-w-sm leading-relaxed">
-            Novembrī, Spānijā, sākas Latvijas ceļš uz Olimpiskajām spēlēm.
-          </p>
 
           {/* Gateway button */}
           <button
