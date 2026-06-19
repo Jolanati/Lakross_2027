@@ -25,7 +25,7 @@ export default function VideoHook() {
 
       {/* Content — anchored bottom-left, Nike style */}
       <div className="relative z-10 px-6 pb-10 md:pb-14 w-full max-w-5xl mx-auto">
-        <p className="italic text-cream/60 text-lg mb-4">
+        <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/60 mb-4">
           Latvijas Sieviešu Lakrosa Izlase
         </p>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-cream leading-[1.0] tracking-tight mb-5 max-w-3xl">

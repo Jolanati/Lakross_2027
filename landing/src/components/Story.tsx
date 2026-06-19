@@ -12,12 +12,12 @@ export default function Story() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Overtitle */}
-        <p className="font-display italic text-carmine text-sm tracking-wide mb-3">
-          {t.story.overtitle.toLowerCase().replace('mūsu stāsts', 'Mūsu stāsts')}
+        <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
+          {t.story.overtitle}
         </p>
 
         {/* Title — large, impactful */}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-charcoal leading-[0.9] tracking-tight mb-8 max-w-4xl">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-charcoal leading-[1.05] mb-6 max-w-4xl">
           14 gadu ceļš. <span className="mark">Nulle eiro budžets.</span> Viens mērķis.
         </h2>
 

@@ -12,7 +12,7 @@ export default function Team() {
     <section id="team" className="py-24 md:py-32 px-6 bg-cream-light">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             Iepazīsti komandu
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1] mb-4">

@@ -8,7 +8,7 @@ export default function Budget() {
   return (
     <div className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
-        <p className="text-carmine font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-center">
+        <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3 text-center">
           {t.budget.overtitle}
         </p>
         <h2 className="text-3xl sm:text-4xl font-display font-black text-charcoal text-center mb-12">

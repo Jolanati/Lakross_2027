@@ -135,7 +135,7 @@ export default function Kilometer() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-4">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/70 mb-3">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
             Ceļš uz Spāniju · Nopērc kilometru
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-charcoal leading-[1.05]">

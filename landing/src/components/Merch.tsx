@@ -10,7 +10,7 @@ export default function Merch() {
     <section id="merch" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
         <div className="mb-12">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             03 · AI supervaroņi
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1]">

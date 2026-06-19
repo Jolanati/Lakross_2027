@@ -37,7 +37,7 @@ export default function Sponsors() {
     <section id="sponsors" className="min-h-screen py-24 md:py-32 px-6 bg-cream flex flex-col justify-center">
       <div className="max-w-5xl mx-auto w-full">
         <div className="mb-16">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             03 · Korporatīvais sponsorings
           </p>
           <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-semibold text-charcoal leading-[1.0] mb-6">

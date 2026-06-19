@@ -8,7 +8,7 @@ export default function Events() {
   return (
     <div className="py-24 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
-        <p className="text-carmine font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-center">
+        <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3 text-center">
           {t.events.overtitle}
         </p>
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-charcoal text-center mb-16">

@@ -58,7 +58,7 @@ export default function Campaigns() {
     <section id="campaigns" className="h-screen pt-14 pb-8 md:pt-16 md:pb-10 px-6 bg-cream-light flex flex-col justify-center overflow-hidden" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
       <div className="max-w-6xl mx-auto w-full">
         <div className="mb-6">
-          <p className="italic text-charcoal/70 text-base mb-3">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
             Kā tu vari palīdzēt
           </p>
           <h2 className="text-4xl sm:text-5xl font-display font-semibold text-charcoal leading-[1.0] mb-2">
