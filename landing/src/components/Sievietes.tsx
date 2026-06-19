@@ -42,23 +42,23 @@ export default function Sievietes() {
   return (
     <section id="sievietes" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream flex flex-col justify-center">
       <div className="max-w-5xl mx-auto w-full">
-        <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
+        <div className="mb-6">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
             02 · Sievietes atbalsta sievietes
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.05] mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-charcoal leading-[1.05] mb-4">
             Stipras sievietes biznesā atbalsta stipras sievietes sportā.
           </h2>
-          <p className="text-xl text-charcoal/80 max-w-2xl leading-relaxed">
+          <p className="text-lg text-charcoal/80 max-w-2xl leading-relaxed">
             Sieviešu vadīti uzņēmumi, mentoringa organizācijas un zīmoli iegūst publicitātes stāstu, LinkedIn redzamību un reālu dalību vēsturiskā brīdī - Latvijas pirmajā olimpiskajā kvalifikācijā lakrosā.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-3 gap-4 mb-6">
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`p-10 flex flex-col ${
+              className={`p-6 flex flex-col ${
                 tier.highlighted
                   ? 'bg-charcoal text-cream'
                   : 'bg-cream-light border border-charcoal/10'
@@ -69,12 +69,12 @@ export default function Sievietes() {
               }`}>
                 {tier.name}
               </span>
-              <span className={`text-5xl font-display font-semibold mb-8 ${
+              <span className={`text-4xl font-display font-semibold mb-4 ${
                 tier.highlighted ? 'text-cream' : 'text-charcoal'
               }`}>
                 {tier.price}
               </span>
-              <ul className={`space-y-3 mb-10 flex-grow ${
+              <ul className={`space-y-2 mb-5 flex-grow ${
                 tier.highlighted ? 'text-cream/80' : 'text-charcoal/80'
               }`}>
                 {tier.perks.map((perk, i) => (
