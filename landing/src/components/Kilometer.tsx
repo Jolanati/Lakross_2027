@@ -131,25 +131,20 @@ export default function Kilometer() {
   ].filter((e) => e.value >= 1)
 
   return (
-    <section id="kilometri" className="py-24 md:py-32 px-6 bg-cream">
+    <section id="kilometri" className="pt-14 pb-6 md:pt-16 md:pb-8 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="mb-10">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+        <div className="mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-3">
             Ceļš uz Spāniju · Nopērc kilometru
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.05]">
-            Velc autobusu. Aizved
-            <br className="hidden sm:block" /> izlasi līdz startam.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-charcoal leading-[1.05]">
+            Velc autobusu. Aizved izlasi līdz startam.
           </h2>
-          <p className="text-lg text-charcoal/70 max-w-2xl mt-6 leading-relaxed">
-            No Rīgas līdz Eiropas čempionātam ir aptuveni 3&nbsp;000 km. Pavelc autobusu pa ceļu vai pieskaries
-            pilsētai — un redzi tieši, cik tālu tavs ieguldījums aizved komandu.
-          </p>
         </div>
 
         {/* Funded-so-far stats */}
-        <div className="flex flex-wrap items-end gap-x-8 gap-y-3 mb-6">
+        <div className="flex flex-wrap items-end gap-x-8 gap-y-2 mb-3">
           <div>
             <span className="font-display text-4xl font-semibold text-carmine">{kmFunded.toLocaleString()}</span>
             <span className="text-charcoal/50 text-sm ml-2">/ {TOTAL_KM.toLocaleString()} km nofinansēti</span>
@@ -162,7 +157,7 @@ export default function Kilometer() {
         </div>
 
         {/* ── Interactive road ─────────────────────────────── */}
-        <div className="relative mb-12 select-none" style={{ touchAction: 'none' }}>
+        <div className="relative mb-4 select-none" style={{ touchAction: 'none' }}>
           {reached && (
             <div className="confetti pointer-events-none absolute inset-0 overflow-hidden z-20">
               {Array.from({ length: 18 }).map((_, i) => (
@@ -304,18 +299,18 @@ export default function Kilometer() {
         </div>
 
         {/* ── Chooser + impact ──────────────────────────────── */}
-        <div className="grid md:grid-cols-[1.1fr_1fr] gap-10 items-start bg-charcoal text-cream p-8 sm:p-10 rounded-sm">
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-6 items-start bg-charcoal text-cream p-5 sm:p-7 rounded-sm">
           {/* chooser */}
           <div>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-6">Tavs posms</p>
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-3">Tavs posms</p>
 
             <div className="flex items-baseline gap-3 mb-1">
-              <span className="font-display text-6xl sm:text-7xl font-semibold text-cream leading-none tabular-nums">
+              <span className="font-display text-5xl sm:text-6xl font-semibold text-cream leading-none tabular-nums">
                 {selectedKm}
               </span>
-              <span className="font-display text-2xl text-cream/60">km</span>
+              <span className="font-display text-xl text-cream/60">km</span>
             </div>
-            <p className="font-body text-gold text-lg font-medium mb-7 tabular-nums">= {selectedEur.toLocaleString()} €</p>
+            <p className="font-body text-gold text-base font-medium mb-4 tabular-nums">= {selectedEur.toLocaleString()} €</p>
 
             <input
               type="range"
@@ -324,7 +319,7 @@ export default function Kilometer() {
               value={selectedKm}
               onChange={(e) => setSelectedKm(Number(e.target.value))}
               aria-label="Izvēlies kilometru skaitu"
-              className="km-slider w-full mb-6"
+              className="km-slider w-full mb-4"
             />
 
             <div className="flex flex-wrap gap-2">
@@ -355,9 +350,9 @@ export default function Kilometer() {
 
           {/* impact */}
           <div className="md:border-l md:border-cream/15 md:pl-10">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-5">Ko tas izdara</p>
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-cream/50 mb-3">Ko tas izdara</p>
 
-            <p className="text-cream/80 leading-relaxed mb-6">
+            <p className="text-cream/80 leading-relaxed mb-3">
               {reached ? (
                 <>
                   Tu aizved izlasi <span className="text-gold font-medium">līdz pašam čempionātam Spānijā</span> 🎉
@@ -371,9 +366,9 @@ export default function Kilometer() {
             </p>
 
             {reached ? (
-              <div className="mb-8 border border-gold/40 bg-gold/10 p-5 rounded-sm">
-                <p className="text-2xl mb-2">🎉</p>
-                <p className="text-cream font-display text-xl font-semibold leading-snug mb-1">
+              <div className="mb-4 border border-gold/40 bg-gold/10 p-4 rounded-sm">
+                <p className="text-2xl mb-1">🎉</p>
+                <p className="text-cream font-display text-lg font-semibold leading-snug mb-1">
                   Fantastiski — ar šo izlases ceļš uz Spāniju ir nosegts pilnībā!
                 </p>
                 <p className="text-cream/55 text-sm">
@@ -381,9 +376,9 @@ export default function Kilometer() {
                 </p>
               </div>
             ) : bigSupport ? (
-              <div className="mb-8 border border-gold/40 bg-gold/10 p-5 rounded-sm">
-                <p className="text-2xl mb-2">🙌</p>
-                <p className="text-cream font-display text-xl font-semibold leading-snug mb-1">
+              <div className="mb-4 border border-gold/40 bg-gold/10 p-4 rounded-sm">
+                <p className="text-2xl mb-1">🙌</p>
+                <p className="text-cream font-display text-lg font-semibold leading-snug mb-1">
                   Paldies par tik dāsnu atbalstu!
                 </p>
                 <p className="text-cream/55 text-sm">
@@ -393,10 +388,10 @@ export default function Kilometer() {
               </div>
             ) : (
               <>
-                <p className="text-cream/45 text-sm mb-3">
+                <p className="text-cream/45 text-sm mb-2">
                   Tie ir {selectedEur.toLocaleString()} € — pietiek, piemēram:
                 </p>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 mb-4">
                   {equivalents.map((e) => (
                     <li key={e.label} className="flex items-center gap-3">
                       <span className="text-lg w-6 text-center">{e.icon}</span>
