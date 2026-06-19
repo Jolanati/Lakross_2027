@@ -264,15 +264,32 @@ export const en = {
   kpis: {
     overtitle: 'METRICS & KPIs',
     title: 'Leading and Lagging Indicators',
-    metrics: [
-      { metric: 'Total funds', target: '€15,000', current: '€4,015' },
-      { metric: 'Private donors in "100 Club"', target: '100 people (avg. €50)', current: 'Active' },
-      { metric: 'B2B & Sponsors', target: '1–2 Title + 15 "Women" businesses', current: 'Outreach started' },
-      { metric: 'PR & Media', target: '5 regional publications, 2 TV shows, 2 podcasts', current: '—' },
-      { metric: 'Page conversion rate', target: '> 4%', current: 'Baseline' },
-      { metric: 'Outreach emails sent', target: 'Min. 10 per week', current: '—' },
-    ],
+    explanation: 'Lagging = strategic outcome measured after the fact. Leading = daily activity we directly control.',
     weeklyRate: '~€535 per week needed to reach the goal',
+    colLagging: 'Target — Lagging Indicator',
+    colLeading: 'Daily Activity — Leading Indicator',
+    rows: [
+      {
+        area: 'Total funds',
+        lagging: '€15,000 in bank/Zeffy account',
+        leading: 'Number of content units with UTM links; min. 10 outreach emails per week',
+      },
+      {
+        area: 'Private donors',
+        lagging: '100 people in "Supporters Club" (avg. €50)',
+        leading: 'Number of direct DM invitations to friends; page conversion rate (target: >4%)',
+      },
+      {
+        area: 'B2B & Sponsors',
+        lagging: '1–2 Title sponsors + 15 "Women Support Women" businesses',
+        leading: 'Number of LinkedIn profiles reached; number of calls and meetings with marketing managers',
+      },
+      {
+        area: 'PR & Media',
+        lagging: '5 regional publications, 2 morning TV shows, 2 sports podcasts',
+        leading: 'Number of personalised press releases sent to journalists with "Buy a Kilometer" call to action',
+      },
+    ],
   },
 
   donate: {

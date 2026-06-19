@@ -276,15 +276,32 @@ export const lv = {
   kpis: {
     overtitle: 'METRIKAS UN KPI',
     title: 'Vadošie un Atpaliekošie rādītāji',
-    metrics: [
-      { metric: 'Līdzekļi kopā', target: '15 000 EUR', current: '4 015 EUR' },
-      { metric: 'Privātie ziedotāji "100 klubā"', target: '100 cilvēki (vid. 50 EUR)', current: 'Aktīvs' },
-      { metric: 'B2B un Sponsori', target: '1–2 Ģenerāl + 15 "Sievietes" uzņēmumi', current: 'Uzruna sākta' },
-      { metric: 'PR un Mediji', target: '5 reģionālās publikācijas, 2 TV šovi, 2 podkāsti', current: '—' },
-      { metric: 'Lapas konversija', target: '> 4%', current: 'Bāzes mērījums' },
-      { metric: 'Izsūtītie uzrunas e-pasti', target: 'Min. 10 nedēļā', current: '—' },
-    ],
+    explanation: 'Atpaliekošais = stratēģiskais mērķis, ko mēra pēc fakta. Vadošais = ikdienas darbība, ko kontrolējam tieši.',
     weeklyRate: '~535 EUR nedēļā nepieciešami mērķa sasniegšanai',
+    colLagging: 'Mērķis — Atpaliekošais rādītājs',
+    colLeading: 'Ikdienas aktivitāte — Vadošais rādītājs',
+    rows: [
+      {
+        area: 'Līdzekļi kopā',
+        lagging: '15 000 EUR bankas/Zeffy kontā',
+        leading: 'Sagatavoto satura vienību skaits ar UTM saitēm; min. 10 uzrunas e-pasti nedēļā',
+      },
+      {
+        area: 'Privātie ziedotāji',
+        lagging: '100 cilvēki "Atbalstītāju klubā" (vid. 50 EUR)',
+        leading: 'Tiešo DM aicinājumu skaits draugiem un eks-spēlētājiem; lapas konversija (mērķis: >4%)',
+      },
+      {
+        area: 'B2B un Sponsori',
+        lagging: '1–2 Ģenerālsponsori + 15 "Sievietes atbalsta sievietes" uzņēmumi',
+        leading: 'Uzrunāto LinkedIn profilu skaits; sazvanu un tikšanos skaits ar mārketinga vadītājiem',
+      },
+      {
+        area: 'PR un Mediji',
+        lagging: '5 reģionālās publikācijas, 2 TV šovi, 2 podkāsti',
+        leading: 'Izsūtīto personalizēto preses relīžu skaits žurnālistiem ar "Nopērc kilometru" aicinājumu',
+      },
+    ],
   },
 
   // -- Donate (ACTION) --
