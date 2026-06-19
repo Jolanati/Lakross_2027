@@ -1,16 +1,19 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Diaspora from '@/components/Diaspora'
-import Link from 'next/link'
 
 export default function DiasporaPage() {
+  const router = useRouter()
   return (
     <>
       <Navbar />
       <div className="pt-11">
         <div className="px-6 py-4 bg-cream border-b border-charcoal/10">
-          <Link href="/" className="text-sm font-body text-charcoal/50 hover:text-charcoal transition-colors">
-            ← Atpakaļ uz sākumu
-          </Link>
+          <button onClick={() => router.back()} className="text-sm font-body text-charcoal/50 hover:text-charcoal transition-colors">
+            ← Atpakaļ
+          </button>
         </div>
         <Diaspora />
       </div>

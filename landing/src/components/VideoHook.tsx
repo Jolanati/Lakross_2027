@@ -8,7 +8,7 @@ export default function VideoHook() {
   }
 
   return (
-    <section id="videohook" className="relative h-[60vh] min-h-[440px] flex items-end overflow-hidden">
+    <section id="videohook" className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
       {/* LVToday video — game footage */}
       <video
         autoPlay
@@ -28,10 +28,10 @@ export default function VideoHook() {
         <p className="font-body text-[10px] font-bold tracking-[0.3em] uppercase text-cream/60 mb-5">
           Latvijas Sieviešu Lakrosa Izlase
         </p>
-        <h1 className="text-6xl sm:text-7xl md:text-8xl font-display font-black text-cream leading-[0.88] tracking-tight mb-5 max-w-xs sm:max-w-sm">
-          14 gadus vienas.
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-black text-cream leading-[0.9] tracking-tight mb-5 max-w-xl">
+          14 gadus pašu spēkiem — tagad kopā!
         </h1>
-        <p className="text-lg text-cream/80 max-w-sm mb-10 leading-relaxed font-body">
+        <p className="text-base text-cream/80 max-w-sm mb-10 leading-relaxed font-body">
           Novembrī, ar atlasi Spānijā sākas Latvijas
           ceļš uz Olimpiādi. Palīdzi mums tur nokļūt.
         </p>

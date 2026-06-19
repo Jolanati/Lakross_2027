@@ -17,7 +17,7 @@ export default function Hero() {
   const handleOpen = () => {
     setOpened(true)
     setTimeout(() => {
-      document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })
+      document.getElementById('videohook')?.scrollIntoView({ behavior: 'smooth' })
     }, 800)
   }
 
