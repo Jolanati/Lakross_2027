@@ -15,10 +15,12 @@ import Timeline from '@/components/Timeline'
 import Risks from '@/components/Risks'
 import Footer from '@/components/Footer'
 import SectionWrapper from '@/components/SectionWrapper'
+import SnapController from '@/components/SnapController'
 
 export default function Home() {
   return (
     <>
+      <SnapController />
       <Navbar />
 
       <Hero />

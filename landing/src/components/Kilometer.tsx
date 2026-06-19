@@ -261,7 +261,6 @@ export default function Kilometer() {
                       className="font-display"
                       style={{ fontSize: 16, fontWeight: 600, fill: isReached ? '#1A1A1A' : 'rgba(26,26,26,0.55)' }}
                     >
-                      {last ? '🇪🇸 ' : ''}
                       {stop.city}
                     </text>
                     <text
@@ -343,7 +342,8 @@ export default function Kilometer() {
                   selectedKm === remainingKm ? 'bg-gold text-charcoal border-gold' : 'bg-transparent text-gold border-gold/40 hover:border-gold'
                 }`}
               >
-                🇪🇸 Līdz Spānijai
+                <img src="/flags/es.svg" width={16} height={11} className="inline rounded-sm mr-1.5 align-middle" alt="ES" />
+                Līdz Spānijai
               </button>
             </div>
           </div>

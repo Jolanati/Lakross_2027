@@ -60,7 +60,12 @@ export default function Navbar() {
               onClick={() => setLocale(locale === 'lv' ? 'en' : 'lv')}
               className="text-sm px-1.5 py-1 hover:bg-charcoal/5 rounded-sm transition-colors"
             >
-              {locale === 'lv' ? '🇬🇧' : '🇱🇻'}
+              <img
+                src={locale === 'lv' ? '/flags/gb.svg' : '/flags/lv.svg'}
+                width={20} height={13}
+                className="rounded-sm inline-block"
+                alt={locale === 'lv' ? 'EN' : 'LV'}
+              />
             </button>
 
             {/* CTA */}
