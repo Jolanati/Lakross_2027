@@ -26,7 +26,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ['Libre Baskerville', 'Georgia', 'serif'],
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
         reading: ['Libre Baskerville', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
