@@ -2,25 +2,24 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+// Resets on full page reload → hero always plays on fresh visits.
+// Survives client-side navigation → back button from sub-pages skips the gateway.
+let gatewayPassed = false
+
 export default function Hero() {
-  const [opened, setOpened] = useState(false)
+  const [opened, setOpened] = useState(gatewayPassed)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    // Play video
     videoRef.current?.play().catch(() => {})
-
-    // Return visit — skip gateway, enable snap immediately
-    if (typeof window !== 'undefined' && sessionStorage.getItem('heroOpened') === '1') {
-      setOpened(true)
+    if (gatewayPassed) {
       document.documentElement.classList.add('snap-ready')
     }
   }, [])
 
   function handleOpen() {
-    sessionStorage.setItem('heroOpened', '1')
+    gatewayPassed = true
     setOpened(true)
-    // Enable scroll-snap after the 1 s clip-path animation finishes
     setTimeout(() => {
       document.documentElement.classList.add('snap-ready')
     }, 1100)
@@ -28,7 +27,7 @@ export default function Hero() {
 
   return (
     <>
-      {/* Full-screen gateway — fixed overlay, z-50 */}
+      {/* Full-screen gateway — fixed overlay z-50 */}
       <div
         id="hero"
         style={{
@@ -52,7 +51,6 @@ export default function Hero() {
         </video>
 
         <div className="relative z-10 flex flex-col items-center text-center px-6">
-          {/* Olympic Rings */}
           <div className="mb-10">
             <svg width="240" height="110" viewBox="0 0 500 230" fill="none">
               <circle cx="100" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
@@ -73,7 +71,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Spacer that collapses when the gateway closes */}
+      {/* Spacer collapses when gateway closes */}
       <div
         style={{ transition: 'height 1s cubic-bezier(0.76, 0, 0.24, 1)' }}
         className={opened ? 'h-0' : 'h-screen'}
