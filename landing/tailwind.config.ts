@@ -8,7 +8,7 @@ const config: Config = {
     extend: {
       colors: {
         carmine: {
-          DEFAULT: '#9B1B30',
+          DEFAULT: '#9D2235',
           dark: '#6B0F20',
           light: '#C42847',
         },
@@ -20,10 +20,13 @@ const config: Config = {
           DEFAULT: '#C9A84C',
           light: '#E0C970',
         },
-        cream: '#FAFAF7',
+        cream: {
+          DEFAULT: '#F6F2EA',
+          light: '#FAF8F4',
+        },
       },
       fontFamily: {
-        display: ['Inter Tight', 'system-ui', 'sans-serif'],
+        display: ['Cormorant Garamond', 'Georgia', 'serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
       },
     },

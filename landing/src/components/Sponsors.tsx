@@ -5,66 +5,93 @@ import { siteConfig } from '@/content/config'
 
 export default function Sponsors() {
   const { t } = useSite()
-  const tiers = ['carmine', 'gold', 'gray'] as const
-  const tierBorders = {
-    carmine: 'border-carmine/30 hover:border-carmine',
-    gold: 'border-gold/30 hover:border-gold',
-    gray: 'border-gray-200 hover:border-gray-400',
-  }
-  const tierAccents = {
-    carmine: 'text-carmine',
-    gold: 'text-gold',
-    gray: 'text-gray-500',
-  }
+
+  const tiers = [
+    {
+      name: 'Atbalstītājs',
+      price: '100 €',
+      perks: 'Pateicības grafika publicēšanai LinkedIn un sociālajos tīklos, uzņēmuma logo atbalstītāju sarakstā.',
+      cta: 'Kļūt par atbalstītāju',
+    },
+    {
+      name: 'Partneris',
+      price: '250 €',
+      perks: 'Iepriekšējais + ielūgums uz Atklāto treniņu dienu uzņēmuma komandai un izcelta atrašanās uz atbalstītāju sienas.',
+      cta: 'Kļūt par partneri',
+      highlighted: true,
+    },
+    {
+      name: 'Mecenāts',
+      price: '500 €',
+      perks: 'Iepriekšējais + logo redzamība kampaņas materiālos un personīga komandas pateicība pirms čempionāta Spānijā.',
+      cta: 'Kļūt par mecenātu',
+    },
+  ]
 
   return (
-    <div id="sponsors" className="py-24 px-4 bg-cream">
+    <section id="sponsors" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
-        <p className="text-carmine font-display font-semibold text-sm tracking-[0.2em] uppercase mb-3 text-center">
-          {t.sponsors.overtitle}
-        </p>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-charcoal text-center mb-4">
-          {t.sponsors.title}
-        </h2>
-        <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
-          {t.sponsors.subtitle}
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {t.sponsors.packages.map((pkg, i) => {
-            const tier = tiers[i] || 'gray'
-            return (
-              <div key={i} className={`bg-white rounded-2xl border-2 ${tierBorders[tier]} p-6 transition-colors`}>
-                <h3 className={`font-display font-bold text-lg mb-1 ${tierAccents[tier]}`}>{pkg.name}</h3>
-                <p className="text-2xl font-display font-black text-charcoal mb-4">{pkg.price}</p>
-                <ul className="space-y-2">
-                  {pkg.perks.map((perk, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
-                      <span className={tierAccents[tier]}>✓</span>
-                      <span>{perk}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          })}
-        </div>
-
-        <div className="text-center space-y-3">
-          <a
-            href={siteConfig.social.website}
-            className="inline-block px-8 py-3 bg-charcoal hover:bg-charcoal-deep text-white font-display font-semibold
-                       rounded-lg transition-colors"
-          >
-            {t.sponsors.cta}
-          </a>
-          <p>
-            <a href={`mailto:info@lacrosse.lv`} className="text-sm text-carmine hover:underline">
-              {t.sponsors.contactCta}
-            </a>
+        <div className="mb-12">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+            02 · Sievietes atbalsta sievietes
+          </p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1] mb-4">
+            Korporatīvais atbalsts.
+          </h2>
+          <p className="text-lg text-charcoal/60 max-w-2xl leading-relaxed">
+            Spēcīgas sievietes biznesā iedvesmo spēcīgas sievietes sportā. Standartizēti, uzņēmumiem viegli norakstāmi atbalsta līmeņi.
           </p>
         </div>
+
+        {/* 3-tier cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {tiers.map((tier) => (
+            <div
+              key={tier.name}
+              className={`p-8 flex flex-col ${
+                tier.highlighted
+                  ? 'bg-charcoal text-cream'
+                  : 'bg-white border border-charcoal/10'
+              }`}
+            >
+              <span className={`text-xs font-body font-medium tracking-[0.15em] uppercase mb-3 ${
+                tier.highlighted ? 'text-cream/60' : 'text-charcoal/40'
+              }`}>
+                {tier.name}
+              </span>
+              <span className={`text-4xl font-display font-semibold mb-6 ${
+                tier.highlighted ? 'text-cream' : 'text-charcoal'
+              }`}>
+                {tier.price}
+              </span>
+              <p className={`text-sm leading-relaxed mb-8 flex-grow ${
+                tier.highlighted ? 'text-cream/70' : 'text-charcoal/60'
+              }`}>
+                {tier.perks}
+              </p>
+              <a
+                href={siteConfig.donate.zeffy}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-block text-center px-6 py-3 font-body text-sm font-medium transition-colors ${
+                  tier.highlighted
+                    ? 'bg-cream text-charcoal hover:bg-white'
+                    : 'bg-charcoal text-cream hover:bg-charcoal/90'
+                }`}
+              >
+                {tier.cta}
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-sm text-charcoal/50">
+          Meklē ģenerālsponsora paketi (4 000–6 000 €)?{' '}
+          <a href="mailto:info@llf.lv" className="text-carmine hover:underline">
+            Sazinies ar mums →
+          </a>
+        </p>
       </div>
-    </div>
+    </section>
   )
 }

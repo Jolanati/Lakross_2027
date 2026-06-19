@@ -1,46 +1,76 @@
 'use client'
 
 import { useSite } from '@/context/SiteContext'
+import { siteConfig } from '@/content/config'
 
 export default function Campaigns() {
   const { t } = useSite()
 
+  const cards = [
+    {
+      num: '01',
+      title: 'Esi viens no 100',
+      description: 'Pievienojies 100 atbalstītāju klubam. 100 cilvēki × 50 € nosedz trešdaļu izlases budžeta. Biedri nonāk komandas Goda sienā.',
+      price: '50 €',
+      cta: 'Kļūsti par biedru →',
+      href: '#klubs',
+    },
+    {
+      num: '02',
+      title: 'Korporatīvais atbalsts',
+      description: '"Sievietes atbalsta sievietes." Zīmoli, kas vēlas asociēties ar spēcīgām sievietēm sportā — ar CSR vērtību un redzamību.',
+      price: '100–500 €',
+      cta: 'Uzņēmumiem →',
+      href: '#sponsors',
+    },
+    {
+      num: '03',
+      title: 'Esi mūsu supervaronis',
+      description: 'Iesūti savu foto, un mūsu AI iestrādā tavu seju episkā supervaroņa kreklā ar lakrosa nūju rokās. Unikāls krekls — tiešs atbalsts.',
+      price: '50 €',
+      cta: 'Kļūsti par varoni →',
+      href: '#merch',
+    },
+  ]
+
   return (
-    <div id="campaigns" className="relative py-32 px-4 bg-charcoal-deep overflow-hidden">
-      {/* Background accent */}
-      <div className="bg-text bottom-0 left-[-5%] text-white/[0.02]">GOAL</div>
-      <div className="absolute top-0 right-0 w-1/2 h-[3px] bg-carmine/40" />
+    <section id="campaigns" className="py-24 md:py-32 px-6 bg-cream-light">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-12">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+            Citi veidi, kā mūs atbalstīt
+          </p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.1] mb-4">
+            Ne tikai kilometri.
+          </h2>
+          <p className="text-lg text-charcoal/60 max-w-xl">
+            Izvēlies sev tuvāko ceļu — katrs ir solis tuvāk Spānijai.
+          </p>
+        </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        <p className="text-carmine-light text-[10px] font-bold tracking-[0.4em] uppercase mb-4">
-          {t.campaigns.overtitle}
-        </p>
-        <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-black text-white leading-[0.85] tracking-tight mb-4">
-          {t.campaigns.title}
-        </h2>
-        <p className="text-gray-500 max-w-xl mb-20 text-lg">
-          {t.campaigns.subtitle}
-        </p>
-
-        {/* Campaign grid — asymmetric, editorial */}
-        <div className="grid md:grid-cols-12 gap-px bg-white/5">
-          {t.campaigns.items.map((item, i) => {
-            // Varying column spans for broken grid feel (5 items)
-            const spans = ['md:col-span-7', 'md:col-span-5', 'md:col-span-4', 'md:col-span-4', 'md:col-span-4']
-            return (
-              <div key={i} className={`${spans[i]} bg-charcoal-deep p-8 md:p-10 border-b border-white/5 group hover:bg-white/[0.03] transition-colors`}>
-                <div className="flex items-start justify-between mb-6">
-                  <span className="text-5xl font-display font-black text-white/10 leading-none">{item.icon}</span>
-                  <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-carmine-light">{item.percent}</span>
-                </div>
-                <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-3 group-hover:text-carmine-light transition-colors">{item.title}</h3>
-                <p className="text-sm text-gray-500 mb-6 leading-relaxed max-w-sm">{item.description}</p>
-                <span className="text-3xl font-display font-black text-white">{item.amount}</span>
+        {/* 3 campaign cards */}
+        <div className="grid md:grid-cols-3 gap-px bg-charcoal/10">
+          {cards.map((card) => (
+            <a
+              key={card.num}
+              href={card.href}
+              className="bg-cream p-8 md:p-10 flex flex-col group hover:bg-white transition-colors"
+            >
+              <span className="font-body text-xs font-bold tracking-[0.2em] text-carmine mb-4">{card.num}</span>
+              <h3 className="text-2xl md:text-3xl font-display font-semibold text-charcoal mb-4 group-hover:text-carmine transition-colors">
+                {card.title}
+              </h3>
+              <p className="text-sm text-charcoal/60 leading-relaxed mb-8 flex-grow">
+                {card.description}
+              </p>
+              <div className="flex items-center justify-between mt-auto pt-6 border-t border-charcoal/10">
+                <span className="text-2xl font-display font-semibold text-charcoal">{card.price}</span>
+                <span className="text-sm font-body font-medium text-carmine">{card.cta}</span>
               </div>
-            )
-          })}
+            </a>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
