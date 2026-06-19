@@ -135,7 +135,7 @@ export default function Kilometer() {
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-4">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-3">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/70 mb-3">
             Ceļš uz Spāniju · Nopērc kilometru
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-charcoal leading-[1.05]">
@@ -147,12 +147,12 @@ export default function Kilometer() {
         <div className="flex flex-wrap items-end gap-x-8 gap-y-2 mb-3">
           <div>
             <span className="font-display text-4xl font-semibold text-carmine">{kmFunded.toLocaleString()}</span>
-            <span className="text-charcoal/50 text-sm ml-2">/ {TOTAL_KM.toLocaleString()} km nofinansēti</span>
+            <span className="text-charcoal/70 text-sm ml-2">/ {TOTAL_KM.toLocaleString()} km nofinansēti</span>
           </div>
-          <div className="text-charcoal/30">·</div>
+          <div className="text-charcoal/50">·</div>
           <div>
             <span className="font-display text-4xl font-semibold text-charcoal">{raisedEur.toLocaleString()}&nbsp;€</span>
-            <span className="text-charcoal/50 text-sm ml-2">savākti līdz šim</span>
+            <span className="text-charcoal/70 text-sm ml-2">savākti līdz šim</span>
           </div>
         </div>
 
@@ -259,7 +259,7 @@ export default function Kilometer() {
                       y={pt.y - 16}
                       textAnchor="middle"
                       className="font-display"
-                      style={{ fontSize: 16, fontWeight: 600, fill: isReached ? '#1A1A1A' : 'rgba(26,26,26,0.4)' }}
+                      style={{ fontSize: 16, fontWeight: 600, fill: isReached ? '#1A1A1A' : 'rgba(26,26,26,0.55)' }}
                     >
                       {last ? '🇪🇸 ' : ''}
                       {stop.city}
@@ -268,7 +268,7 @@ export default function Kilometer() {
                       x={pt.x}
                       y={pt.y + 26}
                       textAnchor="middle"
-                      style={{ fontSize: 10, letterSpacing: 1, fill: 'rgba(26,26,26,0.35)', textTransform: 'uppercase' }}
+                      style={{ fontSize: 10, letterSpacing: 1, fill: 'rgba(26,26,26,0.55)', textTransform: 'uppercase' }}
                     >
                       {stop.km.toLocaleString()} km
                     </text>
@@ -293,7 +293,7 @@ export default function Kilometer() {
             )}
           </svg>
 
-          <p className="text-center text-xs text-charcoal/40 uppercase tracking-[0.2em] mt-1">
+          <p className="text-center text-xs text-charcoal/60 uppercase tracking-[0.2em] mt-1">
             ↤ Velc autobusu vai pieskaries pilsētai ↦
           </p>
         </div>
