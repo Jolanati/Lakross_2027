@@ -15,10 +15,6 @@ export default function KPIs() {
         <h2 className="text-3xl sm:text-4xl font-display font-black text-charcoal text-center mb-3">
           {kpis.title}
         </h2>
-        <p className="text-charcoal/50 text-center text-sm max-w-xl mx-auto mb-10 leading-relaxed">
-          {kpis.explanation}
-        </p>
-
         {/* Column legend */}
         <div className="hidden md:grid md:grid-cols-[1fr_1.6fr_1.6fr] gap-px mb-2 px-1">
           <div />
@@ -57,8 +53,8 @@ export default function KPIs() {
                 {/* Lagging — outcome */}
                 <div className="p-5 border-b md:border-b-0 md:border-r border-gray-100">
                   <div className="flex items-center gap-1.5 mb-2 md:hidden">
-                    <span className="w-2 h-2 rounded-full bg-amber-400" />
-                    <span className="text-xs font-body text-charcoal/40 uppercase tracking-[0.1em]">Mērķis</span>
+                    <span className="w-2 h-2 rounded-full bg-amber-400 flex-shrink-0" />
+                    <span className="text-xs font-body text-charcoal/40 uppercase tracking-[0.1em]">Stratēģiskais Mērķis</span>
                   </div>
                   <p className="text-sm font-semibold text-charcoal leading-snug">{row.lagging}</p>
                 </div>
@@ -66,8 +62,8 @@ export default function KPIs() {
                 {/* Leading — activity */}
                 <div className="p-5">
                   <div className="flex items-center gap-1.5 mb-2 md:hidden">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                    <span className="text-xs font-body text-charcoal/40 uppercase tracking-[0.1em]">Aktivitāte</span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" />
+                    <span className="text-xs font-body text-charcoal/40 uppercase tracking-[0.1em]">Ikdienas KPI</span>
                   </div>
                   <p className="text-sm text-charcoal/70 leading-relaxed">{row.leading}</p>
                 </div>
