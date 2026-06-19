@@ -9,7 +9,7 @@ export default function Hero() {
   useEffect(() => {
     const video = videoRef.current
     if (video) {
-      video.currentTime = 5
+      video.currentTime = 20
       video.play()
     }
   }, [])
