@@ -6,7 +6,7 @@ export default function PassTheStick() {
   const { t } = useSite()
 
   return (
-    <div className="relative py-32 px-4 bg-charcoal-deep overflow-hidden">
+    <div className="pt-8 pb-12 md:pt-10 md:pb-16 px-4 bg-charcoal-deep overflow-hidden">
       {/* Dramatic background */}
       <div className="bg-text top-1/2 -translate-y-1/2 left-[-2%] text-white/[0.02]">PASS</div>
       <div className="absolute top-0 left-1/4 w-[2px] h-full bg-carmine/10" />

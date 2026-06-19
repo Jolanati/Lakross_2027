@@ -11,9 +11,9 @@ export default function Club100() {
   const { t } = useSite()
 
   return (
-    <section id="klubs" className="py-24 md:py-32 px-6 bg-cream">
+    <section id="klubs" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-12">
+        <div className="mb-6">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             01 · Atbalstītāju klubs
           </p>
@@ -47,7 +47,7 @@ export default function Club100() {
         </div>
 
         <p className="text-sm text-charcoal/70 mb-8">
-          {TOTAL_SLOTS - FILLED_SLOTS} vietas vēl brīvas — esi viens no pirmajiem.
+          {TOTAL_SLOTS - FILLED_SLOTS} vietas vēl brīvas - esi viens no pirmajiem.
         </p>
 
         {/* CTA */}

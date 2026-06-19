@@ -7,9 +7,9 @@ export default function Merch() {
   const { t } = useSite()
 
   return (
-    <section id="merch" className="py-24 md:py-32 px-6 bg-cream">
+    <section id="merch" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-12">
+        <div className="mb-6">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             03 · AI supervaroņi
           </p>
@@ -26,7 +26,7 @@ export default function Merch() {
             <span className="text-xs font-body text-carmine font-medium tracking-[0.15em] uppercase mb-3">Premium · personalizēts</span>
             <h3 className="text-3xl font-display font-semibold text-charcoal mb-4">Kļūsti par Varoni</h3>
             <p className="text-charcoal/80 text-sm leading-relaxed mb-8">
-              Iesūti savu fotogrāfiju, un mūsu AI dažu minūšu laikā iestrādā tavu seju episkā supervaroņa tēlā ar lakrosa nūju rokās. Unikāls, neatkārtojams krekls — un tiešs atbalsts izlasei.
+              Iesūti savu fotogrāfiju, un mūsu AI dažu minūšu laikā iestrādā tavu seju episkā supervaroņa tēlā ar lakrosa nūju rokās. Unikāls, neatkārtojams krekls - un tiešs atbalsts izlasei.
             </p>
             <div className="flex items-center gap-6">
               <span className="text-3xl font-display font-semibold text-charcoal">50 €</span>

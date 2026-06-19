@@ -6,12 +6,12 @@ const packages = [
   {
     name: 'Ģenerālsponsors "Lidojuma spārni"',
     price: '4 000–6 000 €',
-    description: 'Viena vai divu lielo zīmolu ekskluzīvā pakete — banka, IT, sports vai enerģētika.',
+    description: 'Viena vai divu lielo zīmolu ekskluzīvā pakete - banka, IT, sports vai enerģētika.',
     perks: [
       'Centrālā logo pozīcija uz Eiropas čempionāta spēļu formām Spānijā',
       '"Galvenā varoņa" loma visos mediju relīzēs un PR materiālos',
       'Integrācija AI atribūtikā, mājaslapā un visās kampaņu komunikācijās',
-      'Ielūgums uz Atklāto treniņu dienu ar foto/video saturu jūsu CSR kanāliem',
+      'Ielūgums uz Atklāto treniņu dienu ar foto/video saturu jūsu atklātajiem pasākumiem',
     ],
     cta: 'Sazināties par ģenerālsponsoringu',
     href: 'mailto:info@llf.lv',
@@ -34,9 +34,9 @@ const packages = [
 
 export default function Sponsors() {
   return (
-    <section id="sponsors" className="min-h-screen py-24 md:py-32 px-6 bg-cream flex flex-col justify-center">
+    <section id="sponsors" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream flex flex-col justify-center">
       <div className="max-w-5xl mx-auto w-full">
-        <div className="mb-16">
+        <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             03 · Korporatīvais sponsorings
           </p>
@@ -44,7 +44,7 @@ export default function Sponsors() {
             Kļūsti par stāsta dzinējspēku.
           </h2>
           <p className="text-xl text-charcoal/80 max-w-2xl leading-relaxed">
-            Mēs nepārdodam vietu uz formas — mēs piedāvājam dalību vēsturiskā brīdī. Latvijas pirmā olimpiskā kvalifikācija lakrosā ir stāsts, ko vēlaties stāstīt kopā ar mums.
+            Mēs nepārdodam vietu uz formas - mēs piedāvājam dalību vēsturiskā brīdī. Latvijas pirmā olimpiskā kvalifikācija lakrosā ir stāsts, ko vēlaties stāstīt kopā ar mums.
           </p>
         </div>
 

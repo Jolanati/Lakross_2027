@@ -22,9 +22,9 @@ const steps = [
 
 export default function Diaspora() {
   return (
-    <section id="diaspora" className="py-24 md:py-32 px-6 bg-cream">
+    <section id="diaspora" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream">
       <div className="max-w-4xl mx-auto">
-        <div className="mb-12">
+        <div className="mb-6">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             04 · Diasporas kampaņa
           </p>
@@ -39,7 +39,7 @@ export default function Diaspora() {
 
         <p className="text-lg text-charcoal/80 max-w-2xl mb-12 leading-relaxed">
           2026. gada novembrī Spānijā Latvija pirmo reizi vēsturē startēs Olimpiskās kvalifikācijas
-          turnīrā lakrosā. Šis brīdis pieder ne tikai mums — tas pieder ikvienam latvietim pasaulē.
+          turnīrā lakrosā. Šis brīdis pieder ne tikai mums - tas pieder ikvienam latvietim pasaulē.
         </p>
 
         {/* Who we're reaching */}
@@ -69,7 +69,7 @@ export default function Diaspora() {
               Latvijā un ES
             </p>
             <p className="text-sm text-charcoal/80 mb-6 leading-relaxed">
-              Zeffy — tiešie ziedojumi bez komisijas maksas. 100% nonāk pie komandas.
+              Zeffy - tiešie ziedojumi bez komisijas maksas. 100% nonāk pie komandas.
             </p>
             <a
               href={siteConfig.donate.zeffy}
@@ -85,7 +85,7 @@ export default function Diaspora() {
               ASV, Kanāda, citur
             </p>
             <p className="text-sm text-charcoal/80 mb-6 leading-relaxed">
-              PayPal — ātrākais veids ziedot no jebkuras pasaules vietas.
+              PayPal - ātrākais veids ziedot no jebkuras pasaules vietas.
             </p>
             <a
               href={siteConfig.donate.zeffy}

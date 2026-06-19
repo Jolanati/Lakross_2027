@@ -9,7 +9,7 @@ const tiers = [
     perks: [
       'Pateicības grafiks publicēšanai jūsu LinkedIn profilā',
       'Uzņēmuma nosaukums atbalstītāju sarakstā mājaslapā',
-      'CSR stāsta materiāls jūsu komunikācijai',
+      'publicitātes materiāls jūsu komunikācijai',
     ],
     cta: 'Kļūt par atbalstītāju',
   },
@@ -40,9 +40,9 @@ const tiers = [
 
 export default function Sievietes() {
   return (
-    <section id="sievietes" className="min-h-screen py-24 md:py-32 px-6 bg-cream flex flex-col justify-center">
+    <section id="sievietes" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream flex flex-col justify-center">
       <div className="max-w-5xl mx-auto w-full">
-        <div className="mb-16">
+        <div className="mb-8">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             02 · Sievietes atbalsta sievietes
           </p>
@@ -50,7 +50,7 @@ export default function Sievietes() {
             Stipras sievietes biznesā atbalsta stipras sievietes sportā.
           </h2>
           <p className="text-xl text-charcoal/80 max-w-2xl leading-relaxed">
-            Sieviešu vadīti uzņēmumi, mentoringa organizācijas un zīmoli iegūst CSR stāstu, LinkedIn redzamību un reālu dalību vēsturiskā brīdī — Latvijas pirmajā olimpiskajā kvalifikācijā lakrosā.
+            Sieviešu vadīti uzņēmumi, mentoringa organizācijas un zīmoli iegūst publicitātes stāstu, LinkedIn redzamību un reālu dalību vēsturiskā brīdī - Latvijas pirmajā olimpiskajā kvalifikācijā lakrosā.
           </p>
         </div>
 
