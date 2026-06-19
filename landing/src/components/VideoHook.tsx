@@ -25,13 +25,13 @@ export default function VideoHook() {
 
       {/* Content — anchored bottom-left, Nike style */}
       <div className="relative z-10 px-6 pb-10 md:pb-14 w-full max-w-5xl mx-auto">
-        <p className="font-body text-[10px] font-bold tracking-[0.3em] uppercase text-cream/60 mb-3">
+        <p className="font-display italic text-cream/60 text-sm mb-3">
           Latvijas Sieviešu Lakrosa Izlase
         </p>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-cream leading-[1.0] tracking-tight mb-3 max-w-2xl">
-          14 gadus pašu spēkiem — tagad kopā!
+          14 gadus pašu spēkiem — <span className="mark">tagad kopā!</span>
         </h1>
-        <p className="text-sm text-cream/80 max-w-md mb-6 leading-relaxed font-body">
+        <p className="font-display text-base text-cream/80 max-w-md mb-6 leading-relaxed">
           Novembrī, ar atlasi Spānijā sākas Latvijas ceļš uz Olimpiādi. Palīdzi mums tur nokļūt.
         </p>
         <div className="flex flex-wrap gap-3">

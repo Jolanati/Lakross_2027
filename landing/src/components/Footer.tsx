@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-cream leading-[1.2] mb-8">
             Četrpadsmit gadus pašas.{' '}
-            <em className="italic text-cream/70">Pēdējos kilometrus — kopā.</em>
+            <em className="italic"><span className="mark">Pēdējos kilometrus — kopā.</span></em>
           </h2>
           <p className="text-cream/60 text-lg mb-10 font-display italic">
             {t.footer.tagline}

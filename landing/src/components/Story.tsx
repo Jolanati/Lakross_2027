@@ -12,20 +12,20 @@ export default function Story() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Overtitle */}
-        <p className="text-carmine text-[10px] font-bold tracking-[0.3em] uppercase mb-3">
-          {t.story.overtitle}
+        <p className="font-display italic text-carmine text-sm tracking-wide mb-3">
+          {t.story.overtitle.toLowerCase().replace('mūsu stāsts', 'Mūsu stāsts')}
         </p>
 
         {/* Title — large, impactful */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-black text-charcoal leading-[0.9] tracking-tight mb-8 max-w-4xl">
-          {t.story.title}
+          14 gadu ceļš. <span className="mark">Nulle eiro budžets.</span> Viens mērķis.
         </h2>
 
         {/* Two-column layout */}
         <div className="grid md:grid-cols-2 gap-12 mb-10">
-          <div className="space-y-5">
+          <div className="space-y-4">
             {t.story.paragraphs.map((p, i) => (
-              <p key={i} className="text-xl text-gray-600 leading-relaxed">{p}</p>
+              <p key={i} className="font-display text-lg text-charcoal/70 leading-relaxed">{p}</p>
             ))}
           </div>
           {/* Visual accent column */}

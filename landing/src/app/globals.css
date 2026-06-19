@@ -49,6 +49,12 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* Dark-red highlighter — applied via <span className="mark"> */
+  .mark {
+    background: linear-gradient(transparent 52%, rgba(157, 34, 53, 0.22) 52%);
+    padding: 0 0.06em;
+  }
+
   /* Scroll-triggered reveal */
   .scroll-reveal {
     opacity: 0;
