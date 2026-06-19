@@ -7,39 +7,39 @@ export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
-    const video = videoRef.current
-    if (video) video.play()
-    // Return visit: skip gateway and re-enable snap immediately
-    if (sessionStorage.getItem('heroOpened') === '1') {
+    // Play video
+    videoRef.current?.play().catch(() => {})
+
+    // Return visit — skip gateway, enable snap immediately
+    if (typeof window !== 'undefined' && sessionStorage.getItem('heroOpened') === '1') {
       setOpened(true)
       document.documentElement.classList.add('snap-ready')
     }
   }, [])
 
-  const handleOpen = () => {
+  function handleOpen() {
     sessionStorage.setItem('heroOpened', '1')
     setOpened(true)
-    // Enable snap after the 1s clip-path + spacer collapse animation finishes
+    // Enable scroll-snap after the 1 s clip-path animation finishes
     setTimeout(() => {
       document.documentElement.classList.add('snap-ready')
-    }, 1050)
+    }, 1100)
   }
 
   return (
     <>
-      {/* Full-screen gateway */}
-      <section
+      {/* Full-screen gateway — fixed overlay, z-50 */}
+      <div
         id="hero"
-        className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-black transition-all duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-          opened ? 'pointer-events-none' : ''
-        }`}
         style={{
           clipPath: opened
             ? 'polygon(0 0, 100% 0, 100% 0%, 0 0%)'
             : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+          transition: 'clip-path 1s cubic-bezier(0.76, 0, 0.24, 1)',
+          pointerEvents: opened ? 'none' : 'auto',
         }}
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black"
       >
-        {/* Background video */}
         <video
           ref={videoRef}
           autoPlay
@@ -51,11 +51,10 @@ export default function Hero() {
           <source src="/practice-days.mp4" type="video/mp4" />
         </video>
 
-        {/* Content */}
         <div className="relative z-10 flex flex-col items-center text-center px-6">
           {/* Olympic Rings */}
           <div className="mb-10">
-            <svg width="240" height="110" viewBox="0 0 500 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="240" height="110" viewBox="0 0 500 230" fill="none">
               <circle cx="100" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
               <circle cx="250" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
               <circle cx="400" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
@@ -64,18 +63,21 @@ export default function Hero() {
             </svg>
           </div>
 
-          {/* Gateway button */}
           <button
+            type="button"
             onClick={handleOpen}
-            className="px-12 py-4 border-2 border-white text-white font-body text-lg md:text-xl font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300"
+            className="px-12 py-4 border-2 border-white text-white font-body text-lg md:text-xl font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-colors duration-300 cursor-pointer"
           >
             Ceļš uz Olimpiādi
           </button>
         </div>
-      </section>
+      </div>
 
-      {/* Spacer — collapses when opened; snap-start keeps hero at y=0 on initial load */}
-      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} />
+      {/* Spacer that collapses when the gateway closes */}
+      <div
+        style={{ transition: 'height 1s cubic-bezier(0.76, 0, 0.24, 1)' }}
+        className={opened ? 'h-0' : 'h-screen'}
+      />
     </>
   )
 }
