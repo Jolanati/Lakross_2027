@@ -1,68 +1,110 @@
 'use client'
 
-import { useSite } from '@/context/SiteContext'
-import { siteConfig } from '@/content/config'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Hero() {
-  const { t } = useSite()
+  const [opened, setOpened] = useState(false)
+  const scriptLoaded = useRef(false)
+
+  useEffect(() => {
+    if (scriptLoaded.current) return
+    scriptLoaded.current = true
+    const s = document.createElement('script')
+    s.src = '//www.instagram.com/embed.js'
+    s.async = true
+    document.body.appendChild(s)
+    s.onload = () => {
+      if (window.instgrm) window.instgrm.Embeds.process()
+    }
+  }, [])
+
+  const handleOpen = () => {
+    setOpened(true)
+    // Scroll to content after animation
+    setTimeout(() => {
+      document.getElementById('content-start')?.scrollIntoView({ behavior: 'smooth' })
+    }, 800)
+  }
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center bg-carmine overflow-hidden">
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 sm:px-8 w-full py-24 md:py-32">
-        {/* Top bar */}
-        <div className="hero-fade-in mb-12">
-          <p className="font-body text-sm text-white/70 tracking-wide">
-            {t.progress.deadline}
-          </p>
+    <>
+      {/* Full-screen hero overlay */}
+      <section
+        id="hero"
+        className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-black transition-all duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+          opened ? 'pointer-events-none' : ''
+        }`}
+        style={{
+          clipPath: opened
+            ? 'polygon(0 0, 100% 0, 100% 0%, 0 0%)'
+            : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+        }}
+      >
+        {/* Instagram Reel embed */}
+        <div className="w-full max-w-[380px] mx-auto mb-8 rounded-lg overflow-hidden opacity-90">
+          <blockquote
+            className="instagram-media"
+            data-instgrm-captioned
+            data-instgrm-permalink="https://www.instagram.com/reel/DYsHoQLtBQc/?utm_source=ig_embed&utm_campaign=loading"
+            data-instgrm-version="14"
+            style={{
+              background: '#000',
+              border: 0,
+              borderRadius: '8px',
+              margin: '0 auto',
+              maxWidth: '380px',
+              width: '100%',
+              padding: 0,
+            }}
+          >
+            <div style={{ padding: '16px' }}>
+              <a
+                href="https://www.instagram.com/reel/DYsHoQLtBQc/?utm_source=ig_embed&utm_campaign=loading"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#fff', textDecoration: 'none' }}
+              >
+                View this post on Instagram
+              </a>
+            </div>
+          </blockquote>
         </div>
 
-        {/* Main headline — emotional, editorial */}
-        <h1 className="hero-fade-in text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-medium text-cream leading-[1.1] mb-10 max-w-4xl">
-          Četrpadsmit gadus mēs to darījām pašas.{' '}
-          <em className="italic text-cream/80">Tagad ir laiks darīt to kopā.</em>
-        </h1>
-
-        {/* Subtitle */}
-        <div className="hero-fade-in-late max-w-2xl mb-12">
-          <p className="text-lg md:text-xl text-cream/80 leading-relaxed">
-            {t.hero.subtitle}
-          </p>
+        {/* Olympic Rings — white, 5 rings (3 top, 2 bottom) */}
+        <div className="mb-8">
+          <svg
+            width="180"
+            height="80"
+            viewBox="0 0 500 230"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="opacity-80"
+          >
+            {/* Top row: 3 rings */}
+            <circle cx="100" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
+            <circle cx="250" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
+            <circle cx="400" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
+            {/* Bottom row: 2 rings */}
+            <circle cx="175" cy="140" r="72" stroke="white" strokeWidth="10" fill="none" />
+            <circle cx="325" cy="140" r="72" stroke="white" strokeWidth="10" fill="none" />
+          </svg>
         </div>
 
-        {/* CTA buttons */}
-        <div className="hero-fade-in-late flex flex-wrap gap-4 mb-20">
-          <a href="#kilometri"
-             className="inline-flex items-center px-8 py-4 bg-cream text-carmine font-body font-semibold text-sm tracking-wide hover:bg-white transition-colors">
-            {t.hero.cta}
-            <svg className="ml-3 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-          <a href="#story"
-             className="inline-flex items-center px-8 py-4 border border-cream/30 text-cream font-body font-medium text-sm tracking-wide hover:border-cream/60 transition-colors">
-            {t.hero.scrollHint}
-          </a>
-        </div>
+        {/* CTA Button */}
+        <button
+          onClick={handleOpen}
+          className="group relative px-10 py-5 bg-white text-black font-display text-xl md:text-2xl font-semibold tracking-wide hover:bg-cream transition-colors duration-300"
+        >
+          Ceļš uz Olimpiādi
+          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-carmine scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+        </button>
+      </section>
 
-        {/* Stats row */}
-        <div className="hero-fade-in-late grid grid-cols-3 gap-8 max-w-xl">
-          <div>
-            <span className="block text-3xl md:text-4xl font-display font-semibold text-cream">14</span>
-            <span className="text-xs text-cream/60 font-body">Gadi pašu spēkiem</span>
-          </div>
-          <div>
-            <span className="block text-3xl md:text-4xl font-display font-semibold text-cream">
-              0 → 15 000 €
-            </span>
-            <span className="text-xs text-cream/60 font-body">Kampaņas mērķis</span>
-          </div>
-          <div>
-            <span className="block text-3xl md:text-4xl font-display font-semibold text-cream">Top 5</span>
-            <span className="text-xs text-cream/60 font-body">Olimpiskā atlase · Spānija &apos;26</span>
-          </div>
-        </div>
-      </div>
-    </section>
+      {/* Spacer — prevents content jump when hero is fixed */}
+      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} />
+
+      {/* Anchor for scroll */}
+      <div id="content-start" />
+    </>
   )
 }
