@@ -16,7 +16,7 @@ const cards = [
     title: 'Sievietes Sievietēm',
     description: 'Sieviešu vadīti uzņēmumi iegūst publicitātes stāstu, LinkedIn redzamību un iespēju ierunāt 10 sekunžu video savam tīklam. Stipras sievietes biznesā atbalsta stipras sievietes sportā.',
     price: '100-500 €',
-    cta: 'Uzņēmumiem',
+    cta: 'Uzņēmējām',
     href: '/sievietes',
   },
   {
@@ -30,7 +30,7 @@ const cards = [
   {
     num: '04',
     title: 'Kļūsti par Varoni',
-    description: 'Iesūti savu fotogrāfiju - mūsu AI dažu minūšu laikā iestrādā tavu seju episkā Marvel stila supervaroņa tēlā ar lakrosa nūju rokās. Unikāls krekls, tiešs atbalsts.',
+    description: 'Iesūti savu fotogrāfiju - mūsu AI dažu minūšu laikā iestrādā tavu seju episkā supervaroņa tēlā ar lakrosa nūju rokās. Unikāls krekls, tiešs atbalsts.',
     price: 'No 10 €',
     cta: 'Pasūtīt kreklu',
     href: '/merch',
