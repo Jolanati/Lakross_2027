@@ -1,26 +1,12 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 export default function Hero() {
   const [opened, setOpened] = useState(false)
-  const scriptLoaded = useRef(false)
-
-  useEffect(() => {
-    if (scriptLoaded.current) return
-    scriptLoaded.current = true
-    const s = document.createElement('script')
-    s.src = '//www.instagram.com/embed.js'
-    s.async = true
-    document.body.appendChild(s)
-    s.onload = () => {
-      if (window.instgrm) window.instgrm.Embeds.process()
-    }
-  }, [])
 
   const handleOpen = () => {
     setOpened(true)
-    // Scroll to content after animation
     setTimeout(() => {
       document.getElementById('content-start')?.scrollIntoView({ behavior: 'smooth' })
     }, 800)
@@ -40,64 +26,48 @@ export default function Hero() {
             : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
         }}
       >
-        {/* Instagram Reel embed */}
-        <div className="w-full max-w-[380px] mx-auto mb-8 rounded-lg overflow-hidden opacity-90">
-          <blockquote
-            className="instagram-media"
-            data-instgrm-captioned
-            data-instgrm-permalink="https://www.instagram.com/reel/DYsHoQLtBQc/?utm_source=ig_embed&utm_campaign=loading"
-            data-instgrm-version="14"
-            style={{
-              background: '#000',
-              border: 0,
-              borderRadius: '8px',
-              margin: '0 auto',
-              maxWidth: '380px',
-              width: '100%',
-              padding: 0,
-            }}
-          >
-            <div style={{ padding: '16px' }}>
-              <a
-                href="https://www.instagram.com/reel/DYsHoQLtBQc/?utm_source=ig_embed&utm_campaign=loading"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: '#fff', textDecoration: 'none' }}
-              >
-                View this post on Instagram
-              </a>
-            </div>
-          </blockquote>
-        </div>
-
-        {/* Olympic Rings — white, 5 rings (3 top, 2 bottom) */}
-        <div className="mb-8">
-          <svg
-            width="180"
-            height="80"
-            viewBox="0 0 500 230"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="opacity-80"
-          >
-            {/* Top row: 3 rings */}
-            <circle cx="100" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
-            <circle cx="250" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
-            <circle cx="400" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
-            {/* Bottom row: 2 rings */}
-            <circle cx="175" cy="140" r="72" stroke="white" strokeWidth="10" fill="none" />
-            <circle cx="325" cy="140" r="72" stroke="white" strokeWidth="10" fill="none" />
-          </svg>
-        </div>
-
-        {/* CTA Button */}
-        <button
-          onClick={handleOpen}
-          className="group relative px-10 py-5 bg-white text-black font-display text-xl md:text-2xl font-semibold tracking-wide hover:bg-cream transition-colors duration-300"
+        {/* Background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
         >
-          Ceļš uz Olimpiādi
-          <span className="absolute bottom-0 left-0 w-full h-[2px] bg-carmine scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-        </button>
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Overlay content */}
+        <div className="relative z-10 flex flex-col items-center">
+          {/* Olympic Rings — white, 5 rings (3 top, 2 bottom) */}
+          <div className="mb-10">
+            <svg
+              width="180"
+              height="80"
+              viewBox="0 0 500 230"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="opacity-90"
+            >
+              {/* Top row: 3 rings */}
+              <circle cx="100" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
+              <circle cx="250" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
+              <circle cx="400" cy="90" r="72" stroke="white" strokeWidth="10" fill="none" />
+              {/* Bottom row: 2 rings */}
+              <circle cx="175" cy="140" r="72" stroke="white" strokeWidth="10" fill="none" />
+              <circle cx="325" cy="140" r="72" stroke="white" strokeWidth="10" fill="none" />
+            </svg>
+          </div>
+
+          {/* CTA Button */}
+          <button
+            onClick={handleOpen}
+            className="group relative px-10 py-5 bg-white/95 text-black font-display text-xl md:text-2xl font-semibold tracking-wide hover:bg-white transition-colors duration-300 backdrop-blur-sm"
+          >
+            Ceļš uz Olimpiādi
+            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-carmine scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+          </button>
+        </div>
       </section>
 
       {/* Spacer — prevents content jump when hero is fixed */}
