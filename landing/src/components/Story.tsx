@@ -24,9 +24,18 @@ export default function Story() {
         {/* Two-column layout */}
         <div className="grid md:grid-cols-2 gap-12 mb-10">
           <div className="space-y-4">
-            {t.story.paragraphs.map((p, i) => (
-              <p key={i} className="text-xl text-charcoal/70 leading-relaxed">{p}</p>
-            ))}
+            <p className="text-xl text-charcoal leading-relaxed">
+              Latvijas sieviešu lakrosa izlase atrodas unikāla vēsturiska notikuma priekšvakarā. 2026. gada novembrī komanda startēs Eiropas čempionātā Spānijā "Olimpiskais sixes" formātā — pirmais <span className="mark">oficiālais atlases posms uz Olimpiskajām spēlēm</span>.
+            </p>
+            <p className="text-xl text-charcoal leading-relaxed">
+              Šis nav tikai kārtējās sacensības. Komandas galvenais sportiskais uzdevums ir iekļūt Eiropas Top 5. Spēlētājas jau ilgstoši veic ievērojamu personīgo līdzfinansējumu, apmaksājot treniņus, ekipējumu un ceļa izdevumus.
+            </p>
+            <p className="text-xl text-charcoal leading-relaxed">
+              Mēs ceļamies <span className="mark">piecos no rīta pirms darba</span>. Mēs <span className="mark">paši apmaksājam treniņus, ekipējumu un ceļu</span>. Lai šis sapnis kļūtu par realitāti, <span className="mark">mums trūkst 15 000 EUR</span>.
+            </p>
+            <p className="text-2xl sm:text-3xl font-display font-bold text-charcoal leading-tight mt-2">
+              Palīdzi mums nokļūt tur.
+            </p>
           </div>
           {/* Visual accent column */}
           <div className="relative hidden md:block">
