@@ -6,7 +6,7 @@ export default function Timeline() {
   const { t } = useSite()
 
   return (
-    <div className="py-20 px-4 bg-cream" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
+    <div className="py-20 px-4 bg-gray-50">
       <div className="max-w-5xl mx-auto">
         <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3 text-center">
           {t.timeline.overtitle}
@@ -31,7 +31,7 @@ export default function Timeline() {
                   <div className="hidden md:block w-1/2" />
 
                   {/* Card */}
-                  <div className="ml-12 md:ml-0 md:w-1/2 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div className="ml-12 md:ml-0 md:w-1/2 bg-white rounded-xl p-6 shadow-sm border border-gray-100 overflow-hidden">
                     <div className="flex items-center gap-3 mb-3">
                       <span className="text-xs font-bold text-white bg-carmine px-3 py-1 rounded-full">
                         {item.month}

@@ -13,7 +13,7 @@ export default function Risks() {
   const { risks } = t
 
   return (
-    <div className="py-20 px-4 bg-gray-50" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
+    <div className="py-20 px-4 bg-gray-50">
       <div className="max-w-4xl mx-auto">
         <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3 text-center">
           {risks.overtitle}
