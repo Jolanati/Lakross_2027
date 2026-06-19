@@ -5,7 +5,11 @@
       "Bash(winget --version)",
       "Bash(where gh *)",
       "PowerShell(winget install --id GitHub.cli --silent --accept-source-agreements --accept-package-agreements)",
-      "PowerShell(head -50)"
+      "PowerShell(head -50)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'videohook: fix text overflow in 50vh — reduce font and padding *)",
+      "Bash(git commit -m 'campaigns: card titles match navbar labels exactly *)",
+      "Bash(git commit -m ' *)"
     ]
   }
 }
