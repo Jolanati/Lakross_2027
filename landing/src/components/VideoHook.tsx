@@ -25,19 +25,19 @@ export default function VideoHook() {
 
       {/* Content — anchored bottom-left, Nike style */}
       <div className="relative z-10 px-6 pb-10 md:pb-14 w-full max-w-5xl mx-auto">
-        <p className="italic text-cream/60 text-base mb-3">
+        <p className="italic text-cream/60 text-lg mb-4">
           Latvijas Sieviešu Lakrosa Izlase
         </p>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-black text-cream leading-[1.0] tracking-tight mb-3 max-w-2xl">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-cream leading-[1.0] tracking-tight mb-5 max-w-3xl">
           14 gadus pašu spēkiem — <span className="mark">tagad kopā!</span>
         </h1>
-        <p className="text-lg text-cream/80 max-w-md mb-6 leading-relaxed">
+        <p className="text-xl md:text-2xl text-cream/80 max-w-2xl mb-8 leading-relaxed">
           Novembrī, ar atlasi Spānijā sākas Latvijas ceļš uz Olimpiādi. Palīdzi mums tur nokļūt.
         </p>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-4">
           <button
             onClick={() => scrollTo('story')}
-            className="px-6 py-2.5 border border-cream/50 text-cream font-body text-sm font-medium hover:bg-cream/10 transition-colors"
+            className="px-8 py-3 border border-cream/50 text-cream font-body text-base font-medium hover:bg-cream/10 transition-colors"
           >
             Mūsu stāsts ↓
           </button>
@@ -45,7 +45,7 @@ export default function VideoHook() {
             href={siteConfig.donate.zeffy}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 bg-carmine text-cream font-body text-sm font-semibold hover:bg-carmine-dark transition-colors"
+            className="px-8 py-3 bg-carmine text-cream font-body text-base font-semibold hover:bg-carmine-dark transition-colors"
           >
             Atbalsti komandu →
           </a>
