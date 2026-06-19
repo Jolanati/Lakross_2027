@@ -3,22 +3,26 @@
 import { useEffect, useRef, useState } from 'react'
 
 export default function Hero() {
-  const [opened, setOpened] = useState(() =>
-    typeof window !== 'undefined' && sessionStorage.getItem('heroOpened') === '1'
-  )
+  const [opened, setOpened] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const video = videoRef.current
     if (video) video.play()
+    // Return visit: skip gateway and re-enable snap immediately
+    if (sessionStorage.getItem('heroOpened') === '1') {
+      setOpened(true)
+      document.documentElement.classList.add('snap-ready')
+    }
   }, [])
 
   const handleOpen = () => {
     sessionStorage.setItem('heroOpened', '1')
     setOpened(true)
+    // Enable snap after the 1s clip-path + spacer collapse animation finishes
     setTimeout(() => {
-      document.getElementById('videohook')?.scrollIntoView({ behavior: 'smooth' })
-    }, 800)
+      document.documentElement.classList.add('snap-ready')
+    }, 1050)
   }
 
   return (
@@ -71,7 +75,7 @@ export default function Hero() {
       </section>
 
       {/* Spacer — collapses when opened; snap-start keeps hero at y=0 on initial load */}
-      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} style={{ scrollSnapAlign: 'start' }} />
+      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} />
     </>
   )
 }
