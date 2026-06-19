@@ -1,86 +1,57 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { siteConfig } from '@/content/config'
+
+const scrollTo = (id: string) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
 
 export default function Hero() {
-  const [opened, setOpened] = useState(false)
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    const video = videoRef.current
-    if (video) {
-      video.currentTime = 30
-      video.play()
-    }
-  }, [])
-
-  const handleOpen = () => {
-    setOpened(true)
-    setTimeout(() => {
-      document.getElementById('content-start')?.scrollIntoView({ behavior: 'smooth' })
-    }, 800)
-  }
-
   return (
-    <>
-      {/* Full-screen hero overlay */}
-      <section
-        id="hero"
-        className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-black transition-all duration-1000 ease-[cubic-bezier(0.76,0,0.24,1)] ${
-          opened ? 'pointer-events-none' : ''
-        }`}
-        style={{
-          clipPath: opened
-            ? 'polygon(0 0, 100% 0, 100% 0%, 0 0%)'
-            : 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-        }}
+    <section id="hero" className="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
       >
-        {/* Background video — starts at 5s */}
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover opacity-50"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        <source src="/lvtoday.mp4" type="video/mp4" />
+      </video>
 
-        {/* Overlay content */}
-        <div className="relative z-10 flex flex-col items-center">
-          {/* Olympic Rings — white, larger */}
-          <div className="mb-12">
-            <svg
-              width="280"
-              height="130"
-              viewBox="0 0 500 230"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Top row: 3 rings */}
-              <circle cx="100" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
-              <circle cx="250" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
-              <circle cx="400" cy="90" r="72" stroke="white" strokeWidth="8" fill="none" />
-              {/* Bottom row: 2 rings */}
-              <circle cx="175" cy="140" r="72" stroke="white" strokeWidth="8" fill="none" />
-              <circle cx="325" cy="140" r="72" stroke="white" strokeWidth="8" fill="none" />
-            </svg>
-          </div>
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-charcoal/55" />
 
-          {/* CTA Button — minimal, no fill */}
+      {/* Content — anchored to bottom left, Nike style */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 pb-16 md:pb-20 w-full">
+        <p className="font-body text-[10px] font-bold tracking-[0.3em] uppercase text-cream/50 mb-6">
+          Latvijas Sieviešu Lakrosa Izlase
+        </p>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-black text-cream leading-[0.88] tracking-tight mb-6">
+          14 gadus vienas.
+        </h1>
+        <p className="text-base sm:text-lg text-cream/70 max-w-lg mb-10 leading-relaxed">
+          Novembrī, Spānijā, sākas Latvijas ceļš uz Olimpiskajām spēlēm.
+          Palīdzi mums nokļūt tur.
+        </p>
+        <div className="flex flex-wrap gap-4">
           <button
-            onClick={handleOpen}
-            className="px-12 py-4 border-2 border-white text-white font-display text-2xl md:text-3xl tracking-wide hover:bg-white hover:text-black transition-all duration-300"
+            onClick={() => scrollTo('story')}
+            className="px-8 py-3 border border-cream/40 text-cream font-body text-sm font-medium hover:bg-cream/10 transition-colors"
           >
-            Ceļš uz Olimpiādi
+            Mūsu stāsts ↓
           </button>
+          <a
+            href={siteConfig.donate.zeffy}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 bg-carmine text-cream font-body text-sm font-semibold hover:bg-carmine-dark transition-colors"
+          >
+            Atbalsti komandu →
+          </a>
         </div>
-      </section>
-
-      {/* Spacer */}
-      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} />
-      <div id="content-start" />
-    </>
+      </div>
+    </section>
   )
 }

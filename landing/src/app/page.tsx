@@ -2,9 +2,8 @@
 
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import Kilometer from '@/components/Kilometer'
-import Team from '@/components/Team'
 import Story from '@/components/Story'
+import Kilometer from '@/components/Kilometer'
 import Campaigns from '@/components/Campaigns'
 import SWOT from '@/components/SWOT'
 import Budget from '@/components/Budget'
@@ -22,17 +21,15 @@ export default function Home() {
         <Hero />
       </SectionWrapper>
 
-      <SectionWrapper sectionKey="donate">
-        <Kilometer />
-      </SectionWrapper>
-
-      <SectionWrapper sectionKey="team">
-        <Team />
-      </SectionWrapper>
-
       <SectionWrapper sectionKey="story">
         <Story />
       </SectionWrapper>
+
+      <div id="kilometer">
+        <SectionWrapper sectionKey="donate">
+          <Kilometer />
+        </SectionWrapper>
+      </div>
 
       <SectionWrapper sectionKey="campaigns">
         <Campaigns />

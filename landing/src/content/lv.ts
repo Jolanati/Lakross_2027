@@ -42,7 +42,7 @@ export const lv = {
     paragraphs: [
       'Latvijas sieviešu lakrosa izlase atrodas unikāla vēsturiska notikuma priekšvakarā. 2026. gada novembrī komanda startēs Eiropas čempionātā Spānijā "Olimpiskais sixes" formātā — pirmais oficiālais atlases posms uz Olimpiskajām spēlēm.',
       'Šis nav tikai kārtējās sacensības. Komandas galvenais sportiskais uzdevums ir iekļūt Eiropas Top 5. Spēlētājas jau ilgstoši veic ievērojamu personīgo līdzfinansējumu, apmaksājot treniņus, ekipējumu un ceļa izdevumus.',
-      'Lai šis sapnis kļūtu par realitāti, ir nepieciešams piesaistīt 15 000 EUR. Šī kampaņa nav vienkāršs lūgums pēc naudas — tā ir augstas klases mārketinga stratēģija, kas balstās uz sabiedrības iesaisti, inovatīviem AI risinājumiem un sieviešu biznesa līderības atbalstu.',
+      'Mēs ceļamies piecos no rīta pirms darba. Mēs paši apmaksājam treniņus, ekipējumu un ceļu. Lai šis sapnis kļūtu par realitāti, mums trūkst 15 000 EUR. Palīdzi mums nokļūt tur.',
     ],
     stats: [
       { value: '14', label: 'Gadu vēsture' },
