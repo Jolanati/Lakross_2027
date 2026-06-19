@@ -8,7 +8,7 @@ export type SiteMode = 'academic' | 'campaign'
 
 export const siteConfig = {
   // Default mode when page loads
-  defaultMode: 'academic' as SiteMode,
+  defaultMode: 'campaign' as SiteMode,
 
   // Default language
   defaultLocale: 'lv' as 'lv' | 'en',
