@@ -6,7 +6,8 @@ import { siteConfig } from '@/content/config'
 
 const campaigns = [
   { label: '100 Klubs', href: '/club100' },
-  { label: 'Uzņēmējiem', href: '/sponsors' },
+  { label: 'Sievietes', href: '/sievietes' },
+  { label: 'Sponsori', href: '/sponsors' },
   { label: 'Merch', href: '/merch' },
   { label: 'Diaspora', href: '/diaspora' },
   { label: 'Pass the Stick', href: '/pass-the-stick' },

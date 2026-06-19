@@ -6,7 +6,7 @@ export default function Story() {
   const { t } = useSite()
 
   return (
-    <div id="story" className="relative py-32 px-4 bg-cream overflow-hidden">
+    <div id="story" className="relative min-h-screen py-24 md:py-32 px-4 bg-cream overflow-hidden flex flex-col justify-center">
       {/* Oversized background text */}
       <div className="bg-text top-1/2 -translate-y-1/2 right-[-5%] text-charcoal/[0.03]">LATVIA</div>
 
@@ -25,7 +25,7 @@ export default function Story() {
         <div className="grid md:grid-cols-2 gap-16 mb-20">
           <div className="space-y-5">
             {t.story.paragraphs.map((p, i) => (
-              <p key={i} className="text-lg text-gray-600 leading-relaxed">{p}</p>
+              <p key={i} className="text-xl text-gray-600 leading-relaxed">{p}</p>
             ))}
           </div>
           {/* Visual accent column */}
