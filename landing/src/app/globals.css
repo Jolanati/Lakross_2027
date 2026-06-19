@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,8 +15,8 @@
   }
 
   body {
-    @apply font-reading text-charcoal bg-cream overflow-x-hidden;
-    font-size: 1.0625rem; /* 17px base */
+    @apply font-body text-charcoal bg-cream overflow-x-hidden;
+    font-size: 1rem; /* 16px base — Source Sans 3 */
   }
 
   h1, h2, h3, h4 {
