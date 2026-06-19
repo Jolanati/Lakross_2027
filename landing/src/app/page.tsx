@@ -55,9 +55,11 @@ export default function Home() {
         <KPIs />
       </SectionWrapper>
 
-      <SectionWrapper sectionKey="footer">
-        <Footer />
-      </SectionWrapper>
+      <div style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
+        <SectionWrapper sectionKey="footer">
+          <Footer />
+        </SectionWrapper>
+      </div>
     </>
   )
 }

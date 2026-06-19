@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <>
       {/* Emotional closing CTA */}
-      <section className="py-24 md:py-32 px-6 bg-charcoal text-center">
+      <section className="min-h-screen px-6 bg-charcoal text-center flex flex-col items-center justify-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-cream leading-[1.2] mb-8">
             Četrpadsmit gadus pašas.{' '}
