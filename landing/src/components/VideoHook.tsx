@@ -8,7 +8,7 @@ export default function VideoHook() {
   }
 
   return (
-    <section id="videohook" className="relative h-[70vh] min-h-[520px] flex items-end overflow-hidden">
+    <section id="videohook" className="relative h-[90vh] min-h-[600px] flex items-end overflow-hidden">
       {/* LVToday video — game footage */}
       <video
         autoPlay
@@ -20,24 +20,25 @@ export default function VideoHook() {
         <source src="/lvtoday.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-charcoal/55" />
+      {/* Gradient overlay — lets video breathe at top, readable text at bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/40 to-charcoal/10" />
 
-      {/* Content — narrow column, anchored bottom-left */}
-      <div className="relative z-10 px-6 pb-16 md:pb-20 w-full max-w-5xl mx-auto">
-        <p className="font-body text-[10px] font-bold tracking-[0.3em] uppercase text-cream/50 mb-6">
+      {/* Content — anchored bottom-left, Nike style */}
+      <div className="relative z-10 px-6 pb-20 md:pb-24 w-full max-w-5xl mx-auto">
+        <p className="font-body text-[10px] font-bold tracking-[0.3em] uppercase text-cream/60 mb-5">
           Latvijas Sieviešu Lakrosa Izlase
         </p>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-display font-black text-cream leading-[0.88] tracking-tight mb-6 max-w-xs sm:max-w-sm">
+        <h1 className="text-6xl sm:text-7xl md:text-8xl font-display font-black text-cream leading-[0.88] tracking-tight mb-5 max-w-xs sm:max-w-sm">
           14 gadus vienas.
         </h1>
-        <p className="text-base text-cream/70 max-w-xs mb-10 leading-relaxed">
-          Novembrī, ar atlasi Spānijā sākas Latvijas ceļš uz Olimpiādi.
-          Palīdzi mums tur nokļūt.
+        <p className="text-lg text-cream/80 max-w-sm mb-10 leading-relaxed font-body">
+          Novembrī, ar atlasi Spānijā sākas Latvijas
+          ceļš uz Olimpiādi. Palīdzi mums tur nokļūt.
         </p>
         <div className="flex flex-wrap gap-4">
           <button
             onClick={() => scrollTo('story')}
-            className="px-8 py-3 border border-cream/40 text-cream font-body text-sm font-medium hover:bg-cream/10 transition-colors"
+            className="px-8 py-3 border border-cream/50 text-cream font-body text-sm font-medium hover:bg-cream/10 transition-colors"
           >
             Mūsu stāsts ↓
           </button>
