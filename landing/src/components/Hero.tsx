@@ -2,11 +2,28 @@
 
 import { useSite } from '@/context/SiteContext'
 import { siteConfig } from '@/content/config'
-import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 
 export default function Hero() {
   const { t } = useSite()
   const percent = Math.round((siteConfig.donate.raisedEur / siteConfig.donate.goalEur) * 100)
+  const embedRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    // Load Instagram embed script
+    const script = document.createElement('script')
+    script.src = 'https://www.instagram.com/embed.js'
+    script.async = true
+    document.body.appendChild(script)
+    script.onload = () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process()
+      }
+    }
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center bg-charcoal-deep overflow-hidden">
@@ -66,20 +83,33 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — fundraising + image placeholder */}
+          {/* Right — Instagram reel + fundraising */}
           <div className="lg:col-span-5 hero-fade-in-late">
-            {/* Team image */}
-            <div className="relative mb-8">
-              <div className="aspect-[3/4] relative overflow-hidden">
-                <Image
-                  src="/team/94422ef3-721d-4a9c-b37f-c8d97da499c2.jpg"
-                  alt="Latvia Lacrosse Team"
-                  fill
-                  className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  priority
-                />
-              </div>
+            {/* Instagram embed */}
+            <div ref={embedRef} className="relative mb-8 overflow-hidden">
+              <blockquote
+                className="instagram-media"
+                data-instgrm-captioned
+                data-instgrm-permalink="https://www.instagram.com/reel/DYsHoQLtBQc/?utm_source=ig_embed&utm_campaign=loading"
+                data-instgrm-version="14"
+                style={{
+                  background: 'transparent',
+                  border: 0,
+                  margin: 0,
+                  padding: 0,
+                  width: '100%',
+                  maxWidth: '540px',
+                }}
+              >
+                <a
+                  href="https://www.instagram.com/reel/DYsHoQLtBQc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#c9c8cd', textDecoration: 'none' }}
+                >
+                  View this post on Instagram
+                </a>
+              </blockquote>
             </div>
 
             {/* Progress */}
