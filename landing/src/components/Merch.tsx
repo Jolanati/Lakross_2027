@@ -22,10 +22,10 @@ export default function Merch() {
           <div className="bg-charcoal/5 p-8 flex items-center justify-center min-h-[300px]">
             <span className="text-sm text-charcoal/30 font-body">AI krekls — tava seja supervaroņa tēlā</span>
           </div>
-          <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
+          <div className="bg-cream-light p-8 md:p-12 flex flex-col justify-center">
             <span className="text-xs font-body text-carmine font-medium tracking-[0.15em] uppercase mb-3">Premium · personalizēts</span>
             <h3 className="text-3xl font-display font-semibold text-charcoal mb-4">Kļūsti par Varoni</h3>
-            <p className="text-charcoal/60 text-sm leading-relaxed mb-8">
+            <p className="text-charcoal/80 text-sm leading-relaxed mb-8">
               Iesūti savu fotogrāfiju, un mūsu AI dažu minūšu laikā iestrādā tavu seju episkā supervaroņa tēlā ar lakrosa nūju rokās. Unikāls, neatkārtojams krekls — un tiešs atbalsts izlasei.
             </p>
             <div className="flex items-center gap-6">
@@ -40,7 +40,7 @@ export default function Merch() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-charcoal/10">
           {t.merch.products.slice(1).map((product, i) => (
-            <div key={i} className="bg-white p-6 flex flex-col">
+            <div key={i} className="bg-cream-light p-6 flex flex-col">
               <div className="aspect-square bg-charcoal/5 mb-4 flex items-center justify-center">
                 <span className="text-[10px] text-charcoal/30 font-body text-center px-2">
                   {product.name.toLowerCase().includes('plakāt') ? 'plakāts A2/A3' :

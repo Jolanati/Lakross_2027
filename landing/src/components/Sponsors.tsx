@@ -40,10 +40,10 @@ export default function Sponsors() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             03 · Korporatīvais sponsorings
           </p>
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-semibold text-charcoal leading-[1.0] mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.05] mb-6">
             Kļūsti par stāsta dzinējspēku.
           </h2>
-          <p className="text-xl text-charcoal/60 max-w-2xl leading-relaxed">
+          <p className="text-xl text-charcoal/80 max-w-2xl leading-relaxed">
             Mēs nepārdodam vietu uz formas — mēs piedāvājam dalību vēsturiskā brīdī. Latvijas pirmā olimpiskā kvalifikācija lakrosā ir stāsts, ko vēlaties stāstīt kopā ar mums.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Sponsors() {
             <div
               key={pkg.name}
               className={`p-10 flex flex-col ${
-                pkg.highlighted ? 'bg-charcoal text-cream' : 'bg-white border border-charcoal/10'
+                pkg.highlighted ? 'bg-charcoal text-cream' : 'bg-cream-light border border-charcoal/10'
               }`}
             >
               <span className={`text-xs font-body font-medium tracking-[0.15em] uppercase mb-4 ${
@@ -67,12 +67,12 @@ export default function Sponsors() {
                 {pkg.price}
               </span>
               <p className={`text-sm mb-8 leading-relaxed ${
-                pkg.highlighted ? 'text-cream/60' : 'text-charcoal/50'
+                pkg.highlighted ? 'text-cream/80' : 'text-charcoal/80'
               }`}>
                 {pkg.description}
               </p>
               <ul className={`space-y-3 mb-10 flex-grow ${
-                pkg.highlighted ? 'text-cream/70' : 'text-charcoal/60'
+                pkg.highlighted ? 'text-cream/80' : 'text-charcoal/80'
               }`}>
                 {pkg.perks.map((perk, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm leading-relaxed">

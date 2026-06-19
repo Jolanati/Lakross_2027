@@ -39,7 +39,7 @@ export default function PassTheStick() {
             <p className="text-carmine-light text-[10px] font-bold tracking-[0.4em] uppercase mb-4">
               {t.passTheStick.overtitle}
             </p>
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white leading-[0.9] tracking-tight mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-white leading-[1.05] mb-8">
               {t.passTheStick.title}
             </h2>
             <p className="text-lg text-gray-400 leading-relaxed mb-12 max-w-md">

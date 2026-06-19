@@ -46,10 +46,10 @@ export default function Sievietes() {
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
             02 · Sievietes atbalsta sievietes
           </p>
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-semibold text-charcoal leading-[1.0] mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.05] mb-6">
             Stipras sievietes biznesā atbalsta stipras sievietes sportā.
           </h2>
-          <p className="text-xl text-charcoal/60 max-w-2xl leading-relaxed">
+          <p className="text-xl text-charcoal/80 max-w-2xl leading-relaxed">
             Sieviešu vadīti uzņēmumi, mentoringa organizācijas un zīmoli iegūst CSR stāstu, LinkedIn redzamību un reālu dalību vēsturiskā brīdī — Latvijas pirmajā olimpiskajā kvalifikācijā lakrosā.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function Sievietes() {
               className={`p-10 flex flex-col ${
                 tier.highlighted
                   ? 'bg-charcoal text-cream'
-                  : 'bg-white border border-charcoal/10'
+                  : 'bg-cream-light border border-charcoal/10'
               }`}
             >
               <span className={`text-xs font-body font-medium tracking-[0.15em] uppercase mb-3 ${
@@ -75,7 +75,7 @@ export default function Sievietes() {
                 {tier.price}
               </span>
               <ul className={`space-y-3 mb-10 flex-grow ${
-                tier.highlighted ? 'text-cream/70' : 'text-charcoal/60'
+                tier.highlighted ? 'text-cream/80' : 'text-charcoal/80'
               }`}>
                 {tier.perks.map((perk, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm leading-relaxed">

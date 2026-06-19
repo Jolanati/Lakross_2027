@@ -11,7 +11,7 @@ export default function Club100() {
   const { t } = useSite()
 
   return (
-    <section id="klubs" className="py-24 md:py-32 px-6 bg-white">
+    <section id="klubs" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
@@ -22,7 +22,7 @@ export default function Club100() {
           </h2>
         </div>
 
-        <p className="text-lg text-charcoal/70 max-w-2xl mb-8 leading-relaxed">
+        <p className="text-lg text-charcoal/80 max-w-2xl mb-8 leading-relaxed">
           Mēs meklējam tieši 100 cilvēkus, no kuriem katrs ziedo 50 €. Tā tiek nosegta trešdaļa no izlases budžeta. Kluba dalībnieki nonāk komandas Goda sienā un pirms čempionāta saņem personalizētu video sveicienu.
         </p>
 
@@ -33,7 +33,7 @@ export default function Club100() {
         </div>
 
         {/* Visual grid — 100 squares */}
-        <div className="grid grid-cols-10 gap-1 mb-10 max-w-md">
+        <div className="grid grid-cols-10 gap-0.5 mb-10 max-w-xs">
           {Array.from({ length: TOTAL_SLOTS }).map((_, i) => (
             <div
               key={i}
@@ -46,7 +46,7 @@ export default function Club100() {
           ))}
         </div>
 
-        <p className="text-sm text-charcoal/50 mb-8">
+        <p className="text-sm text-charcoal/70 mb-8">
           {TOTAL_SLOTS - FILLED_SLOTS} vietas vēl brīvas — esi viens no pirmajiem.
         </p>
 

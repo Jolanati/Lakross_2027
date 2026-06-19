@@ -22,7 +22,7 @@ const steps = [
 
 export default function Diaspora() {
   return (
-    <section id="diaspora" className="py-24 md:py-32 px-6 bg-white">
+    <section id="diaspora" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12">
           <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
@@ -37,7 +37,7 @@ export default function Diaspora() {
           </h2>
         </div>
 
-        <p className="text-lg text-charcoal/70 max-w-2xl mb-12 leading-relaxed">
+        <p className="text-lg text-charcoal/80 max-w-2xl mb-12 leading-relaxed">
           2026. gada novembrī Spānijā Latvija pirmo reizi vēsturē startēs Olimpiskās kvalifikācijas
           turnīrā lakrosā. Šis brīdis pieder ne tikai mums — tas pieder ikvienam latvietim pasaulē.
         </p>
@@ -48,7 +48,7 @@ export default function Diaspora() {
             <div key={i} className="bg-cream-light p-8">
               <div className="text-3xl mb-4">{s.flag}</div>
               <h3 className="font-display font-semibold text-charcoal text-xl mb-3">{s.title}</h3>
-              <p className="text-sm text-charcoal/60 leading-relaxed">{s.text}</p>
+              <p className="text-sm text-charcoal/80 leading-relaxed">{s.text}</p>
             </div>
           ))}
         </div>
@@ -65,10 +65,10 @@ export default function Diaspora() {
         {/* Two payment options */}
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="border border-charcoal/10 p-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/40 mb-3">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
               Latvijā un ES
             </p>
-            <p className="text-sm text-charcoal/60 mb-6 leading-relaxed">
+            <p className="text-sm text-charcoal/80 mb-6 leading-relaxed">
               Zeffy — tiešie ziedojumi bez komisijas maksas. 100% nonāk pie komandas.
             </p>
             <a
@@ -81,10 +81,10 @@ export default function Diaspora() {
             </a>
           </div>
           <div className="border border-charcoal/10 p-8">
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/40 mb-3">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
               ASV, Kanāda, citur
             </p>
-            <p className="text-sm text-charcoal/60 mb-6 leading-relaxed">
+            <p className="text-sm text-charcoal/80 mb-6 leading-relaxed">
               PayPal — ātrākais veids ziedot no jebkuras pasaules vietas.
             </p>
             <a
