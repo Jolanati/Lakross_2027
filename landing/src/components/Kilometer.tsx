@@ -93,28 +93,28 @@ export default function Kilometer() {
         </div>
 
         {/* Text + Donation */}
-        <p className="text-lg md:text-xl text-charcoal/70 max-w-3xl mb-10 leading-relaxed">
-          No Rīgas līdz Eiropas čempionātam Spānijā - 3 000 km.<br />
-          No Spānijas līdz Olimpiādei Los Andželosā - 9 500 km.<br />
-          Katrs ziedotais kilometrs (5 EUR) palīdzēs komandai nonākt tuvāk startam Spānijā un cīnīties par vietu Olimpiādē.
+        <p className="text-lg md:text-xl text-charcoal/80 max-w-3xl mb-10 leading-relaxed">
+          No Rīgas līdz Eiropas čempionātam Spānijā - <span className="font-display font-semibold text-charcoal">3 000 km</span>.<br />
+          No Spānijas līdz Olimpiādei Los Andželosā - <span className="font-display font-semibold text-charcoal">9 500 km</span>.<br />
+          <span className="mt-2 block">Katrs ziedotais kilometrs (<span className="font-semibold text-carmine">5 EUR</span>) palīdzēs komandai nonākt tuvāk startam Spānijā un cīnīties par vietu Olimpiādē.</span>
         </p>
 
         {/* Donation buttons */}
         <div className="flex flex-wrap gap-3">
           <a href={siteConfig.donate.zeffy} target="_blank" rel="noopener noreferrer"
-             className="px-6 py-3 bg-charcoal text-cream font-body text-sm font-medium hover:bg-charcoal/90 transition-colors rounded-sm">
+             className="px-7 py-3.5 border-2 border-charcoal text-charcoal font-display text-sm font-semibold hover:bg-charcoal hover:text-cream transition-all duration-200 rounded-sm">
             5 € · 1 km
           </a>
           <a href={siteConfig.donate.zeffy} target="_blank" rel="noopener noreferrer"
-             className="px-6 py-3 bg-charcoal text-cream font-body text-sm font-medium hover:bg-charcoal/90 transition-colors rounded-sm">
+             className="px-7 py-3.5 border-2 border-charcoal text-charcoal font-display text-sm font-semibold hover:bg-charcoal hover:text-cream transition-all duration-200 rounded-sm">
             25 € · 5 km
           </a>
           <a href={siteConfig.donate.zeffy} target="_blank" rel="noopener noreferrer"
-             className="px-6 py-3 bg-carmine text-cream font-body text-sm font-semibold hover:bg-carmine-light transition-colors rounded-sm">
+             className="px-7 py-3.5 bg-carmine border-2 border-carmine text-cream font-display text-sm font-semibold hover:bg-carmine-dark transition-all duration-200 rounded-sm">
             50 € · 10 km
           </a>
           <a href={siteConfig.donate.zeffy} target="_blank" rel="noopener noreferrer"
-             className="px-6 py-3 bg-charcoal text-cream font-body text-sm font-medium hover:bg-charcoal/90 transition-colors rounded-sm">
+             className="px-7 py-3.5 border-2 border-charcoal text-charcoal font-display text-sm font-semibold hover:bg-charcoal hover:text-cream transition-all duration-200 rounded-sm">
             250 € · 50 km
           </a>
         </div>
