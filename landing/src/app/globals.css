@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,8 +15,8 @@
   }
 
   body {
-    @apply font-display text-charcoal bg-cream overflow-x-hidden;
-    font-size: 1.125rem; /* 18px base — Cormorant Garamond reads best at 18px+ */
+    @apply font-reading text-charcoal bg-cream overflow-x-hidden;
+    font-size: 1.0625rem; /* 17px base */
   }
 
   h1, h2, h3, h4 {
