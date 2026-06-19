@@ -12,7 +12,7 @@ export default function Kilometer() {
   const percentEC = Math.min((kmFunded / TOTAL_KM_EC) * 100, 100)
 
   return (
-    <section id="kilometri" className="py-24 md:py-32 px-6 bg-cream">
+    <section id="kilometri" className="pt-8 pb-24 md:pb-32 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
 
         {/* Two-stage road visualization */}
