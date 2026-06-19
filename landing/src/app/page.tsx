@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import Hook from '@/components/Hook'
 import Kilometer from '@/components/Kilometer'
 import Campaigns from '@/components/Campaigns'
 import Club100 from '@/components/Club100'
@@ -28,6 +29,9 @@ export default function Home() {
       <SectionWrapper sectionKey="hero">
         <Hero />
       </SectionWrapper>
+
+      {/* ===== EMOTIONAL HOOK ===== */}
+      <Hook />
 
       {/* ===== KILOMETER PROGRESS ===== */}
       <SectionWrapper sectionKey="donate">
