@@ -6,11 +6,11 @@ import { siteConfig } from '@/content/config'
 
 const campaigns = [
   { label: '100 Klubs', href: '/club100' },
-  { label: 'Sievietes', href: '/sievietes' },
-  { label: 'Sponsori', href: '/sponsors' },
-  { label: 'Merch', href: '/merch' },
-  { label: 'Diaspora', href: '/diaspora' },
-  { label: 'Pass the Stick', href: '/pass-the-stick' },
+  { label: 'Sievietes Sievietēm', href: '/sievietes' },
+  { label: 'Titulsponsorēšana', href: '/sponsors' },
+  { label: 'Kļūsti par Varoni', href: '/merch' },
+  { label: 'Latvieši Pasaulē', href: '/diaspora' },
+  { label: 'Izaicini Draugus', href: '/pass-the-stick' },
 ]
 
 export default function Navbar() {
