@@ -1,6 +1,6 @@
 // =============================================================
 // LATVIAN CONTENT — Edit text here, not in components
-// Your team updates this file to change all page copy
+// Based on: Lakrosa_Izlase_Strategija_Gemini_final.md
 // =============================================================
 
 export const lv = {
@@ -31,7 +31,7 @@ export const lv = {
     raised: 'Savākts',
     goal: 'Mērķis',
     remaining: 'Atlikuši',
-    deadline: 'Eiropas Čempionāts — Novembris 2026, Spānija',
+    deadline: 'Eiropas Čempionāts "Olimpiskais Sixes" — Novembris 2026, Spānija',
     kmMetaphor: 'Nopērc kilometru mūsu ceļā uz Spāniju',
   },
 
@@ -40,9 +40,9 @@ export const lv = {
     overtitle: 'MŪSU STĀSTS',
     title: '14 gadu ceļš. Nulle eiro budžets. Viens mērķis.',
     paragraphs: [
-      'Latvijas sieviešu lakrosa izlase 14 gadus ir cīnījusies starptautiskajā arēnā — ar pilnu atdevi, bet gandrīz bez finansējuma. Šogad mums ir vēsturiska iespēja.',
-      'Novembrī Spānijā notiks Eiropas čempionāts Sixes formātā — Olimpiskajā disciplīnā. Mūsu mērķis ir iekļūt Eiropas Top 5 un spert pirmo soli pretī Olimpiskajām spēlēm.',
-      'Lai to paveiktu, mums jāsavāc 15 000 EUR — ceļam, dalībai, sagatavošanai. Mēs nesākam no nulles — mēs sākam ar 14 gadu pieredzi un neizmērāmu motivāciju.',
+      'Latvijas sieviešu lakrosa izlase atrodas unikāla vēsturiska notikuma priekšvakarā. 2026. gada novembrī komanda startēs Eiropas čempionātā Spānijā "Olimpiskais sixes" formātā — pirmais oficiālais atlases posms uz Olimpiskajām spēlēm.',
+      'Šis nav tikai kārtējās sacensības. Komandas galvenais sportiskais uzdevums ir iekļūt Eiropas Top 5. Spēlētājas jau ilgstoši veic ievērojamu personīgo līdzfinansējumu, apmaksājot treniņus, ekipējumu un ceļa izdevumus.',
+      'Lai šis sapnis kļūtu par realitāti, ir nepieciešams piesaistīt 15 000 EUR. Šī kampaņa nav vienkāršs lūgums pēc naudas — tā ir augstas klases mārketinga stratēģija, kas balstās uz sabiedrības iesaisti, inovatīviem AI risinājumiem un sieviešu biznesa līderības atbalstu.',
     ],
     stats: [
       { value: '14', label: 'Gadu pieredze' },
@@ -59,33 +59,35 @@ export const lv = {
     strengths: {
       title: 'Stiprās puses',
       items: [
-        '14 gadu komandas vēsture un reāla pieredze',
-        'Augsti motivētas spēlētājas, gatavas pašas veidot saturu',
-        'Skaidrs Olimpiskais mērķis (Top 5)',
-        'Gatava ziedojumu infrastruktūra',
+        'Spēcīgs "underdog" stāsts: 14 gadu vēsture un reāla ziedošanās',
+        'Motivēta komanda, gatava pašas radīt saturu un dalīties tīklos',
+        'Skaidrs Olimpiskais mērķis — Top 5 "Olimpiskais sixes" formātā',
+        'Esoša Zeffy/PayPal infrastruktūra bez tehniskās berzes',
       ],
     },
     weaknesses: {
       title: 'Vājās puses',
       items: [
-        'Starta pozīcija 0 EUR — liels laika spiediens',
-        'Lakross ir nišas sports ar zemu atpazīstamību',
-        'Spēlētāju izdegšanas risks',
+        'Finansiālais sākumpunkts: starts no 0 EUR rada milzīgu spiedienu',
+        'Nišas sports: lakross Latvijā nav masu sports, nepieciešama izglītošana',
+        'Izdegšanas risks: pilna laika darbs + treniņi + mārketings',
       ],
     },
     opportunities: {
       title: 'Iespējas',
       items: [
-        'AI tehnoloģiju izmantošana samazina dizaina izmaksas',
-        'Sieviešu sporta popularitātes pieaugums',
-        'Potenciāls piesaistīt spēcīgu sponsoru caur CSR',
+        'Sieviešu sporta vilnis: zīmolu vēlme asociēties ar spēcīgām sievietēm (CSR budžeti)',
+        'Diasporas iesaiste: ASV lakrosa kopienas ar augstāku maksātspēju',
+        'AI tehnoloģijas: ekskluzīvas fanu atribūtikas radīšana ar minimālām izmaksām',
+        'Reģionālais lokālpatriotisms: novadu mediju un uzņēmumu atbalsts "savējiem"',
       ],
     },
     threats: {
       title: 'Draudi',
       items: [
-        'Sponsoru budžetu iesaldēšana rudens sezonā',
-        'Zema virālā izplatība',
+        'Komunikācijas apjukums: PČ jūlijā var likt domāt, ka izlase jau atbalstīta',
+        'Sponsoru budžetu cikli: rudens sākumā budžeti var būt jau sadalīti',
+        'Kampaņu nogurums: ja auditorija redzēs tikai lūgumus bez pievienotās vērtības',
       ],
     },
   },
@@ -93,36 +95,43 @@ export const lv = {
   // -- Campaigns overview (DESIRE) --
   campaigns: {
     overtitle: 'KAMPAŅAS',
-    title: 'Četri ceļi uz mērķi',
-    subtitle: '15 000 EUR tiks sasniegti, izmantojot četru pīlāru pieeju',
+    title: 'Pieci ceļi uz mērķi',
+    subtitle: '15 000 EUR tiks sasniegti caur 5 neatkarīgiem ieņēmumu strautiem',
     items: [
       {
         icon: '01',
-        title: 'Sponsori un B2B partneri',
-        amount: '6 000 EUR',
-        percent: '40%',
-        description: '1–2 lielo sponsoru piesaiste ar ekskluzīvu CSR un PR integrāciju.',
+        title: '"100 atbalstītāju klubs"',
+        amount: '5 000 EUR',
+        percent: '33%',
+        description: 'Tieši 100 cilvēki, katrs 50 EUR. Personīga uzruna, ekskluzivitāte un piederība unikālam projektam.',
       },
       {
         icon: '02',
-        title: 'Online ziedojumi',
-        amount: '4 000 EUR',
-        percent: '27%',
-        description: 'Crowdfunding, ziedojumu maratoni un "Nopērc kilometru" kampaņa.',
+        title: 'B2B un "Sievietes atbalsta sievietes"',
+        amount: '4 500 EUR',
+        percent: '30%',
+        description: 'Ģenerālsponsori, sieviešu vadīti uzņēmumi, CSR integrācija un Atklātā treniņu diena.',
       },
       {
         icon: '03',
-        title: 'AI Supervaroņu atribūtika',
-        amount: '3 000 EUR',
-        percent: '20%',
-        description: 'AI ģenerēti dizaini uz T-krekliem, plakātiem un uzlīmēm.',
+        title: 'Diasporas kampaņa',
+        amount: '2 000 EUR',
+        percent: '13%',
+        description: 'ASV latviešu centri, lakrosa kopienas ārvalstīs, eks-spēlētājas un starptautiskie draugi.',
       },
       {
         icon: '04',
-        title: '"Pass the Stick" izaicinājums',
+        title: 'AI Supervaroņu atribūtika',
         amount: '2 000 EUR',
         percent: '13%',
-        description: 'Virālā influenceru kampaņa TikTok un Instagram platformās.',
+        description: '"Kļūsti par Varoni" krekli, plakāti un krāsojamās grāmatas — Print on Demand bez riska.',
+      },
+      {
+        icon: '05',
+        title: '"Pass the Stick" un PR',
+        amount: '1 500 EUR',
+        percent: '11%',
+        description: 'Virālais izaicinājums, reģionālā prese, TV rīta šovi un sporta podkāsti.',
       },
     ],
   },
@@ -130,49 +139,56 @@ export const lv = {
   // -- Merch section --
   merch: {
     overtitle: 'AI SUPERVAROŅU ATRIBŪTIKA',
-    title: 'Iegādājies. Atbalsti. Nēsā ar lepnumu.',
-    subtitle: 'Katra spēlētāja — supervaronis. AI radīti dizaini komiksu stilā.',
+    title: 'Kļūsti par Varoni. Atbalsti. Nēsā ar lepnumu.',
+    subtitle: 'Katra spēlētāja transformēta episkā komiksu supervaroņa tēlā ar AI. Print on Demand — bez riska.',
     cta: 'Pasūtīt tagad',
     products: [
       {
-        name: 'T-krekls "Vienotā komanda"',
-        price: '25 EUR',
-        description: 'Grupu dizains ar visām spēlētājām',
-        placeholder: true, // Image placeholder
-      },
-      {
-        name: 'T-krekls "Tava Varonis"',
-        price: '35 EUR',
-        description: 'Ekskluzīvs individuāls dizains',
+        name: 'Premium krekls "Kļūsti par Varoni"',
+        price: '50 EUR',
+        description: 'Tavs fotoattēls AI supervaroņa stilā ar lakrosa nūju rokās',
         placeholder: true,
       },
       {
-        name: 'Uzlīmju komplekts',
+        name: 'Standarta krekls "Vienotā komanda"',
+        price: '25 EUR',
+        description: 'Grupu dizains ar visām spēlētājām',
+        placeholder: true,
+      },
+      {
+        name: 'Episkie komiksu plakāti (A2/A3)',
+        price: '15 EUR',
+        description: 'Komiksu stila sienas plakāts',
+        placeholder: true,
+      },
+      {
+        name: 'Supervaroņu uzlīmju komplekts',
         price: '10 EUR',
         description: 'AI Supervaroņu uzlīmes',
         placeholder: true,
       },
       {
-        name: 'Plakāts A2/A3',
-        price: '15 EUR',
-        description: 'Komiksu stila sienas plakāts',
+        name: 'Bērnu krāsojamā grāmata "Lakrosa Varoņi"',
+        price: '12 EUR',
+        description: 'Krāsojamā grāmata bērniem ar lakrosa supervaroņiem',
         placeholder: true,
       },
     ],
-    preorderNote: 'Priekšpārdošana: 15. augusts – 15. septembris',
+    preorderNote: 'Priekšpārdošana: Augusts – Septembris 2026',
   },
 
   // -- Pass the Stick --
   passTheStick: {
     overtitle: '"PASS THE STICK" IZAICINĀJUMS',
     title: 'Saņem nūju. Izaicini draugu. Atbalsti komandu.',
-    description: 'Nofilmē lakrosa triku, izaicini divus draugus un noziedo 20 EUR. Vai atkārto triku ar jebko, kas tev ir mājās. Tev ir 24 stundas!',
+    description: 'Spēlētājas nofilmē iespaidīgu triku, pavērš nūju pret kameru un padod to tālāk. Izaicini 2 draugus atkārtot triku ar jebko mājās atrodamu vai noziedot 20 EUR mūsu biļetei uz Spāniju!',
     hashtags: ['#PassTheStickLV', '#LatviaLacrosseTop5'],
     steps: [
       { step: '1', text: 'Saņem izaicinājumu un nofilmē savu triku' },
       { step: '2', text: 'Izaicini 2 draugus — viņiem ir 24h' },
-      { step: '3', text: 'Noziedo 20 EUR komandai' },
+      { step: '3', text: 'Noziedo 20 EUR vai dalies savā Storijā' },
     ],
+    quote: 'Mēs cīnīsimies, lai Latvija iekļūst Eiropas Top 5 un tiek soli tuvāk Olimpiskajām spēlēm!',
     videoPlaceholder: 'Video tiks pievienots drīzumā',
   },
 
@@ -182,19 +198,19 @@ export const lv = {
     title: 'Satiec komandu klātienē',
     items: [
       {
-        title: 'Lakrosa diena bērniem',
-        description: 'Atvērts, ģimenēm draudzīgs pasākums — meistarklases, stafetes, mini-spēles ar izlases spēlētājām.',
-        details: '3–4 stundu pasākums • Dalības maksa 10–15 EUR • Kafejnīca un merch galds',
+        title: 'Atklātā treniņu diena (B2B Tīklošanās)',
+        description: 'Uzņēmēju un sponsoru ielūgums izmēģināt lakrosu, veicināt team-building un parakstīt partnerības neformālā gaisotnē.',
+        details: 'Uzņēmumi var izmēģināt lakrosu • CSR vizuālais materiāls • Neformāla partnerību veidošana',
         date: 'Septembris 2026',
         cta: 'Pieteikties',
         placeholder: true,
       },
       {
-        title: 'Atklātās treniņu dienas',
-        description: 'Bezmaksas āra aktivitāte — nāc, iepazīsties, trenējies līdzi izlasei. Visiem vecumiem.',
-        details: 'Reizi mēnesī • Sestdienas rītā • Uzvaras parks, Rīga',
-        date: 'Jūlijs – Septembris 2026',
-        cta: 'Piesakies',
+        title: 'Lakrosa diena bērniem',
+        description: 'Atvērts, ģimenēm draudzīgs pasākums — meistarklases, stafetes, mini-spēles ar izlases spēlētājām.',
+        details: '3–4 stundu pasākums • Dalības maksa 10–15 EUR • Kafejnīca un merch galds',
+        date: 'Septembris 2026',
+        cta: 'Pieteikties',
         placeholder: true,
       },
     ],
@@ -203,16 +219,26 @@ export const lv = {
   // -- Budget (ACADEMIC ONLY) --
   budget: {
     overtitle: 'BUDŽETA ARHITEKTŪRA',
-    title: 'Ieņēmumu un izdevumu sadalījums',
+    title: 'Ieņēmumu avoti un kampaņas budžets',
     revenue: {
-      title: 'Ieņēmumu avoti',
+      title: 'Ieņēmumu avoti (5 strauti)',
       items: [
-        { source: 'Ģenerālsponsors un B2B partneri', amount: '6 000 EUR', percent: '40%' },
-        { source: 'Online ziedojumi (Crowdfunding)', amount: '4 000 EUR', percent: '27%' },
-        { source: 'AI Fanu atribūtika (Merch)', amount: '3 000 EUR', percent: '20%' },
-        { source: '"Pass the Stick" kampaņa', amount: '2 000 EUR', percent: '13%' },
+        { source: '"100 atbalstītāju klubs" (Privātie ziedotāji)', amount: '5 000 EUR', percent: '33%' },
+        { source: 'Ģenerālsponsori un "Sievietes atbalsta sievietes" (B2B)', amount: '4 500 EUR', percent: '30%' },
+        { source: 'Diasporas kampaņa (ASV, ārvalstis)', amount: '2 000 EUR', percent: '13%' },
+        { source: 'AI Fanu atribūtika / Merch (Print on Demand)', amount: '2 000 EUR', percent: '13%' },
+        { source: 'PR, Reģionālā prese un "Pass the Stick"', amount: '1 500 EUR', percent: '11%' },
       ],
       total: '15 000 EUR',
+    },
+    marketing: {
+      title: 'Kampaņas izpildes budžets',
+      items: [
+        { source: 'AI rīki (Midjourney, Canva Pro)', amount: '~42 EUR/mēn', percent: '' },
+        { source: 'Maksas reklāma (Facebook Boost)', amount: '100–200 EUR', percent: '' },
+        { source: 'Merch testēšana (paraugi)', amount: '~50 EUR', percent: '' },
+      ],
+      total: '~300–400 EUR (ROI > 3000%)',
     },
   },
 
@@ -223,33 +249,33 @@ export const lv = {
     months: [
       {
         month: 'Jūnijs',
-        label: 'Sagatavošanās',
-        tasks: ['Sociālo tīklu optimizācija', 'B2B sponsoru piedāvājuma izveide', 'AI atribūtikas dizaini'],
+        label: 'Stratēģijas izveide',
+        tasks: ['Digitālās stratēģijas izveide un apstiprināšana', 'AI paraugu testēšana Midjourney', 'B2B datubāžu un prezentāciju izveide fonā'],
       },
       {
         month: 'Jūlijs',
-        label: 'Aktivizācija & PČ',
-        tasks: ['Fokuss uz PČ Polijā', 'B2B līgumu saskaņošana', 'Merch teaser posti'],
+        label: '"Klasiskais lakross" PČ',
+        tasks: ['Dalība Pasaules čempionātā Polijā', 'Publiskās kampaņas IEPAUZĒTAS', 'Ziedošanas platformu sagatavošana fonā'],
       },
       {
         month: 'Augusts',
-        label: 'Priekšpārdošana',
-        tasks: ['AI Merch priekšpārdošanas starts', '"Pass the Stick" kampaņas palaišana', 'Influenceru iesaiste'],
+        label: 'Kampaņu Starts!',
+        tasks: ['Startē "100 atbalstītāju klubs"', 'AI Merch priekšpārdošanas uzsākšana', '"Pass the Stick" virālā izaicinājuma palaišana'],
       },
       {
         month: 'Septembris',
-        label: 'PR viļņi',
-        tasks: ['Preses relīzes un TV intervijas', '"Nopērc Kilometru" integrācija', 'B2B mazo pakešu pārdošana'],
+        label: 'PR un Mediju vilnis',
+        tasks: ['TV rīta šovi, radio, sporta podkāsti', 'Raksti reģionālajā presē', 'Atklātā treniņu diena uzņēmumiem'],
       },
       {
         month: 'Oktobris',
         label: 'Finiša taisne',
-        tasks: ['Merch piegāde klientiem', 'Ziedojumu maratons', 'Pēdējais grūdiens līdz 15 000 EUR'],
+        tasks: ['AI kreklu saražošana un izsūtīšana', 'Dubultā ziedojuma nedēļas nogale', '"Sievietes atbalsta sievietes" kulminācija'],
       },
       {
         month: 'Novembris',
-        label: 'Spānija — EČ',
-        tasks: ['Reāllaika saturs no arēnām', 'Sponsoru logo laukumā', 'Atskaites un pateicības'],
+        label: 'EIROPAS ČEMPIONĀTS',
+        tasks: ['Spēles un cīņa Spānijā par Top 5', 'Reāllaika saturs no arēnas un tiešraides', 'Masīva pateicība un atskaites sponsoriem'],
       },
     ],
   },
@@ -257,16 +283,16 @@ export const lv = {
   // -- KPIs (ACADEMIC ONLY) --
   kpis: {
     overtitle: 'METRIKAS UN KPI',
-    title: 'Mērāmie rezultāti',
+    title: 'Vadošie un Atpaliekošie rādītāji',
     metrics: [
-      { metric: 'Savāktie līdzekļi', target: '15 000 EUR', current: '300 EUR' },
-      { metric: 'Sponsoru līgumi', target: '6–8 partneri', current: '0' },
-      { metric: 'Instagram iesaiste', target: '> 4–6%', current: 'Bāzes mērījums' },
-      { metric: 'TikTok skatījumi', target: '> 50 000', current: '0' },
-      { metric: 'E-pasta abonenti', target: '500+', current: '0' },
-      { metric: 'Vidējais ziedojums', target: '> 25 EUR', current: '—' },
+      { metric: 'Līdzekļi kopā', target: '15 000 EUR', current: '4 015 EUR' },
+      { metric: 'Privātie ziedotāji "100 klubā"', target: '100 cilvēki (vid. 50 EUR)', current: 'Aktīvs' },
+      { metric: 'B2B un Sponsori', target: '1–2 Ģenerāl + 15 "Sievietes" uzņēmumi', current: 'Uzruna sākta' },
+      { metric: 'PR un Mediji', target: '5 reģionālās publikācijas, 2 TV šovi, 2 podkāsti', current: '—' },
+      { metric: 'Lapas konversija', target: '> 4%', current: 'Bāzes mērījums' },
+      { metric: 'Izsūtītie uzrunas e-pasti', target: 'Min. 10 nedēļā', current: '—' },
     ],
-    weeklyRate: '~735 EUR nedēļā nepieciešami mērķa sasniegšanai',
+    weeklyRate: '~535 EUR nedēļā nepieciešami mērķa sasniegšanai',
   },
 
   // -- Donate (ACTION) --
@@ -277,7 +303,7 @@ export const lv = {
     amountLabels: {
       10: '10 EUR — Viena treniņa ūdens',
       25: '25 EUR — Populārākā izvēle',
-      50: '50 EUR — Spēlētājas maltīte turnīrā',
+      50: '50 EUR — "100 atbalstītāju kluba" dalība',
       100: '100 EUR — Ceļa kilometri uz Spāniju',
     },
     customAmount: 'Cita summa',
@@ -289,23 +315,23 @@ export const lv = {
   // -- Sponsors --
   sponsors: {
     overtitle: 'SPONSORIEM',
-    title: 'Kļūsti par daļu no stāsta',
-    subtitle: 'Mēs nepiedāvājam vietu uz formas — mēs piedāvājam dalību vēsturiskā brīdī.',
+    title: 'Kļūsti par stāsta dzinējspēku',
+    subtitle: 'Stipras sievietes biznesā atbalsta stipras sievietes sportā. Mēs nepārdodam vietu uz formas — mēs piedāvājam dalību vēsturiskā brīdī.',
     packages: [
       {
-        name: 'Titulsponsors "Lidojuma spārni"',
+        name: 'Ģenerālsponsors "Lidojuma spārni"',
         price: '4 000 – 6 000 EUR',
-        perks: ['Logo uz formām centrā', 'Integrācija visos PR materiālos', 'Logo uz AI atribūtikas', 'Sponsorētā satura sērija'],
+        perks: ['Centrālā logo pozīcija uz EČ spēļu formām Spānijā', '"Galvenā varoņa" loma mediju relīzēs', 'Integrācija visos PR materiālos un AI atribūtikā', 'Sponsorētā satura sērija'],
       },
       {
-        name: 'Zelta partneris',
-        price: '1 500 – 2 500 EUR',
-        perks: ['Logo uz formas piedurknēm', 'Regulāri pieminējumi sociālajos tīklos', 'Banneris mājaslapā'],
+        name: '"Sievietes atbalsta sievietes" pakete',
+        price: '100 / 250 / 500 EUR',
+        perks: ['Pateicības grafiks jūsu LinkedIn profilam', 'Iekļaušana "Goda sienā" mājaslapā', 'Uzņēmuma HR/CSR tēla stiprināšana', '10 sek. video iespēja jūsu sociālajiem tīkliem'],
       },
       {
         name: 'Digitālais atbalstītājs',
         price: '500 – 1 000 EUR',
-        perks: ['Logo mājaslapā', 'Iekļaušana pateicības video'],
+        perks: ['Logo mājaslapā', 'Regulāri pieminējumi sociālajos tīklos', 'Iekļaušana pateicības video'],
       },
     ],
     cta: 'Lejupielādēt sponsoru piedāvājumu (PDF)',
@@ -316,7 +342,7 @@ export const lv = {
   team: {
     overtitle: 'KOMANDA',
     title: 'Latvijas sieviešu lakrosa izlase',
-    description: 'Sportistes, studentes, profesionāles — vieno viens mērķis. Katrai savs stāsts, visām kopīgs sapnis.',
+    description: 'Sportistes, studentes, profesionāles — vieno viens mērķis. Katrai savs stāsts, visām kopīgs sapnis par Olimpiskajām spēlēm.',
     membersPlaceholder: 'Komandas foto un profili tiks pievienoti drīzumā',
   },
 

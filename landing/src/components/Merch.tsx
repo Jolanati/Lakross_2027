@@ -21,7 +21,7 @@ export default function Merch() {
           {t.merch.preorderNote}
         </p>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-px bg-white/10 mb-12">
           {t.merch.products.map((product, i) => (
             <div key={i} className="bg-charcoal group">
               <div className="aspect-[4/5] bg-gradient-to-b from-carmine/10 to-charcoal-deep flex items-center justify-center border-b border-white/5">

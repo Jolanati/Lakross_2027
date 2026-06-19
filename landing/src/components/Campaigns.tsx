@@ -25,8 +25,8 @@ export default function Campaigns() {
         {/* Campaign grid — asymmetric, editorial */}
         <div className="grid md:grid-cols-12 gap-px bg-white/5">
           {t.campaigns.items.map((item, i) => {
-            // Varying column spans for broken grid feel
-            const spans = ['md:col-span-7', 'md:col-span-5', 'md:col-span-5', 'md:col-span-7']
+            // Varying column spans for broken grid feel (5 items)
+            const spans = ['md:col-span-7', 'md:col-span-5', 'md:col-span-4', 'md:col-span-4', 'md:col-span-4']
             return (
               <div key={i} className={`${spans[i]} bg-charcoal-deep p-8 md:p-10 border-b border-white/5 group hover:bg-white/[0.03] transition-colors`}>
                 <div className="flex items-start justify-between mb-6">

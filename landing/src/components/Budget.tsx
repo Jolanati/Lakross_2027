@@ -15,7 +15,7 @@ export default function Budget() {
           {t.budget.title}
         </h2>
 
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden mb-8">
           <div className="p-6 border-b border-gray-100">
             <h3 className="font-display font-bold text-charcoal">{t.budget.revenue.title}</h3>
           </div>
@@ -38,6 +38,32 @@ export default function Budget() {
             </tfoot>
           </table>
         </div>
+
+        {/* Marketing budget */}
+        {t.budget.marketing && (
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+            <div className="p-6 border-b border-gray-100">
+              <h3 className="font-display font-bold text-charcoal">{t.budget.marketing.title}</h3>
+            </div>
+            <table className="w-full">
+              <tbody>
+                {t.budget.marketing.items.map((item, i) => (
+                  <tr key={i} className="border-b border-gray-50 hover:bg-gray-50/50 transition-colors">
+                    <td className="px-6 py-4 text-sm text-gray-700">{item.source}</td>
+                    <td className="px-6 py-4 text-sm font-semibold text-charcoal text-right">{item.amount}</td>
+                    <td className="px-6 py-4 text-sm text-gray-400 text-right w-20">{item.percent}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr className="bg-charcoal">
+                  <td className="px-6 py-4 text-sm font-bold text-white">KOPĀ / TOTAL</td>
+                  <td className="px-6 py-4 text-sm font-bold text-gold text-right" colSpan={2}>{t.budget.marketing.total}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        )}
       </div>
     </div>
   )
