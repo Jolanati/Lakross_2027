@@ -15,15 +15,8 @@ export default function Kilometer() {
     <section id="kilometri" className="py-24 md:py-32 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
 
-        {/* Intro text */}
-        <p className="text-lg md:text-xl text-charcoal/70 max-w-2xl mb-16 leading-relaxed">
-          No Rīgas līdz Eiropas čempionātam Spānijā. 3 000 km.<br />
-          No Spānijas līdz Olimpiādei Los Andželosā. 9 500 km.<br />
-          Katrs ziedotais kilometrs (5 €) ved komandu burtiski tuvāk startam Spānijā.
-        </p>
-
         {/* Two-stage road visualization */}
-        <div className="relative mb-16">
+        <div className="mb-16">
           {/* Stage 1: Rīga → EC Spānija */}
           <div className="mb-2">
             <div className="flex justify-between items-end mb-3">
@@ -99,17 +92,12 @@ export default function Kilometer() {
           </div>
         </div>
 
-        {/* Stats + Donation */}
-        <div className="flex flex-wrap items-center gap-6 mb-8">
-          <div className="bg-white px-6 py-4 shadow-sm">
-            <span className="font-display text-3xl font-semibold text-carmine">{raisedEur.toLocaleString()} €</span>
-            <span className="text-charcoal/50 text-sm ml-2">savākti</span>
-          </div>
-          <div className="bg-white px-6 py-4 shadow-sm">
-            <span className="font-display text-3xl font-semibold text-charcoal">{kmFunded.toLocaleString()}</span>
-            <span className="text-charcoal/50 text-sm ml-2">/ {TOTAL_KM_EC.toLocaleString()} km</span>
-          </div>
-        </div>
+        {/* Text + Donation */}
+        <p className="text-lg md:text-xl text-charcoal/70 max-w-3xl mb-10 leading-relaxed">
+          No Rīgas līdz Eiropas čempionātam Spānijā - 3 000 km.<br />
+          No Spānijas līdz Olimpiādei Los Andželosā - 9 500 km.<br />
+          Katrs ziedotais kilometrs (5 EUR) palīdzēs komandai nonākt tuvāk startam Spānijā un cīnīties par vietu Olimpiādē.
+        </p>
 
         {/* Donation buttons */}
         <div className="flex flex-wrap gap-3">
