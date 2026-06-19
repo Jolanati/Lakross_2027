@@ -45,9 +45,9 @@ export const lv = {
       'Lai šis sapnis kļūtu par realitāti, ir nepieciešams piesaistīt 15 000 EUR. Šī kampaņa nav vienkāršs lūgums pēc naudas — tā ir augstas klases mārketinga stratēģija, kas balstās uz sabiedrības iesaisti, inovatīviem AI risinājumiem un sieviešu biznesa līderības atbalstu.',
     ],
     stats: [
-      { value: '14', label: 'Gadu pieredze' },
-      { value: '7', label: 'Starptautiski čempionāti' },
-      { value: 'Top 8', label: 'Augstākā pozīcija Eiropā' },
+      { value: '14', label: 'Gadu vēsture' },
+      { value: '0 EUR', label: 'Sākumpunkts' },
+      { value: 'Top 5', label: 'Mērķis Eiropā' },
       { value: '15 000€', label: 'Nepieciešamais budžets' },
     ],
   },
@@ -205,14 +205,6 @@ export const lv = {
         cta: 'Pieteikties',
         placeholder: true,
       },
-      {
-        title: 'Lakrosa diena bērniem',
-        description: 'Atvērts, ģimenēm draudzīgs pasākums — meistarklases, stafetes, mini-spēles ar izlases spēlētājām.',
-        details: '3–4 stundu pasākums • Dalības maksa 10–15 EUR • Kafejnīca un merch galds',
-        date: 'Septembris 2026',
-        cta: 'Pieteikties',
-        placeholder: true,
-      },
     ],
   },
 
@@ -301,10 +293,9 @@ export const lv = {
     title: 'Nopērc kilometru mūsu ceļā uz Spāniju',
     subtitle: 'Katrs eiro tuvina mūs Eiropas čempionātam. Izvēlies savu ieguldījumu.',
     amountLabels: {
-      10: '10 EUR — Viena treniņa ūdens',
-      25: '25 EUR — Populārākā izvēle',
+      20: '20 EUR — "Pass the Stick" ziedojums',
+      25: '25 EUR — Ieteicamā summa',
       50: '50 EUR — "100 atbalstītāju kluba" dalība',
-      100: '100 EUR — Ceļa kilometri uz Spāniju',
     },
     customAmount: 'Cita summa',
     ctaDonate: 'Ziedot tagad',
@@ -321,21 +312,124 @@ export const lv = {
       {
         name: 'Ģenerālsponsors "Lidojuma spārni"',
         price: '4 000 – 6 000 EUR',
-        perks: ['Centrālā logo pozīcija uz EČ spēļu formām Spānijā', '"Galvenā varoņa" loma mediju relīzēs', 'Integrācija visos PR materiālos un AI atribūtikā', 'Sponsorētā satura sērija'],
+        perks: ['Centrālā logo pozīcija uz EČ spēļu formām Spānijā', '"Galvenā varoņa" loma mediju relīzēs', 'Integrācija visos PR materiālos un AI atribūtikā'],
       },
       {
         name: '"Sievietes atbalsta sievietes" pakete',
         price: '100 / 250 / 500 EUR',
-        perks: ['Pateicības grafiks jūsu LinkedIn profilam', 'Iekļaušana "Goda sienā" mājaslapā', 'Uzņēmuma HR/CSR tēla stiprināšana', '10 sek. video iespēja jūsu sociālajiem tīkliem'],
-      },
-      {
-        name: 'Digitālais atbalstītājs',
-        price: '500 – 1 000 EUR',
-        perks: ['Logo mājaslapā', 'Regulāri pieminējumi sociālajos tīklos', 'Iekļaušana pateicības video'],
+        perks: ['Pateicības grafiks jūsu LinkedIn profilam', 'Uzņēmuma HR/CSR tēla stiprināšana', '10 sek. video iespēja jūsu sociālajiem tīkliem'],
       },
     ],
     cta: 'Lejupielādēt sponsoru piedāvājumu (PDF)',
     contactCta: 'Sazināties ar mums',
+  },
+
+  // -- Risks & Mitigation (ACADEMIC ONLY, Sec. 15) --
+  risks: {
+    overtitle: 'RISKI UN RISINĀJUMI',
+    title: 'Identificētie riski un aizsardzības stratēģijas',
+    items: [
+      {
+        risk: 'Neizdodas atrast lielo Ģenerālsponsoru',
+        impact: 'Augsta',
+        solution: 'Lielā pakete (6 000 EUR) tiek nekavējoties sadalīta 3 mazākās daļās (3 x 2 000 EUR) un pārdota vidējiem reģionālajiem uzņēmumiem. Tiek pastiprināta "100 atbalstītāju kluba" kampaņa.',
+      },
+      {
+        risk: 'Auditorijas apjukums starp abiem čempionātiem',
+        impact: 'Vidēja',
+        solution: 'Stingra terminoloģijas disciplīna. Jūlijā runājam tikai par "Klasisko lakrosu", bet augustā svinīgi pārslēdzamies uz "Olimpiskais sixes" ziedošanas baneriem.',
+      },
+      {
+        risk: 'Kampaņas nogurums un iesaistes kritums',
+        impact: 'Vidēja',
+        solution: 'Mainām satura fokusu ik pēc 3-4 nedēļām. No stāstiem par ziedošanos pārejam uz AI supervaroņu krekliem, influenceru izaicinājumiem vai Dubultā ziedojuma nedēļas nogali.',
+      },
+    ],
+  },
+
+  // -- Target Audiences (ACADEMIC ONLY, Sec. 4) --
+  audiences: {
+    overtitle: 'MĒRĶAUDITORIJAS',
+    title: 'Mērķauditorijas un kanāli',
+    subtitle: 'Viena ziņa neder visiem. Katrai mērķauditorijai tiek izveidots īpašs vēstījums un izvēlēts visprecīzākais satikšanās kanāls.',
+    items: [
+      {
+        segment: 'Sieviešu vadīti uzņēmumi un Lielie B2B',
+        channel: 'LinkedIn (spēlētāju personīgie profili), tiešie e-pasti un "Atklātā treniņu diena"',
+        message: 'Stipras sievietes biznesā atbalsta stipras sievietes sportā. Kļūstiet par stāsta dzinējspēku.',
+      },
+      {
+        segment: 'Personīgie kontakti, Draugi un Eks-spēlētājas',
+        channel: 'WhatsApp grupas, tiešie Facebook ziņojumi, personīgie Instagram Story',
+        message: 'Pievienojies "100 atbalstītāju klubam". Katri 50 EUR mūs burtiski ved tuvāk Spānijai. Mēs rēķināmies ar savējiem.',
+      },
+      {
+        segment: 'Diaspora (Fokuss uz ASV)',
+        channel: 'ASV latviešu centru Facebook grupas, e-pasti vēstniecībām un skolu absolventu tīkliem',
+        message: 'Latvija cīnās par Olimpiskajām spēlēm lakrosā. Palīdzi nest nacionālo lepnumu Eiropā.',
+      },
+      {
+        segment: 'Vietējā kopiena (Novadu lepnums)',
+        channel: 'Vietējā un reģionālā prese (piem., "Saldus Zeme", "Zemgales Ziņas"). QR kods, kas ved uz Zeffy.',
+        message: 'Mūsējā meitene no [Novada] dodas iekarot Eiropu. Atbalstīsim savējos!',
+      },
+      {
+        segment: 'Jaunieši, Sporta entuziasti un Influenceri',
+        channel: 'TikTok, Instagram Reels, Sporta podkāsti ("Bumbu klubs")',
+        message: 'Skaties šo episko AI Supervaroņa kreklu! Pieņem "Pass the stick" izaicinājumu un kļūsti par daļu no virālā viļņa.',
+      },
+    ],
+  },
+
+  // -- Content Pillars (ACADEMIC ONLY, Sec. 5) --
+  contentPillars: {
+    overtitle: 'SATURA PĪLĀRI',
+    title: 'Zīmola vēstījums un satura virzieni',
+    mainMessage: 'Mēs nesam Latvijas vārdu pasaulē — palīdzi mums iekļūt Eiropas Top 5 un spert pirmo soli uz Olimpiskajām spēlēm!',
+    pillars: [
+      {
+        name: 'Izglītošana (Atpazīstamībai)',
+        description: 'Īsi un dinamiski 15 sekunžu video. Vizuāli izskaidrojam, kā "Olimpiskais sixes" (ātrs, kompakts, 6 pret 6) atšķiras no "Klasiskā lakrosa" (liels laukums). Noņem auditorijas apjukumu.',
+      },
+      {
+        name: 'Varoņu ģenēze (Cilvēki un Emocijas)',
+        description: 'Patiesu stāstu stāstīšana par ziedošanos. Kā spēlētājas ceļas 5:00 no rīta pirms darba, iegulda personīgos līdzekļus. AI ģenerēti supervaroņu portreti. Akcentēts no kura novada nāk katra spēlētāja.',
+      },
+      {
+        name: 'Līdzdalība (Ceļš un Progress)',
+        description: 'Reāllaikā tiek aizkrāsota "Kilometru karte" ceļā uz Spāniju vai atjaunināts "100 atbalstītāju kluba" vizuālais termometrs. Cilvēkiem patīk redzēt skaidru rezultātu.',
+      },
+      {
+        name: 'Virālais un Izklaide (Fun)',
+        description: 'Izaicinājumi, joki no ģērbtuvēm, "Pass the stick" nūjas padošana sabiedrībā pazīstamiem cilvēkiem un blooperi (neizdevušies kadri). Mēs protam radīt šovu.',
+      },
+    ],
+    rule: 'Zelta likums: 80% satura dod vērtību (iedvesmo, izglīto, izklaidē). Tikai 20% drīkst tieši lūgt ziedot vai pirkt.',
+  },
+
+  // -- Roles (ACADEMIC ONLY, Sec. 17) --
+  roles: {
+    overtitle: 'LOMU SADALĪJUMS',
+    title: 'Komandas resursu un lomu sadalījums',
+    subtitle: 'Ja par visu atbild visas, nekas netiek izdarīts. Stingra atbildību sadale.',
+    items: [
+      {
+        role: 'Projekta un B2B vadītājs',
+        responsibilities: 'Ģenerālsponsoru un "Sievietes atbalsta sievietes" uzņēmumu piesaiste. Auksto e-pastu izsūtīšana, tikšanās vadīšana, līgumu slēgšana, Atklātās treniņu dienas organizēšana.',
+      },
+      {
+        role: 'Satura radītājs / AI operators',
+        responsibilities: 'Vizuālo materiālu radīšana. Darbs ar AI (Midjourney), "Kļūsti par Varoni" kreklu maketi, TikTok/Reels filmēšana un montāža, ikdienas satura publicēšana.',
+      },
+      {
+        role: 'Kopienas un Diasporas vadītājs',
+        responsibilities: '"100 atbalstītāju kluba" uzskaite, pateicības ziņu sūtīšana, komunikācija ar latviešu centriem ASV. Platformu (Zeffy/PayPal) darbības uzraudzība.',
+      },
+      {
+        role: 'PR un Mediju koordinators',
+        responsibilities: 'Preses relīžu rakstīšana un izsūtīšana reģionālajiem medijiem, vienošanās par dalību TV rīta šovos un sporta podkāstos ("Bumbu klubs").',
+      },
+    ],
   },
 
   // -- Team --

@@ -41,9 +41,9 @@ export const en = {
       "To make this dream a reality, we need to raise €15,000. This campaign is not a simple plea for money — it's a high-class marketing strategy based on community engagement, innovative AI solutions, and women's business leadership support.",
     ],
     stats: [
-      { value: '14', label: 'Years of experience' },
-      { value: '7', label: 'International championships' },
-      { value: 'Top 8', label: 'Highest European position' },
+      { value: '14', label: 'Years of history' },
+      { value: '€0', label: 'Starting point' },
+      { value: 'Top 5', label: 'Goal in Europe' },
       { value: '€15,000', label: 'Budget needed' },
     ],
   },
@@ -196,14 +196,6 @@ export const en = {
         cta: 'Register',
         placeholder: true,
       },
-      {
-        title: 'Kids Lacrosse Day',
-        description: 'Open, family-friendly event — workshops, relays, mini-games with national team players.',
-        details: '3–4 hour event • Participation fee €10–15 • Café and merch stand',
-        date: 'September 2026',
-        cta: 'Register',
-        placeholder: true,
-      },
     ],
   },
 
@@ -288,10 +280,9 @@ export const en = {
     title: 'Buy a kilometer on our road to Spain',
     subtitle: 'Every euro brings us closer to the European Championship. Choose your contribution.',
     amountLabels: {
-      10: '€10 — Water for one practice',
-      25: '€25 — Most popular choice',
+      20: '€20 — "Pass the Stick" donation',
+      25: '€25 — Recommended amount',
       50: '€50 — "100 Supporters Club" membership',
-      100: '€100 — Road kilometers to Spain',
     },
     customAmount: 'Custom amount',
     ctaDonate: 'Donate now',
@@ -307,21 +298,120 @@ export const en = {
       {
         name: 'Title Sponsor "Wings of Flight"',
         price: '€4,000 – €6,000',
-        perks: ['Central logo position on EC game jerseys in Spain', '"Main hero" role in media releases', 'Integration in all PR materials and AI merchandise', 'Sponsored content series'],
+        perks: ['Central logo position on EC game jerseys in Spain', '"Main hero" role in media releases', 'Integration in all PR materials and AI merchandise'],
       },
       {
         name: '"Women Support Women" Package',
         price: '€100 / €250 / €500',
-        perks: ['Thank-you graphic for your LinkedIn profile', 'Inclusion in "Honor Wall" on website', 'Strengthen your company HR/CSR image', '10-sec video opportunity for your social channels'],
-      },
-      {
-        name: 'Digital Supporter',
-        price: '€500 – €1,000',
-        perks: ['Logo on website', 'Regular social media mentions', 'Inclusion in thank-you video'],
+        perks: ['Thank-you graphic for your LinkedIn profile', 'Strengthen your company HR/CSR image', '10-sec video opportunity for your social channels'],
       },
     ],
     cta: 'Download Sponsor Proposal (PDF)',
     contactCta: 'Contact us',
+  },
+
+  risks: {
+    overtitle: 'RISKS & SOLUTIONS',
+    title: 'Identified risks and mitigation strategies',
+    items: [
+      {
+        risk: 'Cannot find Title Sponsor',
+        impact: 'High',
+        solution: 'Large package (€6,000) is immediately split into 3 smaller parts (3 × €2,000) and sold to mid-sized regional businesses. "100 Supporters Club" campaign is intensified.',
+      },
+      {
+        risk: 'Audience confusion between two championships',
+        impact: 'Medium',
+        solution: 'Strict terminology discipline. In July we speak only about "Classic Lacrosse", in August we ceremonially switch to "Olympic Sixes" donation banners.',
+      },
+      {
+        risk: 'Campaign fatigue and engagement drop',
+        impact: 'Medium',
+        solution: 'Change content focus every 3–4 weeks. From donation stories to AI superhero shirts, influencer challenges, or the exciting Matched Giving Weekend.',
+      },
+    ],
+  },
+
+  audiences: {
+    overtitle: 'TARGET AUDIENCES',
+    title: 'Target audiences and channels',
+    subtitle: 'One message does not fit all. Each audience gets a tailored message and the most precise meeting channel.',
+    items: [
+      {
+        segment: 'Women-led businesses & Large B2B',
+        channel: 'LinkedIn (players\' personal profiles), direct emails, and "Open Training Day"',
+        message: 'Strong women in business support strong women in sport. Become the driving force of the story.',
+      },
+      {
+        segment: 'Personal contacts, Friends & Former players',
+        channel: 'WhatsApp groups, direct Facebook messages, personal Instagram Stories',
+        message: 'Join the "100 Supporters Club". Every €50 literally brings us closer to Spain. We count on our own.',
+      },
+      {
+        segment: 'Diaspora (Focus on USA)',
+        channel: 'US Latvian center Facebook groups, emails to embassies and alumni networks',
+        message: 'Latvia is fighting for the Olympics in lacrosse. Help carry national pride across Europe.',
+      },
+      {
+        segment: 'Local community (Regional pride)',
+        channel: 'Local and regional press (e.g., "Saldus Zeme", "Zemgales Ziņas"). QR code linking to Zeffy.',
+        message: 'Our girl from [Region] is going to conquer Europe. Let\'s support our own!',
+      },
+      {
+        segment: 'Youth, Sports enthusiasts & Influencers',
+        channel: 'TikTok, Instagram Reels, Sports podcasts ("Bumbu klubs")',
+        message: 'Check out this epic AI Superhero shirt! Take the "Pass the Stick" challenge and become part of the viral wave.',
+      },
+    ],
+  },
+
+  contentPillars: {
+    overtitle: 'CONTENT PILLARS',
+    title: 'Brand message and content directions',
+    mainMessage: 'We carry Latvia to the world stage — help us reach Europe\'s Top 5 and take the first step towards the Olympics!',
+    pillars: [
+      {
+        name: 'Education (Awareness)',
+        description: 'Short, dynamic 15-second videos. Visually explaining how "Olympic Sixes" (fast, compact, 6v6) differs from "Classic Lacrosse" (large field). Removes audience confusion.',
+      },
+      {
+        name: 'Hero Genesis (People & Emotions)',
+        description: 'Telling true stories of sacrifice. How players wake at 5:00 AM before work, invest personal funds. AI-generated superhero portraits. Highlighting which region each player comes from.',
+      },
+      {
+        name: 'Participation (Journey & Progress)',
+        description: 'Real-time "Kilometer Map" being filled on the road to Spain or the "100 Supporters Club" visual thermometer being updated. People love seeing clear results.',
+      },
+      {
+        name: 'Viral & Entertainment (Fun)',
+        description: 'Challenges, locker room jokes, "Pass the Stick" to public figures, and bloopers. We know how to put on a show.',
+      },
+    ],
+    rule: 'Golden rule: 80% of content gives value (inspires, educates, entertains). Only 20% may directly ask for donations or purchases.',
+  },
+
+  roles: {
+    overtitle: 'ROLE DISTRIBUTION',
+    title: 'Team resource and role allocation',
+    subtitle: 'If everyone is responsible for everything, nothing gets done. Strict division of responsibilities.',
+    items: [
+      {
+        role: 'Project & B2B Manager',
+        responsibilities: 'Title Sponsor and "Women Support Women" business outreach. Cold email campaigns, meeting coordination, contract signing, Open Training Day organization.',
+      },
+      {
+        role: 'Content Creator / AI Operator',
+        responsibilities: 'Visual material creation. Working with AI (Midjourney), "Become a Hero" shirt mockups, TikTok/Reels filming and editing, daily content publishing.',
+      },
+      {
+        role: 'Community & Diaspora Manager',
+        responsibilities: '"100 Supporters Club" tracking, thank-you message sending, communication with US Latvian centers. Platform (Zeffy/PayPal) operation oversight.',
+      },
+      {
+        role: 'PR & Media Coordinator',
+        responsibilities: 'Writing and sending press releases to regional media, arranging appearances on morning TV shows and sports podcasts ("Bumbu klubs").',
+      },
+    ],
   },
 
   team: {
