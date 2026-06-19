@@ -8,7 +8,7 @@ export default function VideoHook() {
   }
 
   return (
-    <section id="videohook" className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
+    <section id="videohook" className="relative h-screen flex items-end overflow-hidden" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
       {/* LVToday video — game footage */}
       <video
         autoPlay

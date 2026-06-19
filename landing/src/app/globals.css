@@ -8,6 +8,7 @@
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
+    scroll-snap-type: y mandatory;
   }
 
   body {

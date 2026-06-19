@@ -28,7 +28,7 @@ export default function Home() {
         <Story />
       </SectionWrapper>
 
-      <div id="kilometer">
+      <div id="kilometer" className="h-screen overflow-hidden" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
         <SectionWrapper sectionKey="donate">
           <Kilometer />
         </SectionWrapper>

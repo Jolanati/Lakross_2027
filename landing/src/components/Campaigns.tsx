@@ -55,16 +55,16 @@ const cards = [
 
 export default function Campaigns() {
   return (
-    <section id="campaigns" className="min-h-screen py-24 md:py-32 px-6 bg-cream-light flex flex-col justify-center">
+    <section id="campaigns" className="h-screen pt-14 pb-8 md:pt-16 md:pb-10 px-6 bg-cream-light flex flex-col justify-center overflow-hidden" style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
       <div className="max-w-6xl mx-auto w-full">
-        <div className="mb-14">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-4">
+        <div className="mb-6">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-charcoal/50 mb-3">
             Kā tu vari palīdzēt
           </p>
-          <h2 className="text-5xl sm:text-6xl md:text-7xl font-display font-semibold text-charcoal leading-[1.0] mb-4">
+          <h2 className="text-4xl sm:text-5xl font-display font-semibold text-charcoal leading-[1.0] mb-2">
             Vēl seši ceļi uz mērķi.
           </h2>
-          <p className="text-xl text-charcoal/60 max-w-xl leading-relaxed">
+          <p className="text-base text-charcoal/60 max-w-xl leading-relaxed">
             Katrs no sešiem ceļiem ir tiešs ieguldījums mūsu startā Spānijā. Izvēlies sev tuvāko.
           </p>
         </div>
@@ -74,18 +74,18 @@ export default function Campaigns() {
             <Link
               key={card.num}
               href={card.href}
-              className="bg-cream p-8 md:p-10 flex flex-col group hover:bg-white transition-colors"
+              className="bg-cream p-4 md:p-6 flex flex-col group hover:bg-white transition-colors"
             >
-              <span className="font-body text-xs font-bold tracking-[0.2em] text-carmine mb-4">{card.num}</span>
-              <h3 className="text-xl md:text-2xl font-display font-semibold text-charcoal mb-3 group-hover:text-carmine transition-colors leading-tight">
+              <span className="font-body text-[10px] font-bold tracking-[0.2em] text-carmine mb-2">{card.num}</span>
+              <h3 className="text-base md:text-lg font-display font-semibold text-charcoal mb-2 group-hover:text-carmine transition-colors leading-tight">
                 {card.title}
               </h3>
-              <p className="text-sm text-charcoal/60 leading-relaxed mb-6 flex-grow">
+              <p className="text-xs text-charcoal/60 leading-relaxed mb-3 flex-grow">
                 {card.description}
               </p>
-              <div className="mt-auto pt-4 border-t border-charcoal/10">
-                <div className="text-lg font-display font-semibold text-charcoal mb-1">{card.price}</div>
-                <span className="text-xs font-body font-medium text-carmine">{card.cta}</span>
+              <div className="mt-auto pt-2 border-t border-charcoal/10">
+                <div className="text-base font-display font-semibold text-charcoal mb-0.5">{card.price}</div>
+                <span className="text-[10px] font-body font-medium text-carmine">{card.cta}</span>
               </div>
             </Link>
           ))}

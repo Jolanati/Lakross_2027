@@ -70,8 +70,8 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* Spacer — collapses when opened */}
-      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} />
+      {/* Spacer — collapses when opened; snap-start keeps hero at y=0 on initial load */}
+      <div className={`transition-all duration-1000 ${opened ? 'h-0' : 'h-screen'}`} style={{ scrollSnapAlign: 'start' }} />
     </>
   )
 }
