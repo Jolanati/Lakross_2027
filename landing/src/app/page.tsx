@@ -36,7 +36,13 @@ export default function Home() {
         <Campaigns />
       </SectionWrapper>
 
-      {/* ===== ACADEMIC SECTIONS (Universitāte mode only) ===== */}
+      <div style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
+        <SectionWrapper sectionKey="footer">
+          <Footer />
+        </SectionWrapper>
+      </div>
+
+      {/* ===== ACADEMIC SECTIONS (Universitāte mode only) — after footer ===== */}
       <SectionWrapper sectionKey="swot">
         <SWOT />
       </SectionWrapper>
@@ -52,12 +58,6 @@ export default function Home() {
       <SectionWrapper sectionKey="kpis">
         <KPIs />
       </SectionWrapper>
-
-      <div style={{ scrollSnapAlign: 'start', scrollSnapStop: 'always' }}>
-        <SectionWrapper sectionKey="footer">
-          <Footer />
-        </SectionWrapper>
-      </div>
     </>
   )
 }

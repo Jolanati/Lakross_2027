@@ -16,20 +16,15 @@ export default function PassTheStick() {
           {/* Left — video placeholder */}
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[9/16] max-w-[280px] mx-auto relative">
-              {/* Phone frame */}
-              <div className="absolute inset-0 border-2 border-white/10 bg-gradient-to-b from-white/5 to-charcoal-deep overflow-hidden">
-                {/* Red accent */}
-                <div className="absolute top-1/3 left-0 w-full h-1/3 bg-carmine/5" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 border-2 border-white/20 flex items-center justify-center hover:border-carmine transition-colors cursor-pointer">
-                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                </div>
-                <p className="absolute bottom-6 left-0 right-0 text-center text-[10px] text-gray-600 uppercase tracking-widest">
-                  {t.passTheStick.videoPlaceholder}
-                </p>
+              <div className="absolute inset-0 border-2 border-white/10 overflow-hidden">
+                <video
+                  src="/did-you-know.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

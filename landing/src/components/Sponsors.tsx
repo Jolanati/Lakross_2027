@@ -36,23 +36,23 @@ export default function Sponsors() {
   return (
     <section id="sponsors" className="pt-8 pb-12 md:pt-10 md:pb-16 px-6 bg-cream flex flex-col justify-center">
       <div className="max-w-5xl mx-auto w-full">
-        <div className="mb-8">
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-4">
+        <div className="mb-5">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-carmine mb-3">
             03 · Korporatīvais sponsorings
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-charcoal leading-[1.05] mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-charcoal leading-[1.05] mb-3">
             Kļūsti par stāsta dzinējspēku.
           </h2>
-          <p className="text-xl text-charcoal/80 max-w-2xl leading-relaxed">
+          <p className="text-lg text-charcoal/80 max-w-2xl leading-relaxed">
             Mēs nepārdodam vietu uz formas - mēs piedāvājam dalību vēsturiskā brīdī. Latvijas pirmā olimpiskā kvalifikācija lakrosā ir stāsts, ko vēlaties stāstīt kopā ar mums.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-4 mb-5">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`p-10 flex flex-col ${
+              className={`p-6 flex flex-col ${
                 pkg.highlighted ? 'bg-charcoal text-cream' : 'bg-cream-light border border-charcoal/10'
               }`}
             >
@@ -66,12 +66,12 @@ export default function Sponsors() {
               }`}>
                 {pkg.price}
               </span>
-              <p className={`text-sm mb-8 leading-relaxed ${
+              <p className={`text-sm mb-4 leading-relaxed ${
                 pkg.highlighted ? 'text-cream/80' : 'text-charcoal/80'
               }`}>
                 {pkg.description}
               </p>
-              <ul className={`space-y-3 mb-10 flex-grow ${
+              <ul className={`space-y-2 mb-5 flex-grow ${
                 pkg.highlighted ? 'text-cream/80' : 'text-charcoal/80'
               }`}>
                 {pkg.perks.map((perk, i) => (
