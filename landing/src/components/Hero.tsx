@@ -63,7 +63,7 @@ export default function Hero() {
           {/* Gateway button */}
           <button
             onClick={handleOpen}
-            className="px-12 py-4 border-2 border-white text-white font-display text-2xl md:text-3xl tracking-wide hover:bg-white hover:text-black transition-all duration-300"
+            className="px-12 py-4 border-2 border-white text-white font-body text-lg md:text-xl font-semibold tracking-[0.15em] uppercase hover:bg-white hover:text-black transition-all duration-300"
           >
             Ceļš uz Olimpiādi
           </button>

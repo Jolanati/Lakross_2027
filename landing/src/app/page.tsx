@@ -18,9 +18,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <SectionWrapper sectionKey="hero">
-        <Hero />
-      </SectionWrapper>
+      <Hero />
 
       <VideoHook />
 
