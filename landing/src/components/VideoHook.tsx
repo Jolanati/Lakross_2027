@@ -8,7 +8,7 @@ export default function VideoHook() {
   }
 
   return (
-    <section id="videohook" className="relative h-[90vh] min-h-[600px] flex items-end overflow-hidden">
+    <section id="videohook" className="relative h-[60vh] min-h-[440px] flex items-end overflow-hidden">
       {/* LVToday video — game footage */}
       <video
         autoPlay
