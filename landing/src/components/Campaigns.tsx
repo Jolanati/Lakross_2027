@@ -8,47 +8,47 @@ const cards = [
     title: '100 Klubs',
     description: 'Meklējam tieši 100 cilvēkus — katrs ziedo 50 €. Kluba dalībnieki nonāk komandas Goda sienā un pirms čempionāta saņem personalizētu video sveicienu.',
     price: '50 €',
-    cta: 'Kļūsti par biedru →',
+    cta: 'Kļūsti par biedru',
     href: '/club100',
   },
   {
     num: '02',
-    title: 'Sievietes',
+    title: 'Sievietes Sievietēm',
     description: 'Sieviešu vadīti uzņēmumi iegūst CSR stāstu, LinkedIn redzamību un iespēju ierunāt 10 sekunžu video savam tīklam. Stipras sievietes biznesā atbalsta stipras sievietes sportā.',
     price: '100–500 €',
-    cta: 'Uzņēmumiem →',
+    cta: 'Uzņēmumiem',
     href: '/sievietes',
   },
   {
     num: '03',
-    title: 'Sponsori',
+    title: 'Titulsponsorēšana',
     description: 'Centrālā logo pozīcija uz Eiropas čempionāta formām Spānijā un "galvenā varoņa" loma visos mediju materiālos. Dalība vēsturiskā brīdī.',
     price: '4 000–6 000 €',
-    cta: 'Korporatīvais atbalsts →',
+    cta: 'Korporatīvais atbalsts',
     href: '/sponsors',
   },
   {
     num: '04',
-    title: 'Merch',
+    title: 'Kļūsti par Varoni',
     description: 'Iesūti savu fotogrāfiju — mūsu AI dažu minūšu laikā iestrādā tavu seju episkā Marvel stila supervaroņa tēlā ar lakrosa nūju rokās. Unikāls krekls, tiešs atbalsts.',
     price: 'No 10 €',
-    cta: 'Kļūsti par varoni →',
+    cta: 'Pasūtīt kreklu',
     href: '/merch',
   },
   {
     num: '05',
-    title: 'Diaspora',
+    title: 'Latvieši Pasaulē',
     description: 'Latvija pirmo reizi vēsturē startē Olimpiskās kvalifikācijas turnīrā. Latvieši ārzemēs un starptautiskā lakrosa kopiena — atbalsti nacionālo lepnumu no jebkuras pasaules vietas.',
     price: 'No 20 €',
-    cta: 'Atbalsti no ārzemēm →',
+    cta: 'Atbalsti no ārzemēm',
     href: '/diaspora',
   },
   {
     num: '06',
-    title: 'Pass the Stick',
+    title: 'Izaicini Draugus',
     description: 'Nofilmē triku ar jebko mājās atrodamu. Izaicini 2 draugus — viņiem ir 24h. Noziedo 20 € vai dalies Storijā. Virālais izaicinājums, kas nes gan smaidu, gan reālus līdzekļus.',
     price: 'No 0 €',
-    cta: 'Piedalīties →',
+    cta: 'Piedalīties',
     href: '/pass-the-stick',
   },
 ]
@@ -76,16 +76,20 @@ export default function Campaigns() {
               href={card.href}
               className="bg-cream p-4 md:p-6 flex flex-col group hover:bg-white transition-colors"
             >
-              <span className="font-body text-[10px] font-bold tracking-[0.2em] text-carmine mb-2">{card.num}</span>
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-body text-[10px] font-bold tracking-[0.2em] text-carmine">{card.num}</span>
+                <span className="font-body text-xs font-semibold text-charcoal/50">{card.price}</span>
+              </div>
               <h3 className="text-base md:text-lg font-display font-semibold text-charcoal mb-2 group-hover:text-carmine transition-colors leading-tight">
                 {card.title}
               </h3>
-              <p className="text-sm text-charcoal/80 leading-relaxed mb-3 flex-grow">
+              <p className="text-sm text-charcoal/80 leading-relaxed mb-4 flex-grow">
                 {card.description}
               </p>
-              <div className="mt-auto pt-2 border-t border-charcoal/10">
-                <div className="text-base font-display font-semibold text-charcoal mb-0.5">{card.price}</div>
-                <span className="text-[10px] font-body font-medium text-carmine">{card.cta}</span>
+              <div className="mt-auto">
+                <span className="inline-flex items-center gap-2 text-sm font-body font-semibold text-carmine border border-carmine/40 px-3 py-1.5 group-hover:bg-carmine group-hover:text-cream group-hover:border-carmine transition-colors">
+                  {card.cta} →
+                </span>
               </div>
             </Link>
           ))}
