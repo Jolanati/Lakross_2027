@@ -68,6 +68,12 @@ export default function Hero() {
           >
             Ceļš uz Olimpiādi
           </button>
+
+          <img
+            src="/qr-donate.png"
+            alt="QR code — ziedot"
+            className="mt-6 w-28 h-28 md:w-32 md:h-32 opacity-90"
+          />
         </div>
       </div>
 
