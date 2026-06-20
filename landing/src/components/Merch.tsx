@@ -25,6 +25,8 @@ const heroImages = [
 const productImages: Record<number, string> = {
   0: '/merch/vienota-komanda.png',
   1: '/merch/poster.png',
+  2: '/merch/stickers.png',
+  3: '/merch/coloring-book.png',
 }
 
 export default function Merch() {
