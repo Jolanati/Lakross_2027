@@ -22,6 +22,10 @@ const heroImages = [
   '/team/9cb8c3ae-3464-42ac-b234-5b0c940d8322.jpg',
 ]
 
+const productImages: Record<number, string> = {
+  0: '/merch/vienota-komanda.png',
+}
+
 export default function Merch() {
   const { t } = useSite()
   const [current, setCurrent] = useState(0)
@@ -106,12 +110,16 @@ export default function Merch() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-charcoal/10">
           {t.merch.products.slice(1).map((product, i) => (
             <div key={i} className="bg-cream-light p-4 flex flex-col">
-              <div className="aspect-square bg-charcoal/5 mb-3 flex items-center justify-center">
-                <span className="text-[10px] text-charcoal/30 font-body text-center px-2">
-                  {product.name.toLowerCase().includes('plakāt') ? 'plakāts A2/A3' :
-                   product.name.toLowerCase().includes('uzlīm') ? 'uzlīmes' :
-                   product.name.toLowerCase().includes('grāmat') ? 'grāmata' : 'krekls'}
-                </span>
+              <div className="aspect-square bg-charcoal/5 mb-3 flex items-center justify-center overflow-hidden">
+                {productImages[i] ? (
+                  <img src={productImages[i]} alt={product.name} className="w-full h-full object-cover" />
+                ) : (
+                  <span className="text-[10px] text-charcoal/30 font-body text-center px-2">
+                    {product.name.toLowerCase().includes('plakāt') ? 'plakāts A2/A3' :
+                     product.name.toLowerCase().includes('uzlīm') ? 'uzlīmes' :
+                     product.name.toLowerCase().includes('grāmat') ? 'grāmata' : 'krekls'}
+                  </span>
+                )}
               </div>
               <h4 className="font-body font-medium text-sm text-charcoal mb-1">{product.name}</h4>
               <span className="text-base font-display font-semibold text-charcoal mb-3">{product.price}</span>
